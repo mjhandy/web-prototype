@@ -14,17 +14,17 @@ export const routes: Routes = [
     path: 'en',
     component: HomeComponent,
     title: 'English Home Page ! Web Prototype',
+    data:{      
+      desciption: 'This is the Web Prototype home page'
+    }
+    
   },
   {
     path: 'en/about-us',
     component: AboutUsComponent,
     title: 'English About Us ! Web Prototype',
-    data:{
-      seo:{        
-        metaTags:[
-          {name: 'description', content:'This is the web prototype about us page'}
-        ]
-      }
+    data:{      
+      desciption: 'This is he Web Prototype About Us pages'
     }  
   }
 ];
