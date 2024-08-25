@@ -9,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AuxNavComponent {
 
+  mobileToggleActive = [false, false];
+
+  toggleClass(id: number) {
+    this.mobileToggleActive[id] = !this.mobileToggleActive[id];
+  }
+
 }
