@@ -1,3 +1,6 @@
+@use '@angular/material' as mat;
+@use 'scssm3-theme';
+
 
 /* You can add global styles to this file, and also import other style files */
 @import 'bsOverrides';
@@ -6,6 +9,22 @@
 
 @import 'mixins/mixins';
 
+// material scss theme
+
+
 @import 'main';
+
+
+
+
+@include mat.core();
+
+html {
+  // Apply the light theme by default
+  @include mat.core-theme(scssm3-theme.$light-theme);
+  @include mat.button-theme(scssm3-theme.$light-theme);
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body { margin: 0;  }
