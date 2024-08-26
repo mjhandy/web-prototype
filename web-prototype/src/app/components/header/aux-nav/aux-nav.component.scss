@@ -1,17 +1,6 @@
 @import 'bsOverrides';
 @import 'componentInclude';
 
-// @import 'buttons';
-
-.navbar-toggler{
-  border: 0;
-  background-color: transparent;
-  padding: 0;
-  margin: 0;
-  border-radius: 10px;
-  width: 50px;
-  height: 50px;
-  @include media-breakpoint-up(lg){
-    display: none;
-  }
+header-aux-nav{
+  display: flex;
 }

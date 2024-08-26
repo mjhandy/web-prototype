@@ -1,24 +1,17 @@
 import { Component } from '@angular/core';
 
-import {MatRippleModule} from '@angular/material/core';
-import {MatIconModule} from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { LangToggleComponent } from './lang-toggle/lang-toggle.component';
+import { MobileNavToggleComponent } from './mobile-nav-toggle/mobile-nav-toggle.component';
+
 
 @Component({
   selector: 'header-aux-nav',
   standalone: true,
-  imports: [MatIconModule, MatRippleModule],
+  imports: [MobileNavToggleComponent, LoginComponent, LangToggleComponent],
   templateUrl: './aux-nav.component.html',
   styleUrl: './aux-nav.component.scss'
 })
 export class AuxNavComponent {
-
-  mobileToggleActive = [false, false];
-
-  radius : number | undefined;
-  color: string | undefined;
-
-  toggleClass(id: number) {
-    this.mobileToggleActive[id] = !this.mobileToggleActive[id];
-  }
 
 }

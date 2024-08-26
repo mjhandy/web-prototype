@@ -1,0 +1,23 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+
+
+.navbar-toggler{
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  line-height: 1;
+  @include media-breakpoint-up(lg){
+    display: none;
+  }
+  mat-icon{
+    font-size: 36px;
+    height: initial;
+    width: initial;
+  }
+}
