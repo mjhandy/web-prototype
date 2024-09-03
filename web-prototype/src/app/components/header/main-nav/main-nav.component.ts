@@ -11,4 +11,11 @@ import { RouterModule } from '@angular/router';
 })
 export class MainNavComponent {
 
+  mobileMenu = document.getElementById('mainNav');
+
+  closeOffcanvas(){
+    console.debug('menu clicked');
+    
+  }
+
 }
