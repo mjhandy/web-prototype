@@ -11,8 +11,8 @@ export const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'en',
-    component: HomeComponent,
+    path: 'en',    
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page'
@@ -20,8 +20,8 @@ export const routes: Routes = [
     
   },
   {
-    path: 'en/about-us',
-    component: AboutUsComponent,
+    path: 'en/about-us',    
+    loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
     title: 'English About Us ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages'
