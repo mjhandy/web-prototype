@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 
 
 import { SkipToMainComponent } from './components/wcag/skip-to-main/skip-to-main.component';
+import { ReadOnLoadComponent } from './components/wcag/read-on-load/read-on-load.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -13,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     RouterOutlet,
     SkipToMainComponent,
+    ReadOnLoadComponent,
     FooterComponent,
     HeaderComponent],
   templateUrl: './app.component.html',

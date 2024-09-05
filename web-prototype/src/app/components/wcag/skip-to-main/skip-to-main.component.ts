@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-skip-to-main',
+  selector: 'wcag-skip-to-main',
   standalone: true,
   imports: [ 
     
