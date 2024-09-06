@@ -1,6 +1,36 @@
 <button 
+  data-bs-toggle="modal"
+  data-bs-target="#langSelectModal"
   mat-icon-button 
   attr.aria-label='{{ "wcag.langToggle" | translate }}' 
   matTooltip='{{ "wcag.langToggle" | translate }}'>
   <mat-icon>language</mat-icon>
 </button>  
+
+
+<div class="modal fade" id="langSelectModal" tabindex="-1" aria-labelledby="langSelectModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Select Language</h1>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal" 
+          mat-icon-button          
+          attr.aria-label='{{ "wcag.close" | translate }}'
+          matTooltip='{{ "wcag.close" | translate }}'>
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container p-0">
+          <div class="row">
+            <div class="col-6">EN</div>
+            <div class="col-6">FR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
