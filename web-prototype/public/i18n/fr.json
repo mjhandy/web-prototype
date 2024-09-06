@@ -1,10 +1,15 @@
 {
   "buttons": {
-    "close": "Close"
+    "close": "Fermer",
+    "english": "Anglais",
+    "french": "Français"    
   },
   "nav": {
     "home": "Home FR",
     "aboutUs": "About Us FR"
+  },
+  "headings":{
+    "langModal": "Sélectionnez une langue"
   },
   "footer": {
     "siteName": "MJH FR",
@@ -12,9 +17,9 @@
     "terms": "termes et conditions"
   },
   "wcag": {
-    "close": "Close",
-    "langToggle": "Click to select your language",
-    "home": "This is the home page",
-    "skip": "Skip To Main"
+    "close": "Fermer",
+    "langToggle": "Cliquez pour sélectionner votre langue",
+    "home": "Ceci est la page d'accueil",
+    "skip": "Passer au principal"
   }
 }

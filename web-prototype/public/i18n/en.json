@@ -1,10 +1,15 @@
 {
   "buttons": {
-    "close": "Close"
+    "close": "Close",
+    "english": "English",
+    "french": "French"
   },
   "nav": {
     "home": "Home",
     "aboutUs": "About Us"
+  },
+  "headings":{
+    "langModal": "Select A Language"
   },
   "footer": {
     "siteName": "MJH",

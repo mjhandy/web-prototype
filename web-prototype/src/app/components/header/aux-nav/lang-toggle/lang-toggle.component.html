@@ -13,7 +13,7 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="langSelectModalLabel">Select A Language</h1>
+        <h1 class="modal-title fs-5" id="langSelectModalLabel">{{ "headings.langModal" | translate }}</h1>
         <button 
           type="button" 
           class="btn-close" 
@@ -36,7 +36,7 @@
               <mat-icon
                 aria-hidden="true"
                 svgIcon="flag-en" class="me-2"></mat-icon>
-              English
+                {{ "buttons.english" | translate }}
               </button>
             </div>
             <div class="col-6 d-flex justify-content-center">
@@ -48,7 +48,7 @@
               <mat-icon
                 aria-hidden="true"
                 svgIcon="flag-fr" class="me-2"></mat-icon>
-              French
+                {{ "buttons.french" | translate }}
               </button>              
             </div>
           </div>
