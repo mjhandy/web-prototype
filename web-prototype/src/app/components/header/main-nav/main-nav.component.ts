@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-
+import { TranslateModule } from "@ngx-translate/core";
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'header-main-nav',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './main-nav.component.html',
   styleUrl: './main-nav.component.scss'
 })

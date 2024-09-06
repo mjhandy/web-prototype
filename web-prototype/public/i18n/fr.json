@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home FR",
+    "aboutUs": "About Us FR"
+  },
+  "footer" : {
+    "siteName" : "MJH FR",
+    "privacy" : "politique de confidentialité",
+    "terms" : "termes et conditions"
+  },
+  "wcag": {
+    "skip": "Skip To Main"
+  }  
+}

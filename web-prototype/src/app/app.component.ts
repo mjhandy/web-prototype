@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from "@ngx-translate/core";
+import { TranslateService } from "@ngx-translate/core";
 import { RouterOutlet } from '@angular/router';
 
 
@@ -16,12 +18,17 @@ import { FooterComponent } from './components/footer/footer.component';
     SkipToMainComponent,
     ReadOnLoadComponent,
     FooterComponent,
-    HeaderComponent],
+    HeaderComponent,
+    TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'web-prototype';
 
-
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['en', 'fr']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 }

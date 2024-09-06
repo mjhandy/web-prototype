@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from "@ngx-translate/core";
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'wcag-skip-to-main',
   standalone: true,
   imports: [ 
-    
+    TranslateModule
   ],
   templateUrl: './skip-to-main.component.html',
   styleUrl: './skip-to-main.component.scss'

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "aboutUs": "About Us"
+  },
+  "footer": {
+    "siteName": "MJH",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions"
+  },
+  "wcag": {
+    "skip": "Skip To Main",
+    "langToggle": "Click to select your language",
+    "home" : "This is the home page"
+  }
+}
