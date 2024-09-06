@@ -1,4 +1,7 @@
 {
+  "buttons": {
+    "close": "Close"
+  },
   "nav": {
     "home": "Home FR",
     "aboutUs": "About Us FR"

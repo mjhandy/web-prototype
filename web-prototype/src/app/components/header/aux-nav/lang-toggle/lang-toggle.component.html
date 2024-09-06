@@ -1,4 +1,5 @@
 <button 
+  type="button"
   data-bs-toggle="modal"
   data-bs-target="#langSelectModal"
   mat-icon-button 
@@ -9,10 +10,10 @@
 
 
 <div class="modal fade" id="langSelectModal" tabindex="-1" aria-labelledby="langSelectModal" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Select Language</h1>
+        <h1 class="modal-title fs-5" id="langSelectModalLabel">Select A Language</h1>
         <button 
           type="button" 
           class="btn-close" 
@@ -26,8 +27,26 @@
       <div class="modal-body">
         <div class="container p-0">
           <div class="row">
-            <div class="col-6">EN</div>
-            <div class="col-6">FR</div>
+            <div class="col-6 d-flex justify-content-center">
+              <button 
+                type="button"
+                class="btn shadow-sm d-flex justify-content-start align-items-center">
+              <mat-icon
+                aria-hidden="true"
+                svgIcon="flag-en" class="me-2"></mat-icon>
+              English
+              </button>
+            </div>
+            <div class="col-6 d-flex justify-content-center">
+              <button 
+                type="button"
+                class="btn shadow-sm d-flex justify-content-start align-items-center">
+              <mat-icon
+                aria-hidden="true"
+                svgIcon="flag-fr" class="me-2"></mat-icon>
+              French
+              </button>              
+            </div>
           </div>
         </div>
       </div>
