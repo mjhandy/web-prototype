@@ -14,7 +14,7 @@ export class MainNavComponent {
   mobileMenu = document.getElementById('mainNav');
 
   closeOffcanvas(){
-    console.debug('menu clicked');
+    // console.debug('menu clicked');
     
   }
 

@@ -30,7 +30,9 @@
             <div class="col-6 d-flex justify-content-center">
               <button 
                 type="button"
-                class="btn shadow-sm d-flex justify-content-start align-items-center">
+                class="btn shadow-sm d-flex justify-content-start align-items-center"
+                data-bs-dismiss="modal"               
+                (click)="translateLanguageTo('en')">
               <mat-icon
                 aria-hidden="true"
                 svgIcon="flag-en" class="me-2"></mat-icon>
@@ -40,7 +42,9 @@
             <div class="col-6 d-flex justify-content-center">
               <button 
                 type="button"
-                class="btn shadow-sm d-flex justify-content-start align-items-center">
+                class="btn shadow-sm d-flex justify-content-start align-items-center"
+                data-bs-dismiss="modal"               
+                (click)="translateLanguageTo('fr')">
               <mat-icon
                 aria-hidden="true"
                 svgIcon="flag-fr" class="me-2"></mat-icon>
