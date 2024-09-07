@@ -26,5 +26,13 @@ export const routes: Routes = [
     data:{      
       desciption: 'This is he Web Prototype About Us pages'
     }  
-  }
+  },
+  {
+    path: 'en/sign-up',    
+    loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
+    title: 'English Sign Up Form ! Web Prototype',
+    data:{      
+      desciption: 'This is he Web Prototype About Us pages'
+    }  
+  },
 ];

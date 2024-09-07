@@ -6,10 +6,16 @@
   },
   "nav": {
     "home": "Home",
-    "aboutUs": "About Us"
+    "aboutUs": "About Us",
+    "signUp": "Sign Up"
   },
   "headings":{
-    "langModal": "Select A Language"
+    "langModal": "Select A Language",
+    "signUpForm": "Sign Up Form"
+  },
+  "forms":{
+    "fName": "First Name",
+    "lName": "Last Names"
   },
   "footer": {
     "siteName": "MJH",
