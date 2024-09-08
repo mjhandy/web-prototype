@@ -19,6 +19,11 @@ export class SignUpComponent implements OnInit {
 
   signUpForm: FormGroup;
   submitted = false;
+  emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
+  alphaReg = new RegExp("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð,.'-]+$/u");
+  zipCodeReg = new RegExp('');
+  postalCodeReg = new RegExp('');
+  country: any = [];
 
   constructor(
     private fb: FormBuilder,
@@ -27,16 +32,27 @@ export class SignUpComponent implements OnInit {
       fName: ['',
         [
           Validators.required,
-          Validators.minLength(3)
+          Validators.pattern(this.alphaReg)
         ]
       ],
+      lName: ['',
+        [
+          Validators.required,
+          Validators.pattern(this.alphaReg)
+        ]
+      ],      
       eMail: ['',
         [
-          Validators.required,          
-          Validators.minLength(3),
-          Validators.email
+          Validators.required,
+          Validators.pattern(this.emailReg)
+
         ]
-      ]
+      ],
+      address: ['',
+        [
+          Validators.required
+        ]
+      ],
     })
   }
 

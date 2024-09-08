@@ -1,0 +1,25 @@
+.form-control{
+  font-size: 1.25rem;
+}
+
+label{
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.valid{
+  &-false{
+    
+    border-color: var(--web-form-invalid-border-color);
+  }
+}
+
+.feedback{
+  margin: 2px 0;
+  height: 20px;
+  font-size: 1rem;
+  &-invalid{
+    color: var(--web-form-invalid-color);
+  
+  }
+}

@@ -15,8 +15,20 @@
   },
   "forms":{
     "fName": "First Name",
-    "lName": "Last Names",
-    "email": "Email Address"
+    "lName": "Last Name",
+    "email": "Email Address",
+    "address": "Address",
+    "required":{
+      "fName": "Please enter a First Name.",
+      "lName": "Please enter a Last Name.",
+      "email": "Please enter an Email address.",
+      "address": "Please enter an address."
+    },
+    "invalid": {
+      "fName": "Please enter a valid First Name.",
+      "lName": "Please enter a valid Last Name.",
+      "email": "Please enter a valid Email address."
+    }
   },
   "footer": {
     "siteName": "MJH",

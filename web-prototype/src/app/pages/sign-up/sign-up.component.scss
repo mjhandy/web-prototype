@@ -4,17 +4,5 @@
 @import 'forms';
 @import 'buttons';
 
-.valid{
-  &-false{
-    border-color: var(--web-form-invalid-border-color);
-  }
-}
+@import 'formCustomization';
 
-.feedback{
-  margin: 2px 0;
-  height: 20px;
-  &-invalid{
-    color: var(--web-form-invalid-color);
-    font-size: small;
-  }
-}
