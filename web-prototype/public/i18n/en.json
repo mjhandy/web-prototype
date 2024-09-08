@@ -15,7 +15,8 @@
   },
   "forms":{
     "fName": "First Name",
-    "lName": "Last Names"
+    "lName": "Last Names",
+    "email": "Email Address"
   },
   "footer": {
     "siteName": "MJH",

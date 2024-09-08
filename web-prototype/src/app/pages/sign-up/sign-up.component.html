@@ -6,15 +6,60 @@
   </div>
   <div class="row d-flex justify-content-center">
     <div class="col-8">
-      <fieldset>
-        <legend>Name and Email Address</legend>
-      </fieldset>
-      <fieldset>
-        <legend>Postal Address</legend>
-      </fieldset>
-      <fieldset>
-        <legend>Form Controls</legend>
-      </fieldset>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <fieldset>
+          <legend>Name and Email Address</legend>
+          <div class="mb-2">
+            <label for="fName">{{ "forms.fName" | translate}}</label>
+            <input type="text" id="fName" formControlName="fName" class="form-control"
+              [class]="{ 'valid-false': submitted && f['fName'].errors }">
+            <div class="feedback">
+              @if (submitted && f['fName'].errors) {
+              <div class="feedback-invalid">
+                @if (f['fName'].errors['required']) {
+                <div>Fullname is required</div>
+                }
+                @if (f['fName'].errors['minlength']) {
+                <div>First Name must be at least 3 characters</div>
+                }
+              </div>
+              }
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="eMail">{{ "forms.email" | translate}}</label>
+            <input type="email" id="eMail" formControlName="eMail" placeholder="name@example.com" class="form-control"
+              [class]="{ 'valid-false': submitted && f['eMail'].errors }">
+            <div class="feedback">
+              @if (submitted && f['eMail'].errors) {
+              <div class="feedback-invalid">
+                @if (f['eMail'].errors['required']) {
+                <div>Email is required</div>
+                }
+                @if (f['eMail'].errors['email']){
+                <div>A valid email address is required</div>
+                }
+              </div>
+              }
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Form Controls</legend>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary" >Register</button>
+            <button type="button" (click)="onReset()" class="btn btn-warning">
+              Reset
+            </button>
+          </div>
+        </fieldset>
+
+
+      </form>
+
+
+
     </div>
   </div>
 </div>
