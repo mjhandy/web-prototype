@@ -5,7 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule, TranslateService } from "@ngx-translate/core";
 
-import { LocalStorageService } from '../../../../shared/services/local-storage-service';
+import { LocalStorageService } from '../../../../services/local-storage-service';
 
 @Component({
   selector: 'aux-lang-toggle',
