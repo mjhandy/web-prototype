@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
-import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { 
+  AbstractControl, 
+  FormBuilder, 
+  FormGroup, 
+  ReactiveFormsModule, 
+  Validators } from '@angular/forms';
 
 
 @Component({
