@@ -6,11 +6,11 @@
   </div>
   <div class="row d-flex justify-content-center">
     <div class="col-8">
-      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <form focusInvalidInput [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <fieldset>
           <legend>Name and Email Address</legend>
           <div class="mb-2">
-            <label for="fName">{{ "forms.fName" | translate}}</label>
+            <label for="fName" >{{ "forms.fName" | translate}}</label>
             <input type="text" id="fName" formControlName="fName" class="form-control"
               [class]="{ 'valid-false': submitted && f['fName'].errors }">
             <div class="feedback">
@@ -80,7 +80,7 @@
           <div class="row">
             <div class="col-6">
               <div class="mb-2">
-                <label for="country">County</label>
+                <label for="country">Country</label>
               </div>
             </div>
             <div class="col-6">
@@ -92,12 +92,12 @@
           <div class="row">
             <div class="col-6">
               <div class="mb-2">
-                <label for="country">City</label>
+                <label for="city">City</label>
               </div>
             </div>
             <div class="col-6">
               <div class="mb-2">
-                <label for="state">Postal Code</label>
+                <label for="pcode">Postal Code</label>
               </div>
             </div>
           </div>
@@ -114,9 +114,6 @@
 
 
       </form>
-
-
-
     </div>
   </div>
 </div>

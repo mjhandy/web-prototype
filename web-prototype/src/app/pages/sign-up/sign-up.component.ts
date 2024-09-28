@@ -7,6 +7,8 @@ import {
   FormGroup, 
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
+import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
+
 
 
 @Component({
@@ -16,6 +18,7 @@ import {
     TranslateModule,
     ReactiveFormsModule,
     CommonModule,
+    FormErrorFocusDirective
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'
@@ -25,14 +28,12 @@ export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
   submitted = false;
   emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
-  alphaReg = new RegExp("/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžæÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð,.'-]+$/u");
+  alphaReg = new RegExp("^[a-zA-Z]");
   zipCodeReg = new RegExp('');
   postalCodeReg = new RegExp('');
   country: any = [];
 
-  constructor(
-    private fb: FormBuilder,
-  ) {
+  constructor( private fb: FormBuilder ) {
     this.signUpForm = this.fb.group({
       fName: ['',
         [
@@ -73,6 +74,7 @@ export class SignUpComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.signUpForm.invalid) {
+      console.log('Form is not valid');
       return;
     }
     console.log('Form has been submitted');
