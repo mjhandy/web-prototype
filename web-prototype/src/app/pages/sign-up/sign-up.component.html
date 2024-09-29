@@ -81,14 +81,31 @@
             <div class="col-6">
               <div class="mb-2">
                 <label for="country">{{ "forms.country" | translate}}</label>
-                <select id="country" name="country">
+                <select 
+                  id="country" 
+                  name="country" 
+                  formControlName="country" 
+                  class="form-control"
+                  [class]="{ 'valid-false': submitted && f['country'].errors }">
                   <option value="" disabled selected>Select Country</option>
-
+                  <option *ngFor="let country of countries; let i = index" [value]="countries[i].label">
+                    {{ countries[i].label}}
+                  </option>
                 </select>
+                <div class="feedback">
+                  @if (submitted && f['country'].errors) {
+                  <div class="feedback-invalid">
+                    @if (f['country'].errors['required']) {
+                    {{ "forms.required.country" | translate}}
+                    }
+                  </div>
+                  }
+                </div>
               </div>
             </div>
             <div class="col-6">
               <div class="mb-2">
+
                 <label for="state">State</label>
               </div>
             </div>

@@ -31,7 +31,7 @@ export class SignUpComponent implements OnInit {
   alphaReg = new RegExp("^[a-zA-Z' ]+$");
   zipCodeReg = new RegExp("");
   postalCodeReg = new RegExp("");
-  country: any = [];
+  countries: any = [];
 
   constructor( private fb: FormBuilder ) {
     this.signUpForm = this.fb.group({
@@ -59,7 +59,14 @@ export class SignUpComponent implements OnInit {
           Validators.required
         ]
       ],
-    })
+      country: ['',
+        [
+          Validators.required
+        ]
+      ]
+    });
+
+    this.countries = this.getCountries();
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -86,5 +93,16 @@ export class SignUpComponent implements OnInit {
   onReset(): void {
     this.submitted = false;
     this.signUpForm.reset();
+  }
+
+  // country list
+  getCountries(){
+    return [
+      { value: 'ca', label: 'Canada'},
+      { value: 'us', label: 'United States of America'},
+      { value: 'dz', label: 'Algeria'},
+      { value: 'au', label: 'Australia'},
+      { value: 'fa', label: 'France'},
+    ]
   }
 }
