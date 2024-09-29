@@ -19,6 +19,13 @@
     "email": "Email Address",
     "address": "Address",
     "country": "Country",
+    "countrySelect": "Please select a country",
+    "countryList" :{
+      "ca"  : "Canada",
+      "us"  : "United States of America",
+      "au"  : "Australia",
+      "fa"  : "France"
+    },
     "required":{
       "fName": "Please enter a First Name.",
       "lName": "Please enter a Last Name.",

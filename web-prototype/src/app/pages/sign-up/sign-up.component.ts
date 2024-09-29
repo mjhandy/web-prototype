@@ -98,11 +98,10 @@ export class SignUpComponent implements OnInit {
   // country list
   getCountries(){
     return [
-      { value: 'ca', label: 'Canada'},
-      { value: 'us', label: 'United States of America'},
-      { value: 'dz', label: 'Algeria'},
-      { value: 'au', label: 'Australia'},
-      { value: 'fa', label: 'France'},
+      { value: 'ca', label: 'forms.countryList.ca'},
+      { value: 'us', label: 'forms.countryList.us'},
+      { value: 'au', label: 'forms.countryList.au'},
+      { value: 'fa', label: 'forms.countryList.fa'},
     ]
   }
 }

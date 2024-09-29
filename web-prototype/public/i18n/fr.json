@@ -11,6 +11,33 @@
   "headings":{
     "langModal": "Sélectionnez une langue"
   },
+  "forms":{
+    "fName": "Prénom",
+    "lName": "Nom de famille",
+    "email": "Email Address",
+    "address": "Address",
+    "country": "Pays",
+    "countrySelect": "Veuillez sélectionner un pays.",
+    "countryList" :{
+      "ca"  : "Canada",
+      "us"  : "les états-unis d'Amérique",
+      "au"  : "Australie",
+      "fa"  : "France"
+    },
+    "required":{
+      "fName": "Veuillez entrer un prénom.",
+      "lName": "Veuillez entrer un nom de famille.",
+      "email": "Veuillez saisir une adresse e-mail.",
+      "address": "Veuillez entrer une adresse.",
+      "country": "Veuillez sélectionner un pays."
+    },
+    "invalid": {
+      "fName": "Veuillez entrer un prénom valide.",
+      "lName": "Veuillez entrer un nom de famille valide.",
+      "email": "S'il vous plaît, mettez une adresse email valide.",
+      "country": "Veuillez sélectionner un pays."
+    }
+  },  
   "footer": {
     "siteName": "MJH FR",
     "privacy": "politique de confidentialité",
