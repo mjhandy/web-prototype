@@ -62,15 +62,14 @@ export class SignUpComponent implements OnInit {
     })
   }
 
-
-
-  ngOnInit() {
-  }
-
   get f(): { [key: string]: AbstractControl } {
     return this.signUpForm.controls;
   }
 
+  ngOnInit() {
+  }
+
+  // form submit
   onSubmit() {
     this.submitted = true;
     console.log(JSON.stringify(this.signUpForm.value, null, 2));
@@ -83,6 +82,7 @@ export class SignUpComponent implements OnInit {
     console.log(JSON.stringify(this.signUpForm.value, null, 2));
   }
 
+  // form reset
   onReset(): void {
     this.submitted = false;
     this.signUpForm.reset();
