@@ -18,11 +18,13 @@
     "lName": "Last Name",
     "email": "Email Address",
     "address": "Address",
+    "country": "Country",
     "required":{
       "fName": "Please enter a First Name.",
       "lName": "Please enter a Last Name.",
       "email": "Please enter an Email address.",
-      "address": "Please enter an address."
+      "address": "Please enter an address.",
+      "country": "Please select a country"
     },
     "invalid": {
       "fName": "Please enter a valid First Name.",

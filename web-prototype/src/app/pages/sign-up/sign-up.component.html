@@ -10,17 +10,17 @@
         <fieldset>
           <legend>Name and Email Address</legend>
           <div class="mb-2">
-            <label for="fName" >{{ "forms.fName" | translate}}</label>
+            <label for="fName">{{ "forms.fName" | translate}}</label>
             <input type="text" id="fName" formControlName="fName" class="form-control"
               [class]="{ 'valid-false': submitted && f['fName'].errors }">
             <div class="feedback">
               @if (submitted && f['fName'].errors) {
               <div class="feedback-invalid">
                 @if (f['fName'].errors['required']) {
-                  {{ "forms.required.fName" | translate}}
+                {{ "forms.required.fName" | translate}}
                 }
                 @if (f['fName'].errors['pattern']) {
-                  {{ "forms.invalid.fName" | translate}}
+                {{ "forms.invalid.fName" | translate}}
                 }
               </div>
               }
@@ -34,10 +34,10 @@
               @if (submitted && f['lName'].errors) {
               <div class="feedback-invalid">
                 @if (f['lName'].errors['required']) {
-                  {{ "forms.required.lName" | translate}}
+                {{ "forms.required.lName" | translate}}
                 }
                 @if (f['lName'].errors['pattern']) {
-                  {{ "forms.invalid.lName" | translate}}
+                {{ "forms.invalid.lName" | translate}}
                 }
               </div>
               }
@@ -51,10 +51,10 @@
               @if (submitted && f['eMail'].errors) {
               <div class="feedback-invalid">
                 @if (f['eMail'].errors['required']) {
-                  {{ "forms.required.email" | translate}}
+                {{ "forms.required.email" | translate}}
                 }
                 @if (f['eMail'].errors['pattern']) {
-                  {{ "forms.invalid.email" | translate}}
+                {{ "forms.invalid.email" | translate}}
                 }
               </div>
               }
@@ -67,20 +67,24 @@
             <label for="address">{{ "forms.address" | translate}}</label>
             <input type="text" id="address" formControlName="address" class="form-control"
               [class]="{ 'valid-false': submitted && f['address'].errors }">
-              <div class="feedback">
-                @if (submitted && f['address'].errors) {
-                <div class="feedback-invalid">
-                  @if (f['address'].errors['required']) {
-                    {{ "forms.required.address" | translate}}
-                  }
-                </div>
+            <div class="feedback">
+              @if (submitted && f['address'].errors) {
+              <div class="feedback-invalid">
+                @if (f['address'].errors['required']) {
+                {{ "forms.required.address" | translate}}
                 }
               </div>
+              }
+            </div>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="mb-2">
-                <label for="country">Country</label>
+                <label for="country">{{ "forms.country" | translate}}</label>
+                <select id="country" name="country">
+                  <option value="" disabled selected>Select Country</option>
+
+                </select>
               </div>
             </div>
             <div class="col-6">
