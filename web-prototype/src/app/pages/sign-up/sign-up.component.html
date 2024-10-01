@@ -11,7 +11,7 @@
           <legend>Name and Email Address</legend>
           <div class="mb-2">
             <label for="fName">{{ "forms.fName" | translate}}</label>
-            <input type="text" id="fName" formControlName="fName" class="form-control"
+            <input type="text" #fName id="fName" formControlName="fName" class="form-control"
               [class]="{ 'valid-false': submitted && f['fName'].errors }">
             <div class="feedback">
               @if (submitted && f['fName'].errors) {
@@ -28,7 +28,7 @@
           </div>
           <div class="mb-2">
             <label for="lName">{{ "forms.lName" | translate}}</label>
-            <input type="text" id="fName" formControlName="lName" class="form-control"
+            <input type="text" #lName id="lName" formControlName="lName" class="form-control"
               [class]="{ 'valid-false': submitted && f['lName'].errors }">
             <div class="feedback">
               @if (submitted && f['lName'].errors) {
@@ -82,6 +82,7 @@
               <div class="mb-2">
                 <label for="country">{{ "forms.country" | translate}}</label>
                 <select 
+                  #country
                   id="country" 
                   name="country" 
                   formControlName="country" 
@@ -117,16 +118,55 @@
             </div>
             <div class="col-6">
               <div class="mb-2">
-                <label for="usZipCode">Zip Code</label>
-                <input type="text" id="usZipCode" formControlName="usZipCode" class="form-control">
-                <div class="feedback">
-
-                </div>
+                @if (country.value == 'us'){
+                  <label for="usZipCode">Zip Code</label>
+                  <input 
+                    type="text" 
+                    id="usZipCode" 
+                    formControlName="usZipCode" 
+                    class="form-control"
+                    [class]="{ 'valid-false': submitted && f['usZipCode'].errors }"
+                    placeholder="xxxxx">
+                  <div class="feedback">
+                    @if (submitted && f['usZipCode'].errors) {
+                      <div class="feedback-invalid">
+                        @if (f['usZipCode'].errors['required']) {
+                        {{ "forms.required.usZipCode" | translate}}
+                        }
+                        @if (f['usZipCode'].errors['pattern']) {
+                        {{ "forms.invalid.usZipCode" | translate}}
+                        }
+                      </div>                    
+                    }
+                  </div>
+                }
+                @if (country.value == 'ca'){
+                  <label for="canPostalCode">Postal Code</label>
+                  <input 
+                    type="text"
+                    #canPostalCode
+                    id="canPostalCode"
+                    formControlName="canPostalCode"
+                    class="form-control"
+                    [class]="{ 'valid-false': submitted && f['canPostalCode'].errors }"
+                    placeholder="A0A 0A0"
+                    (input)="canPostalCode.value = canPostalCode.value.toUpperCase()">
+                  <div class="feedback">
+                    @if (submitted && f['canPostalCode'].errors) {
+                      <div class="feedback-invalid">
+                        @if (f['canPostalCode'].errors['required']) {
+                         {{ "forms.required.canPostalCode" | translate}}
+                        }
+                        @if (f['canPostalCode'].errors['pattern']) {
+                          {{ "forms.invalid.canPostalCode" | translate}}
+                        }
+                      </div>                    
+                    }
+                  </div>
+                }
               </div>
               <div class="mb-2">
-                <label for="canPostalCode">Postal Code</label>
-                <input type="text" id="canPostalCode" fomrControlName="canPostalCode" class="form-control">
-                <div class="feedback"></div>
+
               </div>
             </div>
           </div>
@@ -140,8 +180,6 @@
             </button>
           </div>
         </fieldset>
-
-
       </form>
     </div>
   </div>

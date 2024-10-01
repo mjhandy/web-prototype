@@ -29,8 +29,8 @@ export class SignUpComponent implements OnInit {
   submitted = false;
   emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
   alphaReg = new RegExp("^[a-zA-Z' ]+$");
-  zipCodeReg = new RegExp("");
-  postalCodeReg = new RegExp("");
+  zipCodeReg = new RegExp("^[0-9]{5}(?:-[0-9]{4})?$");
+  postalCodeReg = new RegExp("^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$");
   countries: any = [];
 
   constructor( private fb: FormBuilder ) {
@@ -94,7 +94,7 @@ export class SignUpComponent implements OnInit {
     console.log(JSON.stringify(this.signUpForm.value, null, 2));
     if (this.signUpForm.invalid) {
       console.log('Form is not valid');
-      
+      console.log(JSON.stringify(this.signUpForm.value, null, 2));
       return;
     }
     console.log('Form has been submitted');
