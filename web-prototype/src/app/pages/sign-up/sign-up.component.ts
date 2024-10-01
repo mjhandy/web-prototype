@@ -63,6 +63,18 @@ export class SignUpComponent implements OnInit {
         [
           Validators.required
         ]
+      ],
+      usZipCode: ['',
+        [
+          Validators.required,
+          Validators.pattern(this.zipCodeReg)
+        ]
+      ],
+      canPostalCode: ['',
+        [
+          Validators.required,
+          Validators.pattern(this.postalCodeReg)
+        ]
       ]
     });
 
