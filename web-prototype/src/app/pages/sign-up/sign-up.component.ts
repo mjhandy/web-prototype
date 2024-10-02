@@ -8,6 +8,7 @@ import {
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
 import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
+import { of } from 'rxjs';
 
 
 
@@ -32,6 +33,8 @@ export class SignUpComponent implements OnInit {
   zipCodeReg = new RegExp("^[0-9]{5}(?:-[0-9]{4})?$");
   postalCodeReg = new RegExp("^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$");
   countries: any = [];
+  states: any = [];
+  provinces: any = [];
 
   constructor( private fb: FormBuilder ) {
     this.signUpForm = this.fb.group({
@@ -75,10 +78,28 @@ export class SignUpComponent implements OnInit {
           Validators.required,
           Validators.pattern(this.postalCodeReg)
         ]
+      ],
+      state: ['',
+        [
+          Validators.required
+        ]
+      ],
+      province:['',
+        [
+          Validators.required
+        ]
       ]
     });
 
-    this.countries = this.getCountries();
+    // this.countries = this.getCountries();
+    this.provinces = this.getCanProv();
+    this.states = this.getUsStates();
+
+
+    // asnyc countries
+    of(this.getCountries()).subscribe(countries => {
+      this.countries = countries;
+    });
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -114,6 +135,32 @@ export class SignUpComponent implements OnInit {
       { value: 'us', label: 'forms.countryList.us'},
       { value: 'au', label: 'forms.countryList.au'},
       { value: 'fa', label: 'forms.countryList.fa'},
+    ]
+  }
+
+  //state list
+  getUsStates(){
+    return[
+      {value: 'ca', label: 'California'}
+    ]
+  }
+
+  //Canadian Provinces List
+  getCanProv(){
+    return[
+      { value: 'nl', label:'forms.provList.nl' },
+      { value: 'pe', label:'forms.provList.pe' },
+      { value: 'ns', label:'forms.provList.ns' },
+      { value: 'nb', label:'forms.provList.nb' },
+      { value: 'qc', label:'forms.provList.qc' },
+      { value: 'on', label:'forms.provList.on' },
+      { value: 'mb', label:'forms.provList.mb' },
+      { value: 'sk', label:'forms.provList.sk' },
+      { value: 'ab', label:'forms.provList.ab' },
+      { value: 'bc', label:'forms.provList.bc' },
+      { value: 'yt', label:'forms.provList.yt' },
+      { value: 'nt', label:'forms.provList.nt' },
+      { value: 'nu', label:'forms.provList.nu' },
     ]
   }
 }

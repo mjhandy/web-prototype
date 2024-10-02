@@ -106,7 +106,36 @@
             </div>
             <div class="col-6">
               <div class="mb-2">
+            
                 <label for="state">State</label>
+                <select 
+                  #state 
+                  id="state" 
+                  formControlName="state" 
+                  class="form-control"
+                  [class]="{ 'valid-false': submitted && f['state'].errors }">
+                  <option value="">Please select a state</option>
+                </select>
+                <div class="feedback">
+
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="province">Province/Territory</label>
+                <select 
+                  #province 
+                  id="province" 
+                  formControlName="province" 
+                  class="form-control"
+                  [class]="{ 'valid-false': submitted && f['province'].errors }">
+                  <option value="">Please select a province</option>
+                  <option *ngFor="let province of provinces; let i = index" [value]="provinces[i].value">
+                    {{ provinces[i].label | translate}}
+                   </option>
+                </select>
+                <div class="feedback">
+
+                </div>
               </div>
             </div>
           </div>

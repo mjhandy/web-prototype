@@ -26,6 +26,21 @@
       "au"  : "Australia",
       "fa"  : "France"
     },
+    "provList":{
+      "nl"  : "Newfoundland and Labrador",
+      "pe"  : "Prince Edward Island",
+      "ns"  : "Nova Scotia",
+      "nb"  : "New Brunswick",
+      "qc"  : "Quebec",
+      "on"  : "Ontario",
+      "mb"  : "Manitoba",
+      "sk"  : "Saskatchewan",
+      "ab"  : "Alberta",
+      "bc"  : "British Columbia",
+      "yt"  : "Yukon",
+      "nt"  : "Northwest Territories",
+      "nu"  : "Nunavut"
+    },
     "required":{
       "fName": "Please enter a First Name.",
       "lName": "Please enter a Last Name.",
