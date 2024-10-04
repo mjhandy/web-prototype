@@ -14,6 +14,8 @@
     "signUpForm": "Sign Up Form"
   },
   "forms":{
+    "intro" : "Please fill in all the required fields.",
+    "introError"  : "Please correct the errors bellow.",
     "fName": "First Name",
     "lName": "Last Name",
     "email": "Email Address",
@@ -45,8 +47,10 @@
       "fName": "Please enter a First Name.",
       "lName": "Please enter a Last Name.",
       "email": "Please enter an Email address.",
-      "address": "Please enter an address.",
-      "country": "Please select a country.",
+      "address": "Please enter an Address.",
+      "country": "Please select a Country.",
+      "state" : "Please select a State.",
+      "province"  : "Please select a Province.",
       "usZipCode": "Zip code is required",
       "canPostalCode": "A Postal Code is required"
     },
