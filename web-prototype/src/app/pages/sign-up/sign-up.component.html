@@ -14,11 +14,10 @@
     <div class="col-8">
       <form focusInvalidInput [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <fieldset>
-          <legend>Name and Email Address</legend>
+          <legend class="visually-hidden">{{ "forms.legend.name" | translate }}</legend>
           <div class="mb-2">
             <label for="fName"
-              >{{ "forms.fName" | translate
-              }}<span class="required">*</span></label
+              >{{ "forms.fName" | translate }}<span class="required">*</span></label
             >
             <input
               type="text"
@@ -92,7 +91,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>Address</legend>
+          <legend  class="visually-hidden">{{ "forms.legend.address" | translate }}</legend>
           <div class="mb-2">
             <label for="address"
               >{{ "forms.address" | translate
@@ -273,7 +272,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>Form Controls</legend>
+          <legend  class="visually-hidden">{{ "forms.legend.controls" | translate }}</legend>
           <div class="mb-3">
             <button type="submit" class="btn btn-primary">Register</button>
             <button type="button" (click)="onReset()" class="btn btn-warning">

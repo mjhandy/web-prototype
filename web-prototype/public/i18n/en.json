@@ -14,6 +14,11 @@
     "signUpForm": "Sign Up Form"
   },
   "forms":{
+    "legend":{
+      "name" : "Name and Email Address",
+      "address" :"Address",
+      "controls" : "Submit and Clear Form Buttons"
+    },
     "intro" : "Please fill in all the required fields.",
     "introError"  : "Please correct the errors bellow.",
     "fName": "First Name",
