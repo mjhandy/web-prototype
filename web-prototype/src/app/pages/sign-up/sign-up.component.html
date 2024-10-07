@@ -7,7 +7,7 @@
       </div>
       <div class="form-intro-error" aria-live="assertive">
         @if (submitted && signUpForm.invalid){
-          {{ "forms.introError" | translate }}
+        {{ "forms.introError" | translate }}
         }
       </div>
     </div>
@@ -16,17 +16,9 @@
         <fieldset>
           <legend class="visually-hidden">{{ "forms.legend.name" | translate }}</legend>
           <div class="mb-2">
-            <label for="fName"
-              >{{ "forms.fName" | translate }}<span class="required">*</span></label
-            >
-            <input
-              type="text"
-              #fName
-              id="fName"
-              formControlName="fName"
-              class="form-control"
-              [class]="{ 'valid-false': submitted && f['fName'].errors }"
-            />
+            <label for="fName">{{ "forms.label.fName" | translate }}<span class="required">*</span></label>
+            <input type="text" #fName id="fName" formControlName="fName" class="form-control"
+              [class]="{ 'valid-false': submitted && f['fName'].errors }" />
             <div class="feedback">
               @if (submitted && f['fName'].errors) {
               <div class="feedback-invalid">
@@ -40,18 +32,10 @@
             </div>
           </div>
           <div class="mb-2">
-            <label for="lName"
-              >{{ "forms.lName" | translate
-              }}<span class="required">*</span></label
-            >
-            <input
-              type="text"
-              #lName
-              id="lName"
-              formControlName="lName"
-              class="form-control"
-              [class]="{ 'valid-false': submitted && f['lName'].errors }"
-            />
+            <label for="lName">{{ "forms.label.lName" | translate
+              }}<span class="required">*</span></label>
+            <input type="text" #lName id="lName" formControlName="lName" class="form-control"
+              [class]="{ 'valid-false': submitted && f['lName'].errors }" />
             <div class="feedback">
               @if (submitted && f['lName'].errors) {
               <div class="feedback-invalid">
@@ -65,18 +49,10 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="eMail"
-              >{{ "forms.email" | translate
-              }}<span class="required">*</span></label
-            >
-            <input
-              type="email"
-              id="eMail"
-              formControlName="eMail"
-              placeholder="name@example.com"
-              class="form-control"
-              [class]="{ 'valid-false': submitted && f['eMail'].errors }"
-            />
+            <label for="eMail">{{ "forms.label.email" | translate
+              }}<span class="required">*</span></label>
+            <input type="email" id="eMail" formControlName="eMail" placeholder="name@example.com" class="form-control"
+              [class]="{ 'valid-false': submitted && f['eMail'].errors }" />
             <div class="feedback">
               @if (submitted && f['eMail'].errors) {
               <div class="feedback-invalid">
@@ -91,19 +67,12 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend  class="visually-hidden">{{ "forms.legend.address" | translate }}</legend>
+          <legend class="visually-hidden">{{ "forms.legend.address" | translate }}</legend>
           <div class="mb-2">
-            <label for="address"
-              >{{ "forms.address" | translate
-              }}<span class="required">*</span></label
-            >
-            <input
-              type="text"
-              id="address"
-              formControlName="address"
-              class="form-control"
-              [class]="{ 'valid-false': submitted && f['address'].errors }"
-            />
+            <label for="address">{{ "forms.label.address" | translate
+              }}<span class="required">*</span></label>
+            <input type="text" id="address" formControlName="address" class="form-control"
+              [class]="{ 'valid-false': submitted && f['address'].errors }" />
             <div class="feedback">
               @if (submitted && f['address'].errors) {
               <div class="feedback-invalid">
@@ -117,25 +86,13 @@
           <div class="row">
             <div class="col-6">
               <div class="mb-2">
-                <label for="country"
-                  >{{ "forms.country" | translate
-                  }}<span class="required">*</span></label
-                >
-                <select
-                  #country
-                  id="country"
-                  name="country"
-                  formControlName="country"
-                  class="form-control"
-                  [class]="{ 'valid-false': submitted && f['country'].errors }"
-                >
+                <label for="country">{{ "forms.label.country" | translate }}<span class="required">*</span></label>
+                <select #country id="country" name="country" formControlName="country" class="form-control"
+                  [class]="{ 'valid-false': submitted && f['country'].errors }">
                   <option value="" disabled selected>
-                    {{ "forms.countrySelect" | translate }}
+                    {{ "forms.label.select" | translate }}
                   </option>
-                  <option
-                    *ngFor="let country of countries; let i = index"
-                    [value]="countries[i].value"
-                  >
+                  <option *ngFor="let country of countries; let i = index" [value]="countries[i].value">
                     {{ countries[i].label | translate }}
                   </option>
                 </select>
@@ -152,15 +109,10 @@
             </div>
             <div class="col-6">
               <div class="mb-2">
-                <label for="state">State<span class="required">*</span></label>
-                <select
-                  #state
-                  id="state"
-                  formControlName="state"
-                  class="form-control"
-                  [class]="{ 'valid-false': submitted && f['state'].errors }"
-                >
-                  <option value="">Please select a state</option>
+                <label for="state">{{ "forms.label.state" | translate }}<span class="required">*</span></label>
+                <select #state id="state" formControlName="state" class="form-control"
+                  [class]="{ 'valid-false': submitted && f['state'].errors }">
+                  <option value="">{{ "forms.label.select" | translate }}</option>
                 </select>
                 <div class="feedback">
                   @if (submitted && f['state'].errors) {
@@ -173,21 +125,11 @@
                 </div>
               </div>
               <div class="mb-2">
-                <label for="province"
-                  >Province/Territory<span class="required">*</span></label
-                >
-                <select
-                  #province
-                  id="province"
-                  formControlName="province"
-                  class="form-control"
-                  [class]="{ 'valid-false': submitted && f['province'].errors }"
-                >
-                  <option value="">Please select a province</option>
-                  <option
-                    *ngFor="let province of provinces; let i = index"
-                    [value]="provinces[i].value"
-                  >
+                <label for="province">{{ "forms.label.province" | translate }}<span class="required">*</span></label>
+                <select #province id="province" formControlName="province" class="form-control"
+                  [class]="{ 'valid-false': submitted && f['province'].errors }">
+                  <option value="">{{ "forms.label.select" | translate }}</option>
+                  <option *ngFor="let province of provinces; let i = index" [value]="provinces[i].value">
                     {{ provinces[i].label | translate }}
                   </option>
                 </select>
@@ -212,19 +154,10 @@
             <div class="col-6">
               <div class="mb-2">
                 @if (country.value == 'us'){
-                <label for="usZipCode"
-                  >Zip Code<span class="required">*</span></label
-                >
-                <input
-                  type="text"
-                  id="usZipCode"
-                  formControlName="usZipCode"
-                  class="form-control"
-                  [class]="{
+                <label for="usZipCode">Zip Code<span class="required">*</span></label>
+                <input type="text" id="usZipCode" formControlName="usZipCode" class="form-control" [class]="{
                     'valid-false': submitted && f['usZipCode'].errors
-                  }"
-                  placeholder="xxxxx"
-                />
+                  }" placeholder="xxxxx" />
                 <div class="feedback">
                   @if (submitted && f['usZipCode'].errors) {
                   <div class="feedback-invalid">
@@ -237,23 +170,13 @@
                   }
                 </div>
                 } @if (country.value == 'ca'){
-                <label for="canPostalCode"
-                  >Postal Code<span class="required">*</span></label
-                >
-                <input
-                  type="text"
-                  #canPostalCode
-                  id="canPostalCode"
-                  formControlName="canPostalCode"
-                  class="form-control"
-                  [class]="{
+                <label for="canPostalCode">Postal Code<span class="required">*</span></label>
+                <input type="text" #canPostalCode id="canPostalCode" formControlName="canPostalCode"
+                  class="form-control" [class]="{
                     'valid-false': submitted && f['canPostalCode'].errors
-                  }"
-                  placeholder="A0A 0A0"
-                  (input)="
+                  }" placeholder="A0A 0A0" (input)="
                     canPostalCode.value = canPostalCode.value.toUpperCase()
-                  "
-                />
+                  " />
                 <div class="feedback">
                   @if (submitted && f['canPostalCode'].errors) {
                   <div class="feedback-invalid">
@@ -272,7 +195,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend  class="visually-hidden">{{ "forms.legend.controls" | translate }}</legend>
+          <legend class="visually-hidden">{{ "forms.legend.controls" | translate }}</legend>
           <div class="mb-3">
             <button type="submit" class="btn btn-primary">Register</button>
             <button type="button" (click)="onReset()" class="btn btn-warning">

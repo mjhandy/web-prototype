@@ -5,39 +5,71 @@
     "french": "Français"    
   },
   "nav": {
-    "home": "Home FR",
-    "aboutUs": "About Us FR"
+    "home": "Page d'accueil",
+    "aboutUs": "À propos de nous"
   },
   "headings":{
     "langModal": "Sélectionnez une langue"
   },
   "forms":{
-    "fName": "Prénom",
-    "lName": "Nom de famille",
-    "email": "Email Address",
-    "address": "Address",
-    "country": "Pays",
-    "countrySelect": "Veuillez sélectionner un pays.",
+    "intro" : "Veuillez remplir tous les champs obligatoires.",
+    "introError"  : "Veuillez corriger les erreurs ci-dessous.",
+    "legend":{
+      "name" : "Nom et adresse e-mail",
+      "address" :"Adress",
+      "controls" : "Boutons Soumettre et Effacer le formulaire"
+    },
+    "label" : {
+      "fName": "Prénom",
+      "lName": "Nom de famille",
+      "email": "Adresse email",
+      "address": "Adress",
+      "country": "Pays",      
+      "select": "Veuillez faire une sélection.",
+      "province": "Province ou territoire",
+      "state": "État"
+    },
     "countryList" :{
       "ca"  : "Canada",
-      "us"  : "les états-unis d'Amérique",
+      "us"  : "États-Unis d'Amérique",
       "au"  : "Australie",
       "fa"  : "France"
+    },
+    "provList":{
+      "nl"  : "Terre-Neuve-et-Labrador",
+      "pe"  : "Île-du-Prince-Édouard",
+      "ns"  : "Nova Scotia",
+      "nb"  : "Nouvelle-Écosse",
+      "qc"  : "Québec",
+      "on"  : "Ontario",
+      "mb"  : "Manitoba",
+      "sk"  : "Saskatchewan",
+      "ab"  : "Alberta",
+      "bc"  : "Colombie-Britannique",
+      "yt"  : "Yukon",
+      "nt"  : "Territoires du Nord-Ouest",
+      "nu"  : "Nunavut"
     },
     "required":{
       "fName": "Veuillez entrer un prénom.",
       "lName": "Veuillez entrer un nom de famille.",
       "email": "Veuillez saisir une adresse e-mail.",
-      "address": "Veuillez entrer une adresse.",
-      "country": "Veuillez sélectionner un pays."
+      "address": "Please enter an Address.",
+      "country": "Veuillez entrer une adresse.",
+      "state" : "Veuillez sélectionner un État.",
+      "province"  : "Veuillez sélectionner une province ou un territoire.",
+      "usZipCode": "Le code postal est requis.",
+      "canPostalCode": "Un code postal est requis."
     },
     "invalid": {
       "fName": "Veuillez entrer un prénom valide.",
       "lName": "Veuillez entrer un nom de famille valide.",
       "email": "S'il vous plaît, mettez une adresse email valide.",
-      "country": "Veuillez sélectionner un pays."
+      "country": "Veuillez sélectionner un pays.",
+      "usZipCode": "Veuillez saisir un code postal valide.",
+      "canPostalCode": "Veuillez entrer un code postal valide."
     }
-  },  
+  },
   "footer": {
     "siteName": "MJH FR",
     "privacy": "politique de confidentialité",

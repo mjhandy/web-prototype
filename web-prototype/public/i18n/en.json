@@ -14,19 +14,23 @@
     "signUpForm": "Sign Up Form"
   },
   "forms":{
+    "intro" : "Please fill in all the required fields.",
+    "introError"  : "Please correct the errors bellow.",
     "legend":{
       "name" : "Name and Email Address",
       "address" :"Address",
       "controls" : "Submit and Clear Form Buttons"
     },
-    "intro" : "Please fill in all the required fields.",
-    "introError"  : "Please correct the errors bellow.",
-    "fName": "First Name",
-    "lName": "Last Name",
-    "email": "Email Address",
-    "address": "Address",
-    "country": "Country",
-    "countrySelect": "Please select a country",
+    "label" : {
+      "fName": "First Name",
+      "lName": "Last Name",
+      "email": "Email Address",
+      "address": "Address",
+      "country": "Country",      
+      "select": "Please make a selection.",
+      "province": "Province/Territory",
+      "state": "State"
+    },
     "countryList" :{
       "ca"  : "Canada",
       "us"  : "United States of America",
@@ -55,7 +59,7 @@
       "address": "Please enter an Address.",
       "country": "Please select a Country.",
       "state" : "Please select a State.",
-      "province"  : "Please select a Province.",
+      "province"  : "Please select a Province or Territory.",
       "usZipCode": "Zip code is required",
       "canPostalCode": "A Postal Code is required"
     },
