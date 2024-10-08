@@ -88,6 +88,12 @@ export class SignUpComponent implements OnInit {
         [
           Validators.required
         ]
+      ],
+      city:['',
+        [
+          Validators.required,
+          Validators.pattern(this.alphaReg)
+        ]
       ]
     });
 

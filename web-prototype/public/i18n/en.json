@@ -2,7 +2,9 @@
   "buttons": {
     "close": "Close",
     "english": "English",
-    "french": "French"
+    "french": "French",
+    "submit"  : "Submit",
+    "clear" : "Clear"
   },
   "nav": {
     "home": "Home",
@@ -29,7 +31,8 @@
       "country": "Country",      
       "select": "Please make a selection.",
       "province": "Province/Territory",
-      "state": "State"
+      "state": "State",
+      "city": "City"
     },
     "countryList" :{
       "ca"  : "Canada",
@@ -59,14 +62,16 @@
       "address": "Please enter an Address.",
       "country": "Please select a Country.",
       "state" : "Please select a State.",
+      "city"  : "Please enter a city",
       "province"  : "Please select a Province or Territory.",
       "usZipCode": "Zip code is required",
       "canPostalCode": "A Postal Code is required"
     },
     "invalid": {
-      "fName": "Please enter a valid First Name.",
-      "lName": "Please enter a valid Last Name.",
-      "email": "Please enter a valid Email address.",
+      "fName" : "Please enter a valid First Name.",
+      "lName" : "Please enter a valid Last Name.",
+      "email" : "Please enter a valid Email address.",
+      "city"  :"Please enter a valid city",
       "country": "Please select a country.",
       "usZipCode": "Please enter a valid Zip Code",
       "canPostalCode": "Please enter a valid Postal Code"
@@ -81,6 +86,8 @@
     "close": "Close",
     "langToggle": "Click to select your language",
     "home": "This is the home page",
-    "skip": "Skip To Main"
+    "skip": "Skip To Main",
+    "submit"  : "Submit the form",
+    "clear" :"Clear the form"
   }
 }

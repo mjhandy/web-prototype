@@ -148,7 +148,25 @@
           <div class="row">
             <div class="col-6">
               <div class="mb-2">
-                <label for="city">City<span class="required">*</span></label>
+                <label for="city">{{ "forms.label.city" | translate }}<span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  #city 
+                  id="city" 
+                  formControlName="city" 
+                  class="form-control"
+                  [class]="{ 'valid-false': submitted && f['city'].errors }" />
+                  <div class="feedback">
+                    @if (submitted && f['city'].errors) {
+                    <div class="feedback-invalid">
+                      @if (f['city'].errors['required']) {
+                      {{ "forms.required.city" | translate }}
+                      } @if (f['city'].errors['pattern']) {
+                      {{ "forms.invalid.city" | translate }}
+                      }
+                    </div>
+                    }
+                  </div>
               </div>
             </div>
             <div class="col-6">
@@ -197,9 +215,18 @@
         <fieldset>
           <legend class="visually-hidden">{{ "forms.legend.controls" | translate }}</legend>
           <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Register</button>
-            <button type="button" (click)="onReset()" class="btn btn-warning">
-              Reset
+            <button 
+              type="submit" 
+              class="btn btn-primary" 
+              attr.aria-label="{{ 'wcag.submit' | translate }}">
+                {{ "buttons.submit" | translate }}
+            </button>
+            <button 
+              type="button" 
+              (click)="onReset()" 
+              class="btn btn-warning"
+              attr.aria-label="{{ 'wcag.clear' | translate }}">
+              {{ " buttons.clear" | translate }}
             </button>
           </div>
         </fieldset>

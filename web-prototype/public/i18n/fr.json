@@ -9,7 +9,8 @@
     "aboutUs": "À propos de nous"
   },
   "headings":{
-    "langModal": "Sélectionnez une langue"
+    "langModal": "Sélectionnez une langue",
+    "signUpForm": "Sign Up Form FR"
   },
   "forms":{
     "intro" : "Veuillez remplir tous les champs obligatoires.",
@@ -70,6 +71,7 @@
       "canPostalCode": "Veuillez entrer un code postal valide."
     }
   },
+
   "footer": {
     "siteName": "MJH FR",
     "privacy": "politique de confidentialité",

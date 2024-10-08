@@ -20,6 +20,9 @@ import { LocalStorageService } from '../../../../services/local-storage-service'
   styleUrl: './lang-toggle.component.scss'
 })
 export class LangToggleComponent {
+
+  
+
   constructor(
     private translate: TranslateService,
     private LocalStorageService: LocalStorageService,
@@ -36,10 +39,24 @@ export class LangToggleComponent {
     this.LocalStorageService.setItem('lang', lang);
   }
 
+  setLang(lang:string){
+    this.translate.use(lang);
+  }
+
   checkLang() {
     const currentLang = this.LocalStorageService.getItem('lang');
+    
+    if (currentLang){
+      console.log('current lang:', currentLang);
+      this.setLang(currentLang);
+    }
+    else{
+      console.log('lang not set');
+      this.translateLanguageTo('en');
+      console.log('en set as default lang');
+    }
 
-    console.log('current lang:', currentLang);
+    
   }
 
 }
