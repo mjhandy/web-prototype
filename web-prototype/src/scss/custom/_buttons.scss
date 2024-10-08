@@ -1,19 +1,29 @@
+@import 'bsOverrides';
+
+
 .btn{
   margin: 0;
   padding: 0;
   border: 0;
   &-primary{
-    background-color: blue;
-    border: 1px solid blue;
+    background-color: $blue;
+    border: 1px solid $blue;
     color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    &:hover{
+      background-color: lighten($color: $blue, $amount: 5);
+    }
   }
   &-secondary{
     background-color: transparent;
-    border: 1px solid blue;
-    color: blue;;
+    border: 1px solid $blue;
+    color: $blue;
+    border-radius: 5px;
+    padding: 5px 10px;
   }
   &-textLink{
-    color: blue;
-    text-decoration: blue;
+    color: $blue;
+    text-decoration: $blue;
   }
 }
