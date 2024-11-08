@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
 import { 
@@ -7,8 +7,10 @@ import {
   FormGroup, 
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
+import { FormField } from '../../shared/form-field';
 import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
 import { of } from 'rxjs';
+
 
 
 
@@ -25,6 +27,13 @@ import { of } from 'rxjs';
   styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent implements OnInit {
+
+  @Input() input: FormField<string> | undefined;
+  @Input() form: FormGroup | undefined;
+
+  // get isValid() { 
+  //   return    this.form.controls[this.input.key].valid; 
+  // }
 
   signUpForm: FormGroup;
   submitted = false;
