@@ -1,0 +1,23 @@
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <fieldset>
+      <legend>Name and Email</legend>
+      @for (question of questions; track question) {
+        <div class="mb-2">
+          <app-question [question]="question" [form]="form"></app-question>
+        </div>
+      }
+    </fieldset>
+    <fieldset>
+      <legend>Submit and Clear</legend>
+      <div class="mb-2">
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary me-3">{{ "buttons.submit" | translate }}</button>
+      </div>
+    </fieldset>
+
+  </form>
+  @if (payLoad) {
+    <div class="form-row">
+      <strong>Saved the following values</strong><br>{{ payLoad }}
+    </div>
+  }

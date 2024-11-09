@@ -30,10 +30,19 @@ export const routes: Routes = [
   {
     path: 'en/sign-up',    
     // loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
-    loadComponent: () => import('./pages/sign-up-dynamic/sign-up-dynamic.component').then((d) => d.SignUpDynamicComponent),
+    loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),
+    // loadComponent: () => import('./pages/sign-up-dynamic/sign-up-dynamic.component').then((d) => d.SignUpDynamicComponent),
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages'
     }  
   },
+  {
+    path: 'en/sign-up-old',    
+    loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
+    title: 'English Sign Up Form ! Web Prototype',
+    data:{      
+      desciption: 'This is he Web Prototype About Us pages'
+    }  
+  },  
 ];

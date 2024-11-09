@@ -7,7 +7,7 @@ import {
   FormGroup, 
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
-import { FormField } from '../../shared/form-field';
+// import { FormField } from '../../shared/form-field';
 import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
 import { of } from 'rxjs';
 
@@ -28,8 +28,8 @@ import { of } from 'rxjs';
 })
 export class SignUpComponent implements OnInit {
 
-  @Input() input: FormField<string> | undefined;
-  @Input() form: FormGroup | undefined;
+  // @Input() input: FormField<string> | undefined;
+  // @Input() form: FormGroup | undefined;
 
   // get isValid() { 
   //   return    this.form.controls[this.input.key].valid; 
