@@ -1,7 +1,7 @@
 
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
     <fieldset>
-      <legend>Name and Email</legend>
+      <legend>{{ "forms.legend.name" | translate }}</legend>
       @for (question of questions; track question) {
         <div class="mb-2">
           <app-question [question]="question" [form]="form"></app-question>
@@ -9,7 +9,7 @@
       }
     </fieldset>
     <fieldset>
-      <legend>Submit and Clear</legend>
+      <legend>{{ "forms.legend.controls" | translate }}</legend>
       <div class="mb-2">
         <button type="submit" [disabled]="!form.valid" class="btn btn-primary me-3">{{ "buttons.submit" | translate }}</button>
       </div>

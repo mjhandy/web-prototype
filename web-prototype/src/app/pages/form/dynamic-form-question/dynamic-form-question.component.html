@@ -1,9 +1,9 @@
 <div [formGroup]="form">
-  <label [attr.for]="question.key">{{ question.label }} <span class="required">*</span></label>
+  <label [attr.for]="question.key">{{ question.label | translate}} <span class="required">*</span></label>
   <div>
     @switch (question.controlType) {
       @case ('textbox') {
-        <input [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control">
+        <input [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control" placeholder="{{ question.label | translate}}">
       } @case ('dropdown') {
         <select [id]="question.key" [formControlName]="question.key" class="form-control">
         @for (opt of question.options; track opt) {

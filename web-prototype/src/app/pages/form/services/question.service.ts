@@ -3,17 +3,14 @@ import {DropdownQuestion} from './../classes/question-dropdown';
 import {QuestionBase} from './../base/question-base';
 import {TextboxQuestion} from './../classes/question-textbox';
 import {of} from 'rxjs';
-import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
 export class QuestionService {
-  fname: string | undefined;
+
 
   // TODO: get from a remote source of question metadata
 
-  constructor(public translate: TranslateService) {
-   let fname = this.translate.get('forms.label.fName').subscribe();
-  }
+
 
   
   getQuestions() {
@@ -21,27 +18,27 @@ export class QuestionService {
       
       new TextboxQuestion({
         key: 'fName',
-        label: 'AA' + this.fname,
+        label: 'forms.label.fName',
         value: '',
         required: true,
         order: 1,
       }),
       new TextboxQuestion({
         key: 'lName',
-        label: 'Last Name',
+        label: 'forms.label.lName',
         value: '',
         required: true,
         order: 2,
       }),      
       new TextboxQuestion({
         key: 'emailAddress',
-        label: 'Email',
+        label: 'forms.label.email',
         type: 'email',
         order: 3,
       }),
       new DropdownQuestion({
         key: 'country',
-        label: 'Country',
+        label: 'forms.label.country',
         options: [
           {key: 'ca', value: 'Canada'},
           {key: 'us', value: 'United States of America'},
