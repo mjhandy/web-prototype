@@ -1,10 +1,11 @@
 <div [formGroup]="form">
   <label [attr.for]="question.key">{{ question.label | translate}} <span class="required">*</span></label>
-  <div>
+  
     @switch (question.controlType) {
       @case ('textbox') {
         <input [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control" placeholder="{{ question.label | translate}}">
-      } @case ('dropdown') {
+      } 
+      @case ('dropdown') {
         <select [id]="question.key" [formControlName]="question.key" class="form-control">
         @for (opt of question.options; track opt) {
           <option [value]="opt.key">{{ opt.value }}</option>
@@ -12,6 +13,6 @@
         </select>
       }
     }
-  </div>
+  
   @if (!isValid) {<div class="errorMessage">{{ question.label }} is required</div>}
 </div>
