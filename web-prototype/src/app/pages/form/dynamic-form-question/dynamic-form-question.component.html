@@ -3,16 +3,31 @@
   
     @switch (question.controlType) {
       @case ('textbox') {
-        <input [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control" placeholder="{{ question.label | translate}}">
+        <input 
+          [formControlName]="question.key" 
+          [id]="question.key" 
+          [type]="question.type" 
+          class="form-control" 
+          [class]="{  'valid-false': !isValid  }"
+          placeholder="{{ question.label | translate}}">
       } 
       @case ('dropdown') {
         <select [id]="question.key" [formControlName]="question.key" class="form-control">
-        @for (opt of question.options; track opt) {
-          <option [value]="opt.key">{{ opt.value }}</option>
-        }
+          <option value="" disabled selected>
+            {{ "forms.label.select" | translate }}
+          </option>
+          @for (opt of question.options; track opt) {
+            <option [value]="opt.key">{{ opt.value }}</option>
+          }
         </select>
       }
     }
+
+  <div class="feedback">
+    @if (!isValid) {
+      <div class="feedback-invalid">{{ question.label | translate }} is required</div>
+    }
+  </div>
   
-  @if (!isValid) {<div class="errorMessage">{{ question.label }} is required</div>}
+  
 </div>
