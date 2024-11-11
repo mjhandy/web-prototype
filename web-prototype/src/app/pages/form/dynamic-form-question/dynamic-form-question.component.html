@@ -7,7 +7,8 @@
           [formControlName]="question.key" 
           [id]="question.key" 
           [type]="question.type" 
-          class="form-control" 
+          class="form-control"
+          [pattern]="question.vpattern" 
           [class]="{  'valid-false': !isValid  }"
           placeholder="{{ question.label | translate}}">
       } 

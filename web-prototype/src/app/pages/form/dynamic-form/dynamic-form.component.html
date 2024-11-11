@@ -1,9 +1,10 @@
 
   <form (ngSubmit)="onSubmit()" [formGroup]="form">
-    <fieldset>
+    <fieldset class="row">
       <legend>{{ "forms.legend.name" | translate }}</legend>
       @for (question of questions; track question) {
-        <div class="mb-2">
+      
+        <div class="mb-2" [class]="question.class">
           <app-question [question]="question" [form]="form"></app-question>
         </div>
       }

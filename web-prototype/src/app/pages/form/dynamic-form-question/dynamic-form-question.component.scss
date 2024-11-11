@@ -5,3 +5,9 @@
 
 @import 'custom/formCustomization';
 @import 'custom/buttons';
+
+.size{
+  &-half{
+    width: 50%;
+  }
+}

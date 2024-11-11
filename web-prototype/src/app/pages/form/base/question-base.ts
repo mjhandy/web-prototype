@@ -7,6 +7,8 @@ export class QuestionBase<T> {
   controlType: string;
   type: string;
   options: {key: string; value: string}[];
+  class: string;
+  vpattern: string;
   constructor(
     options: {
       value?: T;
@@ -17,6 +19,8 @@ export class QuestionBase<T> {
       controlType?: string;
       type?: string;
       options?: {key: string; value: string}[];
+      class?: string;
+      vpattern?: string;
     } = {},
   ) {
     this.value = options.value;
@@ -27,5 +31,7 @@ export class QuestionBase<T> {
     this.controlType = options.controlType || '';
     this.type = options.type || '';
     this.options = options.options || [];
+    this.class = options.class || 'col-12';
+    this.vpattern = options.vpattern || '';
   }
 }
