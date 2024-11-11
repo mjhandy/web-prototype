@@ -9,7 +9,7 @@
           [type]="question.type" 
           class="form-control"
           [pattern]="question.vpattern" 
-          [class]="{  'valid-false': !isValid  }"
+          [class]="{  'valid-false': !isValid && Submitted  }"
           placeholder="{{ question.label | translate}}">
       } 
       @case ('dropdown') {
@@ -25,7 +25,7 @@
     }
 
   <div class="feedback">
-    @if (!isValid) {
+    @if (!isValid ) {
       <div class="feedback-invalid">{{ question.label | translate }} is required</div>
     }
   </div>

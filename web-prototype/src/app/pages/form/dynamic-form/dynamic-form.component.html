@@ -12,7 +12,7 @@
     <fieldset>
       <legend>{{ "forms.legend.controls" | translate }}</legend>
       <div class="mb-2">
-        <button type="submit" [disabled]="!form.valid" class="btn btn-primary me-3">{{ "buttons.submit" | translate }}</button>
+        <button type="submit" [disabled]="!form.valid && Submitted" class="btn btn-primary me-3">{{ "buttons.submit" | translate }}</button>
       </div>
     </fieldset>
 
