@@ -32,7 +32,9 @@
       "select": "Please make a selection.",
       "province": "Province/Territory",
       "state": "State",
-      "city": "City"
+      "city": "City",
+      "usZipCode": "Zip Code",
+      "canPostalCode": "Postal Code"
     },
     "countryList" :{
       "ca"  : "Canada",
