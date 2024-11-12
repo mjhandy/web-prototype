@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormBase } from '../base/form-base';
+import { FormBase } from '../../../shared/forms/base/form-base';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

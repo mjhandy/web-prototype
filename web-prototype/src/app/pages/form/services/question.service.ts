@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {DropdownQuestion} from './../classes/question-dropdown';
-import {FormBase} from '../base/form-base';
+import {FormBase} from '../../../shared/forms/base/form-base';
 import {TextboxQuestion} from './../classes/question-textbox';
 import {of} from 'rxjs';
 
