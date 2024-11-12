@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {DropdownQuestion} from './../classes/question-dropdown';
 import {FormBase} from '../../../shared/forms/base/form-base';
-import {TextboxQuestion} from './../classes/question-textbox';
+import {TexboxInput} from './../classes/question-textbox';
 import {of} from 'rxjs';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class QuestionService {
   getQuestions() {
     const questions: FormBase<string>[] = [
       
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'fName',
         label: 'forms.label.fName',
         value: '',
@@ -25,7 +25,7 @@ export class QuestionService {
         order: 1,
       
       }),
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'lName',
         label: 'forms.label.lName',
         value: '',
@@ -33,7 +33,7 @@ export class QuestionService {
         vpattern: "^[a-zA-Z']+$",
         order: 2,
       }),      
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'emailAddress',
         label: 'forms.label.email',
         type: 'email',
@@ -41,7 +41,7 @@ export class QuestionService {
         vpattern: "^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$",
         order: 3,
       }),
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'address',
         label: 'forms.label.address',
         type: 'text',
@@ -70,7 +70,7 @@ export class QuestionService {
         order: 6,
         class: 'col-6'
       }),
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'zipCode',
         label: 'forms.label.usZipCode',
         type: 'text',
@@ -79,7 +79,7 @@ export class QuestionService {
         order: 7,
         class: 'w-50'
       }), 
-      new TextboxQuestion({
+      new TexboxInput({
         key: 'postalCode',
         label: 'forms.label.canPostalCode',
         type: 'text',

@@ -1,7 +1,7 @@
-import { QuestionTextbox } from './question-textbox';
+import { TexboxInput } from './question-textbox';
 
 describe('QuestionTextbox', () => {
   it('should create an instance', () => {
-    expect(new QuestionTextbox()).toBeTruthy();
+    expect(new TexboxInput()).toBeTruthy();
   });
 });

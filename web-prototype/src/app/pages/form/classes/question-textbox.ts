@@ -1,4 +1,4 @@
 import {FormBase} from '../../../shared/forms/base/form-base';
-export class TextboxQuestion extends FormBase<string> {
+export class TexboxInput extends FormBase<string> {
   override controlType = 'textbox';
 }
