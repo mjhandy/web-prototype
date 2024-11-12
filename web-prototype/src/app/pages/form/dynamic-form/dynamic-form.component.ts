@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {DynamicFormQuestionComponent} from './../dynamic-form-question/dynamic-form-question.component';
-import {QuestionBase} from './../base/question-base';
+import {QuestionBase} from '../base/form-base';
 import {QuestionControlService} from './../services/question-control.service';
 import { TranslateModule } from '@ngx-translate/core';
 

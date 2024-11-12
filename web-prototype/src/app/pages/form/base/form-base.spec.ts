@@ -1,4 +1,4 @@
-import { QuestionBase } from './question-base';
+import { QuestionBase } from './form-base';
 
 describe('QuestionBase', () => {
   it('should create an instance', () => {

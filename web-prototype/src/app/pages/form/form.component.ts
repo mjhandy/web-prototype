@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {AsyncPipe} from '@angular/common';
 import {DynamicFormComponent} from './dynamic-form/dynamic-form.component';
 import {QuestionService} from './services/question.service';
-import {QuestionBase} from './base/question-base';
+import {QuestionBase} from './base/form-base';
 import {Observable} from 'rxjs';
 
 @Component({

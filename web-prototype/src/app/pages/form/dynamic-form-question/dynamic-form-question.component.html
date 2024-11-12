@@ -9,7 +9,7 @@
           [type]="question.type" 
           class="form-control"
           [pattern]="question.vpattern" 
-          [class]="{  'valid-false': !isValid && Submitted  }"
+          [class]="{  'valid-false': !isValid && submitted  }"
           placeholder="{{ question.label | translate}}">
       } 
       @case ('dropdown') {

@@ -1,4 +1,4 @@
-import {QuestionBase} from './../base/question-base';
+import {QuestionBase} from '../base/form-base';
 export class TextboxQuestion extends QuestionBase<string> {
   override controlType = 'textbox';
 }
