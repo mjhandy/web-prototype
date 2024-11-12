@@ -1,6 +1,6 @@
 export class QuestionDropdown {
 }
-import {QuestionBase} from '../base/form-base';
-export class DropdownQuestion extends QuestionBase<string> {
+import {FormBase} from '../base/form-base';
+export class DropdownQuestion extends FormBase<string> {
   override controlType = 'dropdown';
 }

@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormGroup, ReactiveFormsModule} from '@angular/forms';
 import {DynamicFormQuestionComponent} from './../dynamic-form-question/dynamic-form-question.component';
-import {QuestionBase} from '../base/form-base';
+import {FormBase} from '../base/form-base';
 import {QuestionControlService} from './../services/question-control.service';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -19,13 +19,13 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
 })
 export class DynamicFormComponent implements OnInit {
-  @Input() questions: QuestionBase<string>[] | null = [];
+  @Input() questions: FormBase<string>[] | null = [];
   form!: FormGroup;
   payLoad = '';
   Submitted = false;
   constructor(private qcs: QuestionControlService) {}
   ngOnInit() {
-    this.form = this.qcs.toFormGroup(this.questions as QuestionBase<string>[]);
+    this.form = this.qcs.toFormGroup(this.questions as FormBase<string>[]);
   }
   onSubmit() {
     this.Submitted = true;

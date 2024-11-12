@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {AsyncPipe} from '@angular/common';
 import {DynamicFormComponent} from './dynamic-form/dynamic-form.component';
 import {QuestionService} from './services/question.service';
-import {QuestionBase} from './base/form-base';
+import {FormBase} from './base/form-base';
 import {Observable} from 'rxjs';
 
 @Component({
@@ -14,7 +14,7 @@ import {Observable} from 'rxjs';
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
-  questions$: Observable<QuestionBase<any>[]>;
+  questions$: Observable<FormBase<any>[]>;
   constructor(service: QuestionService) {
     this.questions$ = service.getQuestions();
   }

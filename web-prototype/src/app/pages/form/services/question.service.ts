@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {DropdownQuestion} from './../classes/question-dropdown';
-import {QuestionBase} from '../base/form-base';
+import {FormBase} from '../base/form-base';
 import {TextboxQuestion} from './../classes/question-textbox';
 import {of} from 'rxjs';
 
@@ -14,7 +14,7 @@ export class QuestionService {
 
   
   getQuestions() {
-    const questions: QuestionBase<string>[] = [
+    const questions: FormBase<string>[] = [
       
       new TextboxQuestion({
         key: 'fName',

@@ -1,4 +1,4 @@
-export class QuestionBase<T> {
+export class FormBase<T> {
   value: T | undefined;
   key: string;
   label: string;

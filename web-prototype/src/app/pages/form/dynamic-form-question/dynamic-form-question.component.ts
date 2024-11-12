@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { QuestionBase } from '../base/form-base';
+import { FormBase } from '../base/form-base';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [TranslateModule, CommonModule, ReactiveFormsModule],
 })
 export class DynamicFormQuestionComponent {
-  @Input() question!: QuestionBase<string>;
+  @Input() question!: FormBase<string>;
   @Input() form!: FormGroup;
   @Input() submitted!: string;
   
