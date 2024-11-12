@@ -1,4 +1,4 @@
-import { QuestionDropdown } from '../../classes/forms/question-dropdown';
+import { QuestionDropdown } from './input-dropdown';
 
 describe('QuestionDropdown', () => {
   it('should create an instance', () => {
