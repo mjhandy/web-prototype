@@ -22,6 +22,15 @@
           }
         </select>
       }
+      @case ('checkbox'){
+        <input 
+          [formControlName]="question.key" 
+          [id]="question.key" 
+          [type]="question.type" 
+          class="form-control"
+          [pattern]="question.vpattern" 
+          [class]="{  'valid-false': !isValid && submitted  }">
+      }
     }
 
   <div class="feedback">

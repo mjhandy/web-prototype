@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {DropdownQuestion} from '../../../classes/forms/input-dropdown';
 import {FormBase} from '../../../shared/forms//base/form-base';
 import {TexboxInput} from '../../../classes/forms/input-textbox';
+import { CheckboxInput } from '../../../classes/forms/input-checkbox';
 import {of} from 'rxjs';
 
 @Injectable()
@@ -88,6 +89,11 @@ export class QuestionService {
         order: 8,
         class: 'w-50'
       }),
+    
+      // new CheckboxInput({
+      //   key, 'optinInPrivacy',
+      //   label: 'Privacy'
+      // })
     ];
     return of(questions.sort((a, b) => a.order - b.order));
   }
