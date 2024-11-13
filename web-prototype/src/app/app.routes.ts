@@ -28,7 +28,7 @@ export const routes: Routes = [
     }  
   },
   {
-    path: 'en/sign-up',    
+    path: 'en/sign-up-reactive',    
     // loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),
     // loadComponent: () => import('./pages/sign-up-dynamic/sign-up-dynamic.component').then((d) => d.SignUpDynamicComponent),
@@ -38,7 +38,7 @@ export const routes: Routes = [
     }  
   },
   {
-    path: 'en/sign-up-old',    
+    path: 'en/sign-up-dynamic',    
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
