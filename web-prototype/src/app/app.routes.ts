@@ -13,9 +13,7 @@ export const routes: Routes = [
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page',
-      name: 'test',
-    }
-    
+    }    
   },
   {
     path: 'en/about-us',    
@@ -23,7 +21,6 @@ export const routes: Routes = [
     title: 'English About Us ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages',
-      name: 'test',
     }  
   },
   {
@@ -31,7 +28,6 @@ export const routes: Routes = [
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
-      name: 'test',
       desciption: 'This is he Web Prototype About Us pages'
     }  
   },
@@ -40,7 +36,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
-      name: 'test',
       desciption: 'This is he Web Prototype About Us pages'
     }  
   },  

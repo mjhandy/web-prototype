@@ -1,8 +1,8 @@
 <p>footer-nav works!</p>
 <nav>
-  @for ( route of routes; track route.name ){
+  @for ( route of routes; track route.title ){
     <li>
-      <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.name }}</a>
+      <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.title }}</a>
     </li>
   }
 
