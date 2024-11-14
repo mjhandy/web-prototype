@@ -1,0 +1,8 @@
+<p>footer-nav works!</p>
+<nav>
+  <ul>
+    <li *for="let route of routes">
+      <a routerLink="route.path" routerLinkActive="active">{{ route.label }}</a>
+    </li>
+  </ul>
+</nav>
