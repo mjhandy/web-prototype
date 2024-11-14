@@ -13,7 +13,7 @@ export const routes: Routes = [
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page',
-      showInFooter: true
+      name: 'test',
     }
     
   },
@@ -22,16 +22,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
     title: 'English About Us ! Web Prototype',
     data:{      
-      desciption: 'This is he Web Prototype About Us pages'
+      desciption: 'This is he Web Prototype About Us pages',
+      name: 'test',
     }  
   },
   {
-    path: 'en/sign-up-reactive',    
-    // loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
-    loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),
-    // loadComponent: () => import('./pages/sign-up-dynamic/sign-up-dynamic.component').then((d) => d.SignUpDynamicComponent),
+    path: 'en/sign-up-reactive',        
+    loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
+      name: 'test',
       desciption: 'This is he Web Prototype About Us pages'
     }  
   },
@@ -40,6 +40,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
+      name: 'test',
       desciption: 'This is he Web Prototype About Us pages'
     }  
   },  

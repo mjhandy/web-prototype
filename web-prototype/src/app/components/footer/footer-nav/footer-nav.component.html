@@ -1,10 +1,9 @@
 <p>footer-nav works!</p>
 <nav>
-  <ul>
-    @for (route of routes; track $index) {
-      <li>
-        <a routerLink=""></a>
-      </li>
-    }
-  </ul>
+  @for ( route of routes; track route.name ){
+    <li>
+      <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.name }}</a>
+    </li>
+  }
+
 </nav>
