@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { FooterNavService } from '../../../services/footer-nav.service';
 
 @Component({
   selector: 'footer-nav',
@@ -13,11 +14,16 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterNavComponent {
 
+  private navigation = inject(FooterNavService);
 
-  routes: { path: string, label: string }[];
-  constructor(private router: Router) {
-    this.routes = this.router.config.filter(route => route.path !== '' && route.data && route.data['label'])
-      .map(route => ({ path: route.path!, label: route.data!['label'] }));
+  routes: Route[] = [];
+
+  ngOnInit(): void {
+    this.routes = this.getRoutes();
+  }
+
+  private getRoutes(): Route[] {
+    return this.navigation.getNavigationRoutes();
   }
 
 }

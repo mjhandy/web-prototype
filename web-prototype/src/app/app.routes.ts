@@ -1,8 +1,5 @@
 import { Routes } from '@angular/router';
-import { Meta, Title } from '@angular/platform-browser';
 
-import { HomeComponent } from './pages/home/home.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
 
 export const routes: Routes = [
   {
@@ -15,7 +12,8 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
     title: 'English Home Page ! Web Prototype',
     data:{      
-      desciption: 'This is the Web Prototype home page'
+      desciption: 'This is the Web Prototype home page',
+      showInFooter: true
     }
     
   },
