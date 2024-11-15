@@ -1,11 +1,13 @@
-import { Component, inject } from '@angular/core';
-import { RouterModule, Router, NavigationEnd } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
+import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
   selector: 'footer-nav',
   standalone: true,
   imports: [
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './footer-nav.component.html',
   styleUrl: './footer-nav.component.scss'

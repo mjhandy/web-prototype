@@ -6,7 +6,8 @@
   },
   "nav": {
     "home": "Page d'accueil",
-    "aboutUs": "À propos de nous"
+    "aboutUs": "À propos de nous",
+    "signUp":   "Sign Up FR"
   },
   "headings":{
     "langModal": "Sélectionnez une langue",

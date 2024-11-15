@@ -13,7 +13,7 @@ export const routes: Routes = [
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page',
-      label: 'Home',
+      label: 'nav.home',
       showInFooter: true,  
     }    
   },
@@ -23,7 +23,7 @@ export const routes: Routes = [
     title: 'English About Us ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages',
-      label: 'About Us',      
+      label: 'nav.aboutUs',      
       showInFooter: true,
     }  
   },
@@ -33,7 +33,7 @@ export const routes: Routes = [
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages',
-      label: 'Sign Up (Reactive)'
+      label: 'nav.signUp'
     }  
   },
   {
@@ -42,7 +42,7 @@ export const routes: Routes = [
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages',
-      label: 'Sign Up (Dynamci)',      
+      label: 'nav.signUp',      
       showInFooter: true,
     }  
   },  

@@ -2,7 +2,7 @@
   <ul>
   @for ( route of routes; track route.title ){
     <li>
-      <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.label}}</a>
+      <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.label | translate}}</a>
     </li>
   }
   </ul>
