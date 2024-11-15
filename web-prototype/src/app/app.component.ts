@@ -49,6 +49,10 @@ export class AppComponent {
       .addSvgIcon(
         "flag-fr",
         this.setPath(`${this.iconPath}flags/fr.svg`)
+      )
+      .addSvgIcon(
+        "social-fb",
+        this.setPath(`${this.iconPath}bs/facebook.svg`)
       );
   }
 
