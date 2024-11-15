@@ -1,0 +1,17 @@
+nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    li{
+      list-style: none;
+      margin: 5px 0;
+      a{
+        text-decoration: none;
+        color: var(--web-gray-400);
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

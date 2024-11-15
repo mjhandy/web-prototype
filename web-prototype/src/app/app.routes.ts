@@ -13,7 +13,8 @@ export const routes: Routes = [
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page',
-      label: 'Home'
+      label: 'Home',
+      showInFooter: true,  
     }    
   },
   {
@@ -22,6 +23,8 @@ export const routes: Routes = [
     title: 'English About Us ! Web Prototype',
     data:{      
       desciption: 'This is he Web Prototype About Us pages',
+      label: 'About Us',      
+      showInFooter: true,
     }  
   },
   {
@@ -29,7 +32,8 @@ export const routes: Routes = [
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
-      desciption: 'This is he Web Prototype About Us pages'
+      desciption: 'This is he Web Prototype About Us pages',
+      label: 'Sign Up (Reactive)'
     }  
   },
   {
@@ -37,7 +41,9 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
     title: 'English Sign Up Form ! Web Prototype',
     data:{      
-      desciption: 'This is he Web Prototype About Us pages'
+      desciption: 'This is he Web Prototype About Us pages',
+      label: 'Sign Up (Dynamci)',      
+      showInFooter: true,
     }  
   },  
 ];
