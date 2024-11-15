@@ -53,7 +53,19 @@ export class AppComponent {
       .addSvgIcon(
         "social-fb",
         this.setPath(`${this.iconPath}bs/facebook.svg`)
-      );
+      )
+      .addSvgIcon(
+        "social-it",
+        this.setPath(`${this.iconPath}bs/instagram.svg`)
+      )
+      .addSvgIcon(
+        "social-li",
+        this.setPath(`${this.iconPath}bs/linkedin.svg`)
+      )
+      .addSvgIcon(
+        "social-tt",
+        this.setPath(`${this.iconPath}bs/tiktok.svg`)
+      )                ;
   }
 
   setPath(url: string): SafeResourceUrl{
