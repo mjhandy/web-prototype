@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule, Router, NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs';
 
 @Component({
   selector: 'footer-nav',
@@ -12,28 +11,16 @@ import { filter } from 'rxjs';
   styleUrl: './footer-nav.component.scss'
 })
 export class FooterNavComponent {
-  routes: { 
+ routes: { 
     path:   string; 
     title:  string;  
   }[] = [];
 
   constructor(private router: Router) {
-    this.routes = this.router.config.filter(
-      route => route.path !== '' && route.data && route.title)
-      .map(route => ({ path: route.path!, title: route.title!, }
-
-    ));
+    // Filter routes that have a valid `path` and `title`, then map to the required type
+    this.routes = this.router.config
+      .filter(route => route.path && typeof route.title === 'string')
+      .map(route => ({ path: route.path!, title: route.title as string }));
   }
-
-  // ngOnInit(): void {
-  //   this.router.events.pipe(
-  //     filter(event => event instanceof NavigationEnd)
-  //   ).subscribe(() => {
-  //     this.routes = this.router.config
-  //       .filter(route => route.data && route.title )
-  //       .map(route => ({ path: route.path, name: route.title }));
-  //   });
-  // }
-
 
 }

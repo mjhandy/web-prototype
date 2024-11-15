@@ -13,6 +13,7 @@ export const routes: Routes = [
     title: 'English Home Page ! Web Prototype',
     data:{      
       desciption: 'This is the Web Prototype home page',
+      label: 'Home'
     }    
   },
   {
