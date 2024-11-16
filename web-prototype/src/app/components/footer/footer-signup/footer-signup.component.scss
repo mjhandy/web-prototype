@@ -1,3 +1,13 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+@import 'custom/buttons';
+
 *{
-  color: #fff;
+  color: $footerMain;
+}
+
+input{
+  border: 1px solid $footerMain;
+  background-color: $footerMain;
 }

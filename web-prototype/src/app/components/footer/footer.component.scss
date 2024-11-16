@@ -1,11 +1,10 @@
-*{
-  color: var(--web-gray-400);
-}
+@import 'bsOverrides';
+@import 'componentInclude';
 
 h3{
   text-align: center;
-  border-bottom: 2px solid var(--web-gray-500);
-  color: var(--web-gray-500);
+  border-bottom: 2px solid $footerMain;
+  color: $footerMain;
   padding: 10px 0;
   margin: 0 0 20px 0;
 }

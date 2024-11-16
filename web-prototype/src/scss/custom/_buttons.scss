@@ -26,4 +26,14 @@
     color: $blue;
     text-decoration: $blue;
   }
+  &-footerSignUp{
+    color: $blue;
+    border: 1px solid $footerMain;
+    border-left: 1px solid $footerBG;
+    background-color: $footerMain;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 700;
+  }
 }
