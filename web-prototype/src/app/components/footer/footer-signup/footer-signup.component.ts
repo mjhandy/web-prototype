@@ -1,6 +1,7 @@
-import { Component, input, ViewChild } from '@angular/core';
+import { Component, input, Output, ViewChild } from '@angular/core';
 import { LocalStorageService } from '../../../services/local-storage-service';
 import { Router } from '@angular/router';
+// import { DataSignalService } from '../../../services/data.service'
 
 @Component({
   selector: 'footer-signup',
@@ -12,28 +13,30 @@ import { Router } from '@angular/router';
 export class FooterSignupComponent {
   @ViewChild('input') footerEmail: any;
 
-  inputValue: string  = '';
+  @Output('footerEmail') string: any;
+
+  inputValue: string = '';
   footerSignUpForm: string = '';
-  
+
   constructor(
+    // private dataService: DataSignalService,
     private LocalStorageService: LocalStorageService,
     private router: Router,
-  ) {}
+  ) { }
 
-  submit(value: string){
+  submit(value: string) {
 
-    // the input value
-    this.inputValue = value;
-    // set the field value in to local storage
-    this.LocalStorageService.setItem('footerEmail', value);
     // clear input field before redirecting    
 
-    console.log('clicked', this.inputValue);      
+    console.log('clicked', value);
 
     // redirect to the sign up page if the field has a value
-    if (this.inputValue != ''){
-      console.log('input cleared', this.inputValue);
-      this.footerEmail.value = '';
+    if (value != '') {
+      // set the field value in to local storage
+      this.LocalStorageService.setItem('footerEmail', value);
+      // send data via data service
+      // this.dataService.setData(value);
+      // console.log('input cleared', value);
       this.router.navigate(['en/sign-up-dynamic']);
     }
   }

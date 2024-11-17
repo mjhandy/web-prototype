@@ -11,4 +11,6 @@ input{
   border: 1px solid $footerMain;
   background-color: $footerMain;
   color: $blue;
+  border-top-left-radius: var(--web-border-radius);
+  border-bottom-left-radius: var(--web-border-radius);
 }

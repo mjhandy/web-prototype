@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
 import { 
@@ -7,9 +7,10 @@ import {
   FormGroup, 
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
-// import { FormField } from '../../shared/form-field';
 import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
 import { of } from 'rxjs';
+import { LocalStorageService } from '../../services/local-storage-service';
+
 
 
 
@@ -28,13 +29,6 @@ import { of } from 'rxjs';
 })
 export class SignUpComponent implements OnInit {
 
-  // @Input() input: FormField<string> | undefined;
-  // @Input() form: FormGroup | undefined;
-
-  // get isValid() { 
-  //   return    this.form.controls[this.input.key].valid; 
-  // }
-
   signUpForm: FormGroup;
   submitted = false;
   emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
@@ -45,7 +39,12 @@ export class SignUpComponent implements OnInit {
   states: any = [];
   provinces: any = [];
 
-  constructor( private fb: FormBuilder ) {
+  constructor( 
+    // private dataService: DataSignalService,
+    private fb: FormBuilder,
+    private LocalStorageService: LocalStorageService,
+  ) {
+    // this.data = this.dataService.getData();
     this.signUpForm = this.fb.group({
       fName: ['',
         [
@@ -122,6 +121,8 @@ export class SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
+    
+    this.getFooterEmail();
   }
 
   // form submit
@@ -177,5 +178,15 @@ export class SignUpComponent implements OnInit {
       { value: 'nt', label:'forms.provList.nt' },
       { value: 'nu', label:'forms.provList.nu' },
     ]
+  }
+
+  //email address from footer, if the data exists
+  getFooterEmail(){
+    let fEmail = localStorage.getItem('footerEmail');
+    if (fEmail){
+      this.signUpForm.controls['eMail'].setValue(fEmail);
+      localStorage.removeItem('footerEmail');
+    }    
+    console.debug('email from footer:', fEmail);
   }
 }

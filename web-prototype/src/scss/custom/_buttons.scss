@@ -31,8 +31,8 @@
     border: 1px solid $footerMain;
     border-left: 1px solid $footerBG;
     background-color: $footerMain;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: var(--web-border-radius);
+    border-bottom-right-radius: var(--web-border-radius);
     padding: 5px 10px;
     font-weight: 700;
   }
