@@ -6,13 +6,13 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="" (click)="closeOffcanvas()">{{ "nav.home" | translate }}</a>
         </li>        
-        <li class="nav-item">
+        <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/about-us">{{ "nav.aboutUs" | translate }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="en/sign-up-reative">{{ "nav.signUp" | translate }}-reactive</a>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" routerLink="en/sign-up-reactive">{{ "nav.signUp" | translate }}-reactive</a>
         </li>   
-        <li class="nav-item">
+        <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/sign-up-dynamic">{{ "nav.signUp" | translate }}-dynamic</a>
         </li>         
         <li class="nav-item dropdown">
@@ -28,8 +28,8 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-primary" type="submit">Search</button>
+        <input class="form-control header-search" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary btn-headerSearchSubmit" type="submit">Search</button>
       </form>
     </div>
   </div>

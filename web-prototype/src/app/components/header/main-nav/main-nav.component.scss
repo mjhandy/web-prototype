@@ -30,3 +30,32 @@
     transform: translateX(-100%);
   }
 }
+
+.header{
+  &-search{
+    border: 1px solid var(--web-gray-400);
+    // background-color: $footerMain;
+    // color: $blue;
+    padding-left: 10px;
+    border-top-left-radius: var(--web-border-radius);
+    border-bottom-left-radius: var(--web-border-radius);
+  }
+}
+
+// nav bar custimization
+
+.navbar{
+  .nav{
+    &-item{
+      a{
+        font-weight: 700;
+      }
+      &.active{
+        a{
+          color: $blue;
+        }
+        
+      }
+    }
+  }
+}
