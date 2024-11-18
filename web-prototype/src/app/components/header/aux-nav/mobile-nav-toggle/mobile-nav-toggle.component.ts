@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 import {MatRippleModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'aux-mobile-nav-toggle',
@@ -11,5 +13,28 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrl: './mobile-nav-toggle.component.scss'
 })
 export class MobileNavToggleComponent {
+  // @ViewChild('navToggle') navToggle: ElementRef;
+  @ViewChild('navToggle', {static: false}) navToggle: ElementRef | undefined;
+
+  
+ 
+
+  constructor(
+    private router: Router
+  ) {     }
+
+  
+  ngOnInit() {
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      // const navToggle : HTMLElement = document.getElementById('navToggle');
+      // navToggle.click();
+      this.navToggle.nativeElement.click();
+      console.log('route change end');
+    });
+
+  }
 
 }
