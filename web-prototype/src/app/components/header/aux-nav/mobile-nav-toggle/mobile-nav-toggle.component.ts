@@ -13,7 +13,6 @@ import { filter } from 'rxjs';
   styleUrl: './mobile-nav-toggle.component.scss'
 })
 export class MobileNavToggleComponent {
-  // @ViewChild('navToggle') navToggle: ElementRef;
   @ViewChild('navToggle', {static: false}) navToggle: ElementRef | undefined;
 
   
@@ -29,9 +28,7 @@ export class MobileNavToggleComponent {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // const navToggle : HTMLElement = document.getElementById('navToggle');
-      // navToggle.click();
-      this.navToggle.nativeElement.click();
+      this.navToggle?.nativeElement.click();
       console.log('route change end');
     });
 
