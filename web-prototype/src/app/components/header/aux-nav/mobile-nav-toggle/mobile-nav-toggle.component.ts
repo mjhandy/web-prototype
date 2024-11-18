@@ -24,11 +24,11 @@ export class MobileNavToggleComponent {
 
   
   ngOnInit() {
-
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      this.navToggle?.nativeElement.click();
+      // causing the nav to open on initial load
+      // this.navToggle?.nativeElement.click();
       console.log('route change end');
     });
 
