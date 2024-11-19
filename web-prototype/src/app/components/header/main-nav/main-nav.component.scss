@@ -34,8 +34,6 @@
 .header{
   &-search{
     border: 1px solid var(--web-gray-400);
-    // background-color: $footerMain;
-    // color: $blue;
     padding-left: 10px;
     border-top-left-radius: var(--web-border-radius);
     border-bottom-left-radius: var(--web-border-radius);
@@ -44,18 +42,31 @@
 
 // nav bar custimization
 
+.navItem{
+  font-size: 24px;
+  @include media-breakpoint-up(lg){
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
 .navbar{
   .nav{
     &-item{
-      a{
-        font-weight: 700;
-      }
       &.active{
-        a{
+        .nav-link{
           color: $blue;
         }
         
       }
     }
+    &-link{
+@extend .navItem;
+      
+
+    }
+  }
+  .dropdown-menu{
+    background-color: lightcyan;
   }
 }

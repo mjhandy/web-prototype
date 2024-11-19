@@ -9,6 +9,7 @@
   aria-controls="mainNav" 
   aria-expanded="false" 
   aria-label="Open navigation"
-  matRipple >
-  <mat-icon>menu</mat-icon>
+  matRipple 
+  (click)="menu()">
+  <mat-icon>{{ menuOpenIcon }}</mat-icon>
 </button>

@@ -22,6 +22,8 @@ export class MobileNavToggleComponent {
 
   className: string | undefined;
   mainNavVisible: boolean | undefined;
+  menuOpenIcon = 'menu';
+  menuOpen = false;
 
 
 
@@ -34,9 +36,6 @@ export class MobileNavToggleComponent {
   ngOnInit() {
 
     this.mainNavVisible = false;
-
-
-
 
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
@@ -58,6 +57,19 @@ export class MobileNavToggleComponent {
 
     });
 
+  }
+
+  menu(){
+    
+    if (this.menuOpen === false){
+      this.menuOpen = true;
+      this.menuOpenIcon = 'close';
+    }
+    else {
+      this.menuOpen = false;
+      this.menuOpenIcon = 'menu';
+    }
+    
   }
 
 }
