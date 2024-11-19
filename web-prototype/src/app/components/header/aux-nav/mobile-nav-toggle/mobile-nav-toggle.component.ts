@@ -1,9 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, viewChild, ViewChild } from '@angular/core';
 
-import {MatRippleModule} from '@angular/material/core';
-import {MatIconModule} from '@angular/material/icon';
+import { MatRippleModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
+import { HTMLElementService } from '../../../../services/html-elements.service';
 
 @Component({
   selector: 'aux-mobile-nav-toggle',
@@ -12,24 +13,49 @@ import { filter } from 'rxjs';
   templateUrl: './mobile-nav-toggle.component.html',
   styleUrl: './mobile-nav-toggle.component.scss'
 })
-export class MobileNavToggleComponent {
-  @ViewChild('navToggle', {static: false}) navToggle: ElementRef | undefined;
 
-  
- 
+
+
+
+export class MobileNavToggleComponent {
+  @ViewChild('navToggle', { static: false }) navToggle: ElementRef | undefined;
+
+  className: string | undefined;
+  mainNavVisible: boolean | undefined;
+
+
 
   constructor(
-    private router: Router
-  ) {     }
+    private router: Router,
+    private elementService: HTMLElementService
+  ) { }
 
-  
+
   ngOnInit() {
+
+    this.mainNavVisible = false;
+
+
+
+
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
-      // causing the nav to open on initial load
-      // this.navToggle?.nativeElement.click();
-      console.log('route change end');
+
+      this.elementService.getElement('mainNav').subscribe(element => {
+        if (element) {
+
+          // get all the clsses from the mainNav
+          this.className = element.className;
+          // do we have the 'show class
+          this.mainNavVisible = this.className.includes('show');
+          // if so, trigget the nav toggle click 
+          if (this.mainNavVisible) {
+            this.navToggle?.nativeElement.click();
+          }
+        }
+      });
+
     });
 
   }
