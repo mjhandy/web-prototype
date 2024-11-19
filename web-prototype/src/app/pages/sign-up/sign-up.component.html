@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row d-flex justify-content-center">
-    <div class="col-8">
+    <div class="col012 col-lg-8">
       <h1>{{ "headings.signUpForm" | translate }}</h1>
       <div class="form-intro">
         {{ "forms.intro" | translate }}
@@ -11,7 +11,7 @@
         }
       </div>
     </div>
-    <div class="col-8">
+    <div class="col012 col-lg-8">
       <form focusInvalidInput [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <fieldset>
           <legend class="visually-hidden">{{ "forms.legend.name" | translate }}</legend>
@@ -84,7 +84,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <div class="mb-2">
                 <label for="country">{{ "forms.label.country" | translate }}<span class="required">*</span></label>
                 <select #country id="country" name="country" formControlName="country" class="form-control"
@@ -107,7 +107,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <div class="mb-2">
                 <label for="state">{{ "forms.label.state" | translate }}<span class="required">*</span></label>
                 <select #state id="state" formControlName="state" class="form-control"
@@ -146,7 +146,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <div class="mb-2">
                 <label for="city">{{ "forms.label.city" | translate }}<span class="required">*</span></label>
                 <input 
@@ -169,7 +169,7 @@
                   </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-2 col-lg-6">
               <div class="mb-2">
                 @if (country.value == 'us'){
                 <label for="usZipCode">Zip Code<span class="required">*</span></label>
