@@ -1,14 +1,12 @@
-@import 'bsOverrides';
-@import 'componentInclude';
+@import "bsOverrides";
+@import "componentInclude";
 
-@import 'nav';
-@import 'navbar';
-@import 'offcanvas';
+@import "nav";
+@import "navbar";
+@import "offcanvas";
 @import "dropdown";
 
-
-@import 'custom/buttons';
-
+@import "custom/buttons";
 
 @media (max-width: 991.98px) {
   .offcanvas-collapse {
@@ -31,8 +29,8 @@
   }
 }
 
-.header{
-  &-search{
+.header {
+  &-search {
     border: 1px solid var(--web-gray-400);
     padding-left: 10px;
     border-top-left-radius: var(--web-border-radius);
@@ -42,31 +40,28 @@
 
 // nav bar custimization
 
-.navItem{
+.navItem {
   font-size: 24px;
-  @include media-breakpoint-up(lg){
-    font-size: 16px;
-    font-weight: 700;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+    font-weight: 400;
   }
 }
 
-.navbar{
-  .nav{
-    &-item{
-      &.active{
-        .nav-link{
+.navbar {
+  .nav {
+    &-item {
+      &.active {
+        .nav-link {
           color: $blue;
         }
-        
       }
     }
-    &-link{
-@extend .navItem;
-      
-
+    &-link {
+      @extend .navItem;
     }
   }
-  .dropdown-menu{
+  .dropdown-menu {
     background-color: lightcyan;
   }
 }

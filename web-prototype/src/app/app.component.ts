@@ -28,7 +28,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  private iconPath = './icons/';
+  private iconPath = './icons/'
 
   constructor(
     private translate: TranslateService,
@@ -65,7 +65,11 @@ export class AppComponent {
       .addSvgIcon(
         "social-tt",
         this.setPath(`${this.iconPath}bs/tiktok.svg`)
-      )                ;
+      )
+      .addSvgIcon(
+        "site-logo",
+        this.setPath(`${this.iconPath}logos/site-logo.svg`)
+      );
   }
 
   setPath(url: string): SafeResourceUrl{
