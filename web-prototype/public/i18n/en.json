@@ -9,11 +9,13 @@
   "nav": {
     "home": "Home",
     "aboutUs": "About Us",
-    "signUp": "Sign Up"
+    "signUp": "Sign Up",
+    "siteMap" : "Site Map"
   },
   "headings":{
     "langModal": "Select A Language",
-    "signUpForm": "Sign Up Form"
+    "signUpForm": "Sign Up Form",
+    "siteMap" :"Site Map"
   },
   "forms":{
     "intro" : "Please fill in all the required fields.",
@@ -92,8 +94,9 @@
     "submit"  : "Submit the form",
     "clear" :"Clear the form",
     "pageLoad": {
-      "home"  : "This is the home page",
-      "aboutUs" : "This is the About Us page"
+      "home"  : "This is the home page.",
+      "aboutUs" : "This is the About Us page.",
+      "siteMap" : "THis is the Site Map page."
     }
   }
 }

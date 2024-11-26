@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ "headings.siteMap" | translate }}</h1>
+      <nav>
+        <ul>
+          @for ( route of routes; track route.title ){
+            <li>
+              <a [routerLink]="[route.path]" routerLinkActive="active">{{ route.label | translate}}</a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
