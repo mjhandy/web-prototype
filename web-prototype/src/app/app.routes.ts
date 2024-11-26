@@ -19,16 +19,17 @@ export const routes: Routes = [
     }    
   },
   {
-    path: 'en/about-us',    
-    loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
-    title: 'English About Us ! Web Prototype',
+    path: 'en/api-feed',    
+    loadComponent: () => import('./pages/api-feed/api-feed.component').then((d) => d.ApiFeedComponent),
+    title: 'English API Feed | Web Prototype',
     data:{      
-      desciption: 'This is he Web Prototype About Us pages',
-      label: 'nav.aboutUs',      
+      desciption: 'This is the Web Prototype API Feed',
+      label: 'nav.apiFeed',      
       showInFooter: true,
       showInSiteMap: true,
     }  
   },
+
   {
     path: 'en/sign-up-reactive',        
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    
@@ -61,4 +62,15 @@ export const routes: Routes = [
       showInSiteMap: false,
     }  
   },   
+  {
+    path: 'en/about-us',    
+    loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
+    title: 'English About Us ! Web Prototype',
+    data:{      
+      desciption: 'This is he Web Prototype About Us pages',
+      label: 'nav.aboutUs',      
+      showInFooter: true,
+      showInSiteMap: true,
+    }  
+  }
 ];
