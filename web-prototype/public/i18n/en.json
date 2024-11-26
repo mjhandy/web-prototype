@@ -10,12 +10,14 @@
     "home": "Home",
     "aboutUs": "About Us",
     "signUp": "Sign Up",
-    "siteMap" : "Site Map"
+    "siteMap" : "Site Map",
+    "apiFeed" : "API Feed"
   },
   "headings":{
     "langModal": "Select A Language",
     "signUpForm": "Sign Up Form",
-    "siteMap" :"Site Map"
+    "siteMap" :"Site Map",
+    "apiFeed":  "API Feed"
   },
   "forms":{
     "intro" : "Please fill in all the required fields.",

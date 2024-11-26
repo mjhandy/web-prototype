@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
-import { Observable } from 'rxjs';
+import { ApiDataService } from '../../services/api-data.service';
 
 @Component({
   selector: 'app-api-feed',
@@ -12,7 +12,17 @@ import { Observable } from 'rxjs';
 export class ApiFeedComponent {
 
 
+  posts: any;
 
+  constructor(private apiDataService: ApiDataService) { }
+
+  ngOnInit() {
+
+    this.apiDataService.getPosts()
+      .subscribe(response => {
+        this.posts = response;
+      });
+  }
 
 
 
