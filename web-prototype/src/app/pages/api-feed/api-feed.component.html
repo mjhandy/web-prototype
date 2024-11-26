@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ "headings.apiFeed" | translate }}</h1>
+      <h2>Please ensure the local API server is running</h2>
+      <p><code>json-server --watch db.json</code></p>
+    </div>   
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h3>This is the feed</h3>
+      <button (click)="get_products()">GET /products</button>
+    </div>
+  </div>
+</div>
