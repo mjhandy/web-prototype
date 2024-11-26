@@ -29,7 +29,17 @@ export const routes: Routes = [
       showInSiteMap: true,
     }  
   },
-
+  {
+    path: 'en/news-feed',    
+    loadComponent: () => import('./pages/news-feed/news-feed.component').then((d) => d.NewsFeedComponent),
+    title: 'English News Feed API | Web Prototype',
+    data:{      
+      desciption: 'This is the Web Prototype News Feed',
+      label: 'nav.newsFeed',      
+      showInFooter: true,
+      showInSiteMap: true,
+    }  
+  },
   {
     path: 'en/sign-up-reactive',        
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    

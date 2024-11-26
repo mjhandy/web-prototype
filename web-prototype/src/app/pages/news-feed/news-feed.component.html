@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">News Feed</div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="newsArticles">
+        
+        @for (article of article; track article)
+        {
+        <div class="article">
+          <h4>{{ article.title }}</h4>
+          <p>{{ article.content }}</p>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
