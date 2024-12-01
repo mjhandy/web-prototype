@@ -1,0 +1,49 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+.packages{ 
+  gap: 10px;  
+  .package{    
+    border: 1px solid var(--web-gray-400);
+    background-color: $white;
+    color: $black;
+    border-radius: 10px;
+    text-decoration: none;
+    flex-flow: column;
+    margin: 20px 0;
+    @include boxShadow (3, 5, 300);
+    &-header{
+      padding: 20px;      
+      text-align: center;      
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      h3{
+        font-weight: 700;
+        margin: 0;
+      }
+      &.p0{
+        background-color: lighten(#ffc107, 25%);
+      }
+      &.p1{
+        background-color: lighten(#fd7e14, 25%);
+      }
+      &.p2{
+        background-color: lighten(#20c997, 25%);
+      }
+    }
+    &-body{
+      padding: 20px 0;
+      ul{
+        margin: 0;
+      }
+      
+    }
+    &-footer{
+      padding: 20px;
+    }
+    &.highlight{
+      scale: 120%;
+    }
+    
+  }
+}

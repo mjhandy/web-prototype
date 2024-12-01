@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Tier 1",
+    "price": "500",
+    "description" : "<li>3-5 Pages</li><li>Google Analitcs</li><li>Fixed cost</li><li>90 days support</li>",
+    "detailURL" : "/en/packeges.html#t1"
+  },
+  {
+    "id": 2,
+    "flag": true,
+    "title": "Tier 2",
+    "description" : "Low monthly billing"
+  },
+  {
+    "id": 3,
+    "title": "Tier 3",
+    "description" : "Low monthly billing"
+  }
+]
