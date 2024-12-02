@@ -8,7 +8,7 @@
       {"point": "point 1"},
       {"point": "point 2"}
     ],
-    "detailURL" : "/en/packeges.html#t1"    
+    "detailURL" : "/en/packages"    
   },
   {
     "id": 2,
@@ -18,7 +18,8 @@
     "points": [
       {"point": "point 1"},
       {"point": "point 2"}
-    ]
+    ],
+    "detailURL" : "/en/packages"   
   },
   {
     "id": 3,
@@ -28,6 +29,7 @@
       {"point": "point 1"},
       {"point": "point 2"},
       {"point": "point 3"}
-    ]
+    ],
+    "detailURL" : "/en/packages"   
   }
 ]
