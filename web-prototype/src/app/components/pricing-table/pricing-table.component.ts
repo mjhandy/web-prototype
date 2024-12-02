@@ -15,7 +15,7 @@ export class PricingTableComponent {
 
   constructor() {
 
-    console.debug( pricePackage);
+    console.debug('Packages :',  pricePackage);
 
    }
 
