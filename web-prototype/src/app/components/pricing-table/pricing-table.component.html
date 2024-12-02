@@ -8,7 +8,7 @@
     <div class="col-12 col-lg-8 d-flex justify-content-center">
       <div class="d-flex flex-row packages w-100">
         @for ( package of packages; track package; let i = $index){
-          <a href="{{ package.detailURL }}" class="d-flex flex-column flex-fill package" [class]="   package.flag ? 'highlight ' : ''">
+          <a href="{{ package.detailURL }}" fragement="" class="d-flex flex-column flex-fill package" [class]="   package.flag ? 'highlight ' : ''">
             <div class="package-header" [class]="'p' + $index">
               <h3>{{ package.title }}</h3>
             </div>

@@ -41,6 +41,17 @@ export const routes: Routes = [
     }  
   },
   {
+    path: 'en/packages',
+    loadComponent: () => import('./pages/packages/packages.component').then((d) => d.PackagesComponent),
+    title: 'Our Pakcages | Web Prototype',
+    data:{
+      desciption: 'This is the Web Prototype Packages Page',
+      label: 'nav.packages',      
+      showInFooter: true,
+      showInSiteMap: true,
+    }
+  },
+  {
     path: 'en/sign-up-reactive',        
     loadComponent: () =>  import('./pages/form/form.component').then((d)  => d.FormComponent),    
     title: 'English Sign Up Form ! Web Prototype',
