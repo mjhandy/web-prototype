@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
 import { TranslateService } from "@ngx-translate/core";
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 
 import { MatIconRegistry, MatIconModule } from '@angular/material/icon';
 
@@ -11,6 +11,7 @@ import { ReadOnLoadComponent } from './components/wcag/read-on-load/read-on-load
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { filter } from 'rxjs';
 
 
 @Component({
@@ -29,11 +30,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class AppComponent {
   private iconPath = './icons/'
+  
 
   constructor(
     private translate: TranslateService,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private router: Router
   ) {
     // site languages
     this.translate.addLangs(['en', 'fr']);
@@ -70,6 +73,15 @@ export class AppComponent {
         "site-logo",
         this.setPath(`${this.iconPath}logos/site-logo.svg`)
       );
+  }
+
+  ngOnInit(){
+    this.router.events.subscribe( (evt) => {
+      if (!(evt instanceof NavigationEnd)){
+        return;
+      }
+      window.scrollTo(0,0);
+    });
   }
 
   setPath(url: string): SafeResourceUrl{
