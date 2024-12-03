@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import * as AccordionData from '../../Model/accordion-data.json';
 
+import { MatIconModule } from '@angular/material/icon';
+
 @Component({
   selector: 'aap-accoridon',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './accoridon.component.html',
   styleUrl: './accoridon.component.scss'
 })

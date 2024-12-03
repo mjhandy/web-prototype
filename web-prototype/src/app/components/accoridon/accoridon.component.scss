@@ -10,11 +10,27 @@
     }
   }
   &.basic{
+
+  }
+  &.red{
     .accordion{
       &-button{
         background-color: var(--web-red);
       }
     }
   }
-  &.red{}
+  &.plain{
+    .accordion{
+      &-item{
+        border: 0;
+      }
+      &-button{
+        font-size: 16px;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+        padding: 5px;
+      }
+    }
+  }
 }

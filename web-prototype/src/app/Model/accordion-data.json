@@ -2,6 +2,7 @@
   {
     "id"  : 1,
     "heading": "Accordion Heading One",
+    "headingIcon": "home",
     "body"  : "<p>This the the accordion body</p>"
   },
   {
