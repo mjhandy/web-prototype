@@ -11,11 +11,17 @@ import * as AccordionData from '../../Model/accordion-data.json';
 export class AccoridonComponent {
 
   AD: any = (AccordionData as any).default;
+  randomNumber = Math.random() * 100;
+  aid = crypto.randomUUID();
+
 
   constructor() {
-
     console.debug('AccordionData :', AccordionData);
+    console.log(this.randomNumber);
+    console.log(this.aid);
 
   }
+
+  
 
 }

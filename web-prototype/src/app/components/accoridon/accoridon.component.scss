@@ -1,4 +1,20 @@
 @import 'bsOverrides';
 @import 'componentInclude';
 
-@import 'accordion'
+@import 'accordion';
+
+:host{
+  .accordion{
+    &-button{
+      font-weight: 700;
+    }
+  }
+  &.basic{
+    .accordion{
+      &-button{
+        background-color: var(--web-red);
+      }
+    }
+  }
+  &.red{}
+}

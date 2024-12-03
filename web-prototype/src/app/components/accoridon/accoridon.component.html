@@ -1,12 +1,12 @@
-<div class="accordion" id="accordionExample">
+<div class="accordion" id="accordion-{{aid}}">
   @for( accordion of AD; track accordion; let i = $index ){
     <div class="accordion-item">
       <h2 class="accordion-header">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse-{{i}}" [attr.aria-expanded]="i === 0 ? 'true':'false'" attr.aria-controls="collapse-{{i}}">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse-{{aid}}--{{i}}" [attr.aria-expanded]="i === 0 ? 'true':'false'" attr.aria-controls="collapse-{{i}}">
           {{ accordion.heading }}
         </button>
       </h2>
-      <div id="collapse-{{i}}" class="accordion-collapse collapse " [class]="i === 0 ? 'show': ''" data-bs-parent="#accordionExample">
+      <div id="collapse-{{aid}}--{{i}}" class="accordion-collapse collapse " [class]="i === 0 ? 'show': ''" attr.data-bs-parent="#accordion-{{aid}}">
         <div class="accordion-body" [innerHTML]="accordion.body"></div>
       </div>
     </div>
