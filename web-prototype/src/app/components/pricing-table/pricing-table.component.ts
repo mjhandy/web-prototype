@@ -12,13 +12,13 @@ import * as pricePackage from '../../Model/pricing-packages.json';
 export class PricingTableComponent {
 
 
-  packages: any = ( pricePackage as any ).default;
+  packages: any = (pricePackage as any).default;
 
   constructor() {
 
-    console.debug('Packages :',  pricePackage);
+    console.debug('Packages :', pricePackage);
 
-   }
+  }
 
 
 

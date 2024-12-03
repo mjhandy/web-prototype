@@ -1,0 +1,17 @@
+[
+  {
+    "id"  : 1,
+    "heading": "Accordion Heading One",
+    "body"  : "<p>This the the accordion body</p>"
+  },
+  {
+    "id"  : 2,
+    "heading": "Accordion Heading Two",
+    "body"  : "<p>This the the accordion body</p>"
+  },
+  {
+    "id"  : 3,
+    "heading": "Accordion Heading Three",
+    "body"  : "<p>This the the accordion body</p>"
+  }
+]
