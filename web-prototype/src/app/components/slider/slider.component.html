@@ -1,0 +1,10 @@
+@for ( slide of slideData ; track slide){
+  <div class="carousel-item">
+    <img [src]="slide.bgImage" alt="{{ slide.bgImageAlt }}">
+    <div class="carousel-caption">
+      <h1>{{slide.h1}}</h1>
+      <h2>{{slide.h2}}</h2>
+      <a href="" class="btn">{{slide.ctaLabel}}</a>
+    </div>
+  </div>
+}

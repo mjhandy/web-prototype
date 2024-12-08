@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "h1": "Main Heading Slide 1",
+    "h2": "Sub Heading",
+    "position":"p1",
+    "ctaLabel":"Click Me",
+    "ctaURL":"en",
+    "bgImage":"",
+    "bgImageAlt":"Image Alt tag"
+  },
+  {
+    "id": 2,
+    "h1": "Main Heading Slide 2",
+    "h2": "Sub Heading",
+    "position":"p1",
+    "ctaLabel":"Click Me",
+    "ctaURL":"en",
+    "bgImage":"",
+    "bgImageAlt":"Image Alt tag"
+  }  
+]

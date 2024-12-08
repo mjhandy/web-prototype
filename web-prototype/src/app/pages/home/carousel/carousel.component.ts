@@ -18,6 +18,11 @@ export class CarouselComponent {
     { url: 'https://images.hdqwalls.com/download/earth-strongest-spiderman-ix-1920x1080.jpg', h1: 'Slide 5 Heading 1', h2: 'Slide 5 Heading 2s'},
   ]
   shuffledSlides: { url: string, h1: string, h2: string } [] =[]
+  shuffedSlideData!: [];
+
+  
+
+
 
   ngOnInit(): void{
     this.shuffleSlides();
@@ -28,6 +33,10 @@ export class CarouselComponent {
       .map(value => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value);
+  }
+
+  shuffleSlideData(): void{
+
   }
 
 }
