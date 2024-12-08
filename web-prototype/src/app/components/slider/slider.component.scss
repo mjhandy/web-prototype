@@ -1,0 +1,67 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+@import 'carousel';
+@import 'custom/buttons';
+
+.carousel{
+  &-caption{
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 5px;
+    bottom: unset;
+    a{
+      text-decoration: none;
+    }
+    &.p1{
+      top: 15px;      
+      right: 50%;
+      left: 15px;
+    }
+    &.p2{
+      top: 15px;
+      right: 15px;
+      left: 50%;
+    }
+    &.p3{
+      bottom: 5%;      
+      right: 50%;
+      left: 15px;
+    }
+    &.p4{
+      bottom: 15px;
+      right: 15px;
+      left: 50%;
+    }
+    &.p5{
+      top: 15px;      
+      right: 15px;
+      left: 15px;
+    }
+    &.p6{
+      bottom: 5%;      
+      right: 15px;
+      left: 15px;
+    }                
+  }
+  &-control-prev{
+    width: 5%;
+  }
+  &-control-next{
+    width: 5%;
+  }
+  &-indicators{
+    margin-bottom: 5px;
+    [data-bs-target]{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 0;
+    }
+  }
+  &-item{
+    img{
+      width: 100%;
+    }
+  }
+}

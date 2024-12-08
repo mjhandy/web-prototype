@@ -1,10 +1,27 @@
-@for ( slide of slideData ; track slide){
-  <div class="carousel-item">
-    <img [src]="slide.bgImage" alt="{{ slide.bgImageAlt }}">
-    <div class="carousel-caption">
-      <h1>{{slide.h1}}</h1>
-      <h2>{{slide.h2}}</h2>
-      <a href="" class="btn">{{slide.ctaLabel}}</a>
-    </div>
+<div id="{{ silderID }}" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    @for (slide of slideData; track slide; let i = $index){
+      <button type="button" title="To Slide #{{i}}" attr.data-bs-target="#{{ silderID }}" [attr.data-bs-slide-to]="i" [class.active]="i === 0" aria-current="true" attr.aria-label="Slide {{i + 1}}"></button>
+    }
   </div>
-}
+  <div class="carousel-inner">
+  @for ( slide of slideData; track slide; let ii = $index){
+    <div class="carousel-item" [class.active]="ii === 0">
+      <img [src]="slide.bgImage" alt="{{ slide.bgImageAlt }}">
+      <div class="carousel-caption" [class]="slide.position ">
+        <h1>{{slide.h1}}</h1>
+        <h2>{{slide.h2}}</h2>
+        <a href="" class="btn btn-primary">{{slide.ctaLabel}}</a>
+      </div>
+    </div>
+  }
+</div>
+  <button class="carousel-control-prev" type="button" attr.data-bs-target="#{{ silderID }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" attr.data-bs-target="#{{ silderID }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>  
+</div>
