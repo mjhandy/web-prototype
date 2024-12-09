@@ -1,47 +1,56 @@
-@import 'bsOverrides';
+@import "bsOverrides";
 
-
-.btn{
+.btn {
   margin: 0;
   padding: 0;
   border: 0;
   display: flex;
-  &-group{
+
+  &-group {
     display: flex;
     flex-direction: column;
-    column-gap: 15px;
-    @include media-breakpoint-up(lg){
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    @include media-breakpoint-up(lg) {
       flex-direction: row;
       row-gap: 15px;
-      justify-content: center;
     }
   }
-  &-primary{
+
+  &-primary {
     background-color: $blue;
     border: 1px solid $blue;
     color: white;
     border-radius: 5px;
     padding: 5px 10px;
-    &:hover{
+    width: fit-content;
+
+    &:hover {
       background-color: lighten($color: $blue, $amount: 5);
     }
   }
-  &-secondary{
+
+  &-secondary {
     background-color: transparent;
     border: 1px solid $blue;
     color: $blue;
     border-radius: 5px;
     padding: 5px 10px;
-    &:hover{
+    width: fit-content;
+    &:hover {
       border: 1px solid lighten($color: $blue, $amount: 5);
       color: lighten($color: $blue, $amount: 5);
     }
   }
-  &-textLink{
+
+  &-textLink {
     color: $blue;
     text-decoration: $blue;
   }
-  &-footerSignUp{
+
+  &-footerSignUp {
     color: $blue;
     border: 1px solid $footerMain;
     border-left: 1px solid $footerBG;
@@ -51,11 +60,13 @@
     padding: 5px 10px;
     font-weight: 700;
   }
-  &-headerSearchSubmit{
+
+  &-headerSearchSubmit {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .mat-icon{
+
+  .mat-icon {
     width: 20px;
   }
 }

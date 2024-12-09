@@ -6,7 +6,8 @@
 
 .carousel {
   &-caption {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.10);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 5px;
     bottom: unset;
@@ -15,6 +16,14 @@
     left: unset;
     a {
       text-decoration: none;
+      &.btn-secondary{
+        color: $white;
+        border-color: $white;
+        &:hover{
+          color: $blue;
+          border-color: $blue;
+        }
+      }
     }
     &.p1 {
       left: 15px;
@@ -63,8 +72,9 @@
       bottom: 15px;
       @include media-breakpoint-up(lg) {
         top: 15px;
-        right: 15px;
-        left: 15px;
+        right: 25%;
+        left: 25%;
+        bottom: unset;
       }
     }
     &.p6 {
@@ -73,8 +83,8 @@
       bottom: 15px;
       @include media-breakpoint-up(lg) {
         bottom: 5%;
-        right: 15px;
-        left: 15px;
+        right: 25%;
+        left: 25%;
       }
     }
   }
