@@ -1,66 +1,112 @@
-@import 'bsOverrides';
-@import 'componentInclude';
+@import "bsOverrides";
+@import "componentInclude";
 
-@import 'carousel';
-@import 'custom/buttons';
+@import "carousel";
+@import "custom/buttons";
 
-.carousel{
-  &-caption{
+.carousel {
+  &-caption {
     background-color: rgba(0, 0, 0, 0.25);
     padding: 10px;
     border-radius: 5px;
     bottom: unset;
-    a{
+    top: unset;
+    right: unset;
+    left: unset;
+    a {
       text-decoration: none;
     }
-    &.p1{
-      top: 15px;      
-      right: 50%;
+    &.p1 {
       left: 15px;
-    }
-    &.p2{
-      top: 15px;
       right: 15px;
-      left: 50%;
-    }
-    &.p3{
-      bottom: 5%;      
-      right: 50%;
-      left: 15px;
-    }
-    &.p4{
       bottom: 15px;
-      right: 15px;
-      left: 50%;
+      @include media-breakpoint-up(lg) {
+        top: 15px;
+        bottom: unset;
+        right: 50%;
+      }
     }
-    &.p5{
-      top: 15px;      
-      right: 15px;
+    &.p2 {
       left: 15px;
+      right: 15px;
+      bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        top: 15px;
+        bottom: unset;
+        right: 15px;
+        left: 50%;
+      }
     }
-    &.p6{
-      bottom: 5%;      
-      right: 15px;
+    &.p3 {
       left: 15px;
-    }                
+      right: 15px;
+      bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        bottom: 5%;
+        right: 50%;
+        left: 15px;
+      }
+    }
+    &.p4 {
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        bottom: 15px;
+        right: 15px;
+        left: 50%;
+      }
+    }
+    &.p5 {
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+      }
+    }
+    &.p6 {
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      @include media-breakpoint-up(lg) {
+        bottom: 5%;
+        right: 15px;
+        left: 15px;
+      }
+    }
   }
-  &-control-prev{
+  &-control-prev {
     width: 5%;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
-  &-control-next{
+  &-control-next {
     width: 5%;
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
-  &-indicators{
+  &-indicators {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
     margin-bottom: 5px;
-    [data-bs-target]{
+    [data-bs-target] {
       width: 10px;
       height: 10px;
       border-radius: 50%;
       border: 0;
     }
   }
-  &-item{
-    img{
+  &-item {
+    img {
       width: 100%;
     }
   }

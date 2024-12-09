@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-
+import { MatIconModule } from '@angular/material/icon';
 import * as data from '../../Model/slider-data.json';
 
 @Component({
   selector: 'aap-slider',
   standalone: true,
-  imports: [],
+  imports: [MatIconModule],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.scss'
 })

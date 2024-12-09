@@ -8,10 +8,10 @@
   @for ( slide of slideData; track slide; let ii = $index){
     <div class="carousel-item" [class.active]="ii === 0">
       <img [src]="slide.bgImage" alt="{{ slide.bgImageAlt }}">
-      <div class="carousel-caption" [class]="slide.position ">
+      <div class="carousel-caption d-flex flex-column justify-content-center" [class]="slide.position ">
         <h1>{{slide.h1}}</h1>
         <h2>{{slide.h2}}</h2>
-        <a href="" class="btn btn-primary">{{slide.ctaLabel}}</a>
+        <a href="" class="btn btn-primary">{{slide.ctaLabel}} <mat-icon>chevron_right</mat-icon></a>
       </div>
     </div>
   }
