@@ -1,5 +1,5 @@
 <div class="d-flex flex-column flex-lg-row packages w-100">
-  @for ( package of packages; track package; let i = $index){
+  @for ( package of jsonData; track package; let i = $index){
   <a
     routerLink="{{ package.detailURL }}"
     fragment="{{ package.title }}"

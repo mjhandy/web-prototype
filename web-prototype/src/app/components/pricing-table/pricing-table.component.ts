@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import * as pricePackage from '../../Model/pricing-packages.json';
 
 @Component({
   selector: 'aap-pricingtable',
@@ -11,16 +10,7 @@ import * as pricePackage from '../../Model/pricing-packages.json';
 })
 export class PricingTableComponent {
 
-
-  packages: any = (pricePackage as any).default;
-
-  constructor() {
-
-    console.debug('Packages :', pricePackage);
-
-  }
-
-
+  @Input() jsonData: any;
 
 
 

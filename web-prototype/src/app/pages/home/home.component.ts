@@ -6,6 +6,7 @@ import { SliderComponent } from '../../components/slider/slider.component';
 
 
 import * as data from '../../Model/slider-data.json';
+import * as pdata from '../../Model/pricing-packages.json';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ import * as data from '../../Model/slider-data.json';
 export class HomeComponent {
 
   slideData: any = (data as any).default;
+  pricingData: any = (pdata as any).default;
   constructor() {
     console.log('Slide Data:', this.slideData);
   }
