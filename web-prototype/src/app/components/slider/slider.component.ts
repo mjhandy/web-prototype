@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
-import * as data from '../../Model/slider-data.json';
+// import * as data from '../../Model/slider-data.json';
 
 @Component({
   selector: 'aap-slider',
@@ -12,12 +12,9 @@ import * as data from '../../Model/slider-data.json';
 })
 export class SliderComponent {
 
-  slideData: any = (data as any).default;
-  silderID = 'slideID-' + this.randomString(5);
+  @Input() jsonData: any;
 
-  constructor() {
-    console.log('Slide Data:', this.slideData);
-  }
+  silderID = 'slideID-' + this.randomString(5);
 
   randomString(length: number) {
 

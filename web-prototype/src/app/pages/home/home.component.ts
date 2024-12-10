@@ -4,6 +4,9 @@ import { PricingTableComponent } from '../../components/pricing-table/pricing-ta
 
 import { SliderComponent } from '../../components/slider/slider.component';
 
+
+import * as data from '../../Model/slider-data.json';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -13,6 +16,9 @@ import { SliderComponent } from '../../components/slider/slider.component';
 })
 export class HomeComponent {
 
-
+  slideData: any = (data as any).default;
+  constructor() {
+    console.log('Slide Data:', this.slideData);
+  }
 
 }

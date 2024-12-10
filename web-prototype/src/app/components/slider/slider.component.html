@@ -1,11 +1,11 @@
 <div id="{{ silderID }}" class="carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    @for (slide of slideData; track slide; let i = $index){
+    @for (slide of jsonData; track slide; let i = $index){
       <button type="button" title="To Slide #{{i}}" attr.data-bs-target="#{{ silderID }}" [attr.data-bs-slide-to]="i" [class.active]="i === 0" aria-current="true" attr.aria-label="Slide {{i + 1}}"></button>
     }
   </div>
   <div class="carousel-inner">
-  @for ( slide of slideData; track slide; let ii = $index){
+  @for ( slide of jsonData; track slide; let ii = $index){
     <div class="carousel-item" [class.active]="ii === 0">
       <img [src]="slide.bgImage" alt="{{ slide.bgImageAlt }}">
       <div class="carousel-caption d-flex flex-column justify-content-center" [class]="slide.position ">
