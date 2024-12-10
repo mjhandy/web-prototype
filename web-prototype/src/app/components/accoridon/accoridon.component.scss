@@ -12,6 +12,30 @@
   &.basic{
 
   }
+  &.faq{
+    .accordion{
+      &-button{
+        font-weight: 700;
+        background-color: transparent;
+        &:before{
+          content: 'Q';
+          font-size: 36px;
+          margin-right: 15px;
+        }
+      }
+      &-body{
+        &:before{
+          content: 'A';
+          font-size: 36px;
+          line-height: 1;
+          margin-right: 15px;
+          display: block;
+          float: left;
+          padding-top: 1px;
+        }
+      }
+    }
+  }
   &.red{
     .accordion{
       &-button{

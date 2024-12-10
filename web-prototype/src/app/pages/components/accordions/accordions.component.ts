@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as AccordionData from '../../../Model/accordion-data.json';
 import { AccoridonComponent } from '../../../components/accoridon/accoridon.component';
 
 
@@ -10,5 +11,7 @@ import { AccoridonComponent } from '../../../components/accoridon/accoridon.comp
   styleUrl: './accordions.component.scss'
 })
 export class AccordionsComponent {
+
+  AD: any = (AccordionData as any).default;
 
 }

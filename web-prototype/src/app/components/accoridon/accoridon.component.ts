@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import * as AccordionData from '../../Model/accordion-data.json';
-
+import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -12,13 +10,13 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class AccoridonComponent {
 
-  AD: any = (AccordionData as any).default;
+ @Input() jsonData: any;
+
   randomNumber = Math.random() * 100;
   aid = crypto.randomUUID();
 
 
   constructor() {
-    console.debug('AccordionData :', AccordionData);
     console.log(this.randomNumber);
     console.log(this.aid);
 
