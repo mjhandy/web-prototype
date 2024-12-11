@@ -61,7 +61,16 @@
       @extend .navItem;
     }
   }
-  .dropdown-menu {
-    background-color: lightcyan;
+  .dropdown{
+    &-menu{
+      background-color: transparent;
+      @include media-breakpoint-up(lg) {
+      background-color: $white;
+      }
+    }
+    &-item{
+      @extend .navItem;
+    }
   }
+  
 }
