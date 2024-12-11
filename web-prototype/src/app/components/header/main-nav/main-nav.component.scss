@@ -51,7 +51,8 @@
 .navbar {
   .nav {
     &-item {
-      &.active {
+      &.active,
+      &:hover {
         .nav-link {
           color: $blue;
         }
@@ -63,14 +64,31 @@
   }
   .dropdown{
     &-menu{
+      border: 0;
       background-color: transparent;
       @include media-breakpoint-up(lg) {
-      background-color: $white;
+        background-color: $white;
+      }
+      li{
+        &.active,
+        &:hover{
+          a{
+            background-color: transparent;
+            color: $blue;
+          }
+        }
+        a{
+          @extend .navItem;
+        }
       }
     }
     &-item{
-      @extend .navItem;
+      &.active,
+      &:hover {
+        .nav-link {
+          color: $blue !important;
+        }
+      }
     }
-  }
-  
+  }  
 }
