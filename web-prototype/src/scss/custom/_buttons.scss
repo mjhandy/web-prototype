@@ -66,6 +66,12 @@
     border-bottom-left-radius: 0;
   }
 
+  &-icon{
+    width: 32px;
+    height: 32px;
+    background-color: $blue;
+  }
+
   .mat-icon {
     width: 20px;
   }
