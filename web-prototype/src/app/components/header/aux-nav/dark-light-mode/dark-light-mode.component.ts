@@ -45,7 +45,7 @@ export class DarkLightModeComponent {
       this.mode = 'light'
       this.LocalStorageService.setItem('mode', 'light');
     }
-    
+    this.body.setAttribute('data-bs-theme', this.mode);
   }
 
   modeSwitch(){
@@ -63,7 +63,9 @@ export class DarkLightModeComponent {
   }
 
   openSnackBar(message: string) {
-    this._snackBar.open(message, '');
+    this._snackBar.open(message, '', {
+      duration: 1500
+    });
   }
 
 }
