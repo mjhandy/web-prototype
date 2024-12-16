@@ -1,0 +1,12 @@
+@use '@angular/material' as mat;
+
+// Customize the entire app. Change :root to your selector if you want to scope the styles.
+:root {
+  --mdc-snackbar-container-color:  var(--web-gray-600);
+  --mdc-snackbar-supporting-text-color: #f2f0f4;
+  --mdc-snackbar-supporting-text-font: "Montserrat", sans-serif;
+  --mdc-snackbar-supporting-text-line-height: 1;
+  --mdc-snackbar-supporting-text-size: 18px;
+  --mdc-snackbar-supporting-text-weight: 700;
+  --mdc-snackbar-container-shape: 10px;
+}
