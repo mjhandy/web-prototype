@@ -10,3 +10,15 @@
   --mdc-snackbar-supporting-text-weight: 700;
   --mdc-snackbar-container-shape: 10px;
 }
+
+//snackbars
+.alert{
+  &-default{
+    .mdc-snackbar__surface.mat-mdc-snackbar-surface{
+      background: rgba(var(--web-black-rgb),0.6);
+      border: 2px solid #495057;
+      border-radius: 10px;
+      padding: 25px 50px;
+    }
+  }
+}

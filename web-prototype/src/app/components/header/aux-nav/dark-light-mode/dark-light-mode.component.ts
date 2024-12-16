@@ -64,7 +64,8 @@ export class DarkLightModeComponent {
 
   openSnackBar(message: string) {
     this._snackBar.open(message, '', {
-      duration: 1500
+      // duration: 1500,
+      panelClass: ['alert-default']
     });
   }
 
