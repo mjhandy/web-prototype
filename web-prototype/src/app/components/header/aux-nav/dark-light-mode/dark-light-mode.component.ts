@@ -3,8 +3,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
-import { TranslateModule, TranslateService } from "@ngx-translate/core";
-
 import { LocalStorageService } from '../../../../services/local-storage-service';
 
 @Component({
@@ -13,7 +11,7 @@ import { LocalStorageService } from '../../../../services/local-storage-service'
   imports: [
     MatIconModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule    
   ],
   templateUrl: './dark-light-mode.component.html',
   styleUrl: './dark-light-mode.component.scss'
@@ -21,18 +19,19 @@ import { LocalStorageService } from '../../../../services/local-storage-service'
 export class DarkLightModeComponent {
 
   mode = '';
+  message= '';
   body = document.body;
   private _snackBar = inject(MatSnackBar);
   
 
   constructor(
-    private translate: TranslateService,
     private LocalStorageService: LocalStorageService,
   ) {
-    console.log(this.body);
+    // console.log(this.body);
   }
 
   ngOnInit(){
+    const lang = this.LocalStorageService.getItem('lang');
     this.checkMode();
   }
 
@@ -51,20 +50,20 @@ export class DarkLightModeComponent {
   modeSwitch(){
     if (this.mode === 'light'){
       this.mode = 'dark'; 
-      this.openSnackBar('Dark Mode enabled');
-      
-    }
+      this.message = "Dark Mode Enabled";  
+          }
     else {
       this.mode = 'light';
-      this.openSnackBar('Light Mode enabled') 
+      this.message = "Light Mode Enabled";
     }
+    this.openSnackBar(this.message);
     this.body.setAttribute('data-bs-theme', this.mode);
     this.LocalStorageService.setItem('mode', this.mode);
   }
 
   openSnackBar(message: string) {
     this._snackBar.open(message, '', {
-      // duration: 1500,
+      duration: 1500,
       panelClass: ['alert-default']
     });
   }
