@@ -3,6 +3,11 @@ This is my Angular projecy where I'm teaching my self Angular. This project look
 
 # Features
 
+## Home Hero slider
+
+- fully based on JSON data
+- Copy block locations are set via JSON as well. 
+
 ## Dark Mode
 There are still a few UI bugs, but it works. And the selection is stored in Local Storage for the users next visit
 
@@ -48,3 +53,7 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 ### Dynamic Main Nav
 
 - Similar to the site-map.html and footer nav, have the main nav source be app.routes.ts
+
+### 404/Error page
+
+- Just need a simple page and router update

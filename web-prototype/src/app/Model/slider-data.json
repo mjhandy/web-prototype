@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "h1": "Main Heading Slide 1",
-    "h2": "Sub Heading",
+    "h1": "Main Heading Slide One",
+    "h2": "Sub Heading Slide One",
     "position": "p1",
     "ctaPrimeLabel": "Click Me",
     "ctaPrimeURL": "en/packages",
     "ctaSecondaryLabel": "Read More",
-    "ctaSecondaryURL":"en/aboout-us",
+    "ctaSecondaryURL":"en/about-us",
     "bgImage": "assets/images/slides/slide-1.webp",
     "bgImageAlt": "Image Alt tag"
   },
@@ -18,7 +18,7 @@
     "ctaPrimeLabel": "Click Me",
     "ctaPrimeURL": "en",
     "ctaSecondaryLabel": "Read More",
-    "ctaSecondaryURL":"en/aboout-us",
+    "ctaSecondaryURL":"en/about-us",
     "bgImage": "assets/images/slides/slide-2.webp",
     "bgImageAlt": "Image Alt tag"
   },

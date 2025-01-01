@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
-// import * as data from '../../Model/slider-data.json';
+import * as data from '../../Model/slider-data.json';
 
 @Component({
   selector: 'aap-slider',
