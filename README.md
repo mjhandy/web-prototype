@@ -16,7 +16,7 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 
 ## Bug Fixes
 
-** Various known bugs **
+**Various known bugs**
 
 ### Dark Mode
 
@@ -29,4 +29,22 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 - When using the country select drop down:
   - the State/Provce field should offer the apporiate options if America or Canada is selected
   - The postal/Zip code should update, with the aproprate validation
-  -If Nither Canada or America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
+  - If Nither Canada or America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
+
+### Cross Platform Testing
+
+- Cross browser/OS
+  - on PC, Firefox and Chrome (Current dev is done against Edge)
+  - on Mac, Safari, Edge, Firefox, and Chrome
+  - Full mobile testing on iOS and Android, both Cell and Tablets
+
+
+## New Features
+
+### Sortable Table
+
+- Source a public API that can represent data in a table format, and allow for sortable column.
+
+### Dynamic Main Nav
+
+- Similar to the site-map.html and footer nav, have the main nav source be app.routes.ts
