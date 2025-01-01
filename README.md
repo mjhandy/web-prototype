@@ -10,14 +10,23 @@ There are still a few UI bugs, but it works. And the selection is stored in Loca
 These two items are built from the router
 
 ## Localization
-Using ng-translate, there are an EN and FR il8n files with terms. The language select stores the user selection in local storate. Not all terms have been enabled
+Using ng-translate, there are EN and FR il8n files with terms. The language select stores the user selection in local storate. Not all terms have been enabled
 
 # TODO
 
 ## Bug Fixes
+
+Various known bugs
 
 ### Dark Mode
 
 * The current logo, an SVG, needs fixed wile in dark mode
 * Nav drop down needs update
 * Mobile nav has not been tested
+
+### Sign Up Form
+
+* When using the country select drop down:
+** the State/Provce field should offer the apporiate options if America or Canada is selected
+** The postal/Zip code should update, with the aproprate validation
+** If Nither Canada or America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
