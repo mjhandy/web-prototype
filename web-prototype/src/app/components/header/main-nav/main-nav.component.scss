@@ -65,10 +65,10 @@
   .dropdown{
     &-menu{
       border: 0;
-      background-color: transparent;
-      @include media-breakpoint-up(lg) {
-        background-color: $white;
-      }
+      // background-color: transparent;
+      // @include media-breakpoint-up(lg) {
+      //   background-color: $white;
+      // }
       li{
         &.active,
         &:hover{
