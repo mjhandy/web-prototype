@@ -11,7 +11,7 @@
     text-decoration: none;
     flex-flow: column;
     min-width: 300px;
-    margin: 20px 0;
+    margin: 10px 0;
 
     @include boxShadow(3, 5, 300);
     &-header {

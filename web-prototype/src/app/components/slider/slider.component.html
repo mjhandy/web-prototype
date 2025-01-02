@@ -14,7 +14,7 @@
           <h2>{{slide.h2}}</h2>
         }
         @if ( slide.ctaPrimeLabel ) {
-          <div class="btn-group">
+          <div class="btn-group btn-group--accordion">
             <a routerLink="/{{ slide.ctaPrimeURL }}" class="btn btn-primary">{{slide.ctaPrimeLabel}} <mat-icon>chevron_right</mat-icon></a>
             @if ( slide.ctaSecondaryLabel){
               <a routerLink="/{{ slide.ctaSecondaryURL }}" class="btn btn-secondary">{{slide.ctaSecondaryLabel}} <mat-icon>chevron_right</mat-icon></a>
