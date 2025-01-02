@@ -38,12 +38,15 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 
 ### Main Nav
 
-- site logo link is broken
+- site logo link is broken 
+  - needs testing
 
 ### Dark Mode
 
 - The current logo, an SVG, needs fixed wile in dark mode
+  - needs testing
 - Nav drop down needs update
+  - needs testing
 - Mobile nav has not been tested
 
 ### Sign Up Form
