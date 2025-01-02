@@ -1,11 +1,25 @@
-.header-logo{
+@import "bsOverrides";
+@import "componentInclude";
+
+$color-mode-type: data;
+
+.header-logo {
   width: 150px;
   display: block;
   height: 65px;
-  color: #000;
+  // color: #000;
+  mat-icon {
+    width: 100%;
+    height: auto;
+  }
 }
 
-mat-icon{
-  width: 100%;
-  height: auto;
+body {
+  &[data-bs-theme=dark] .header-logo{
+    color: #fff;
+  }
 }
+
+
+
+

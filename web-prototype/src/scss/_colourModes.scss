@@ -1,0 +1,16 @@
+@import "bsOverrides";
+@import "componentInclude";
+
+$color-mode-type: data;
+
+@include color-mode(light) {
+  header-logo a{
+    color: black;
+  }
+}
+
+@include color-mode(dark) {
+  header-logo a{
+    color: #fff;
+  }
+}
