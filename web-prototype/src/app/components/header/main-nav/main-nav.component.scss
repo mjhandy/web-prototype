@@ -62,27 +62,23 @@
       @extend .navItem;
     }
   }
-  .dropdown{
-    &-menu{
+  .dropdown {
+    &-menu {
       border: 0;
-      // background-color: transparent;
-      // @include media-breakpoint-up(lg) {
-      //   background-color: $white;
-      // }
-      li{
+      li {
         &.active,
-        &:hover{
-          a{
+        &:hover {
+          a {
             background-color: transparent;
             color: $blue;
           }
         }
-        a{
+        a {
           @extend .navItem;
         }
       }
     }
-    &-item{
+    &-item {
       &.active,
       &:hover {
         .nav-link {
@@ -90,5 +86,5 @@
         }
       }
     }
-  }  
+  }
 }
