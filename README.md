@@ -3,6 +3,19 @@ This is my Angular projecy where I'm teaching my self Angular. This project look
 
 # Features
 
+## WCAG 2.x
+
+- skip to main as first tab item
+- main nav has full keyboard support
+- on route change screen reader prompt. 
+  - as this is a SPA, screen readers don't pick up the page title change
+  - needs to be fully implimented and tested
+
+## Accordions
+
+- data bound form parent component
+- random number to ensure multiple accordions don't conflict with each other
+
 ## Home Hero slider
 
 - fully based on JSON data
@@ -22,6 +35,10 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 ## Bug Fixes
 
 **Various known bugs**
+
+### Main Nav
+
+- site logo link is broken
 
 ### Dark Mode
 
@@ -57,3 +74,9 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 ### 404/Error page
 
 - Just need a simple page and router update
+
+### Analytics
+
+- need event tracking on the following
+  - all nav items
+  - accordion usage
