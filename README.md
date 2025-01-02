@@ -20,15 +20,18 @@ This is my Angular projecy where I'm teaching my self Angular. This project look
 
 - fully based on JSON data
 - Copy block locations are set via JSON as well. 
+- clickable pips needs some tweeks, just location and size adjustments
+- this is also data bound to allow the component to be reused.
 
 ## Dark Mode
-There are still a few UI bugs, but it works. And the selection is stored in Local Storage for the users next visit
+- There are still a few UI bugs, but it works. And the selection is stored in Local Storage for the users next visit.
+- toast message shows the mode change. Redundant, but I wanted to exploring implimeninting this.
 
 ## Dynamic Site Map Page and Footer Nav
-These two items are built from the router
+- These two items are built from the router
 
 ## Localization
-Using ng-translate, there are EN and FR il8n files with terms. The language select stores the user selection in local storate. Not all terms have been enabled
+- Using ng-translate, there are EN and FR il8n files with terms. The language select stores the user selection in local storate. Not all terms have been enabled
 
 # TODO
 
@@ -54,7 +57,7 @@ Using ng-translate, there are EN and FR il8n files with terms. The language sele
 - When using the country select drop down:
   - the State/Provce field should offer the apporiate options if America or Canada is selected
   - The postal/Zip code should update, with the aproprate validation
-  - If Nither Canada or America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
+  - If neither Canada nor America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
 
 ### Cross Platform Testing
 
