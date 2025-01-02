@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "gitbuild"  : "ng build --base-href 'https://mjhandy.github.io/web-prototype/'",
+    "gitbuild"  : "ng build --base-href 'https://mjhandy.github.io/web-prototype'",
     "gitpush": "npx angular-cli-ghpages --dir=dist/web-prototype/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
