@@ -1,1 +1,0 @@
-import{X as o}from"./chunk-BV5DWLVG.js";var c=(()=>{class t{constructor(){}setItem(e,r){localStorage.setItem(e,r)}getItem(e){return localStorage.getItem(e)}removeItem(e){localStorage.removeItem(e)}clear(){localStorage.clear()}static \u0275fac=function(r){return new(r||t)};static \u0275prov=o({token:t,factory:t.\u0275fac,providedIn:"root"})}return t})();export{c as a};
