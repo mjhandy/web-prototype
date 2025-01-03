@@ -1,5 +1,5 @@
 # Project Overview
-This is my Angular projecy where I'm teaching my self Angular. This project looks like a tradition resposnsive web site, with a main nav, footer, site map page, etc.
+This is my Angular project where I'm teaching myself Angular. This project looks like a tradition resposnsive web site, with a main nav, footer, site map page, etc.
 
 # Features
 
