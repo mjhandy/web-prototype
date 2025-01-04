@@ -11,3 +11,15 @@ $color-mode-type: data;
     height: auto;
   }
 }
+
+:host-context([data-bs-theme=dark]) {
+  .header-logo{
+    color: $white;
+  }
+}
+
+:host-context([data-bs-theme=light]) {
+  .header-logo{
+    color: $black;
+  }
+}
