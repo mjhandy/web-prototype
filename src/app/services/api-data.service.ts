@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ApiDataService {
 
-  private url = 'http://jsonplaceholder.typicode.com/posts';
+  private url = 'https://jsonplaceholder.typicode.com/posts';
    
   constructor(private httpClient: HttpClient) { }
   
