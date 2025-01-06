@@ -77,8 +77,19 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/components/accordions/accordions.component').then((d) => d.AccordionsComponent),
     title: 'Accordion Components | Web Prototype',
     data: {
-      description: 'Themes accordion componet',
+      description: 'Themed accordion componet',
       label: 'nav.accordions',
+      showInFooter: true,
+      showInSiteMap: true
+    }
+  },
+  {
+    path: 'en/components/tables',
+    loadComponent: () => import('./pages/components/tables/tables.component').then((d) => d.TablesComponent),
+    title: 'Soratable Data Tables Components | Web Prototype',
+    data: {
+      description: 'Sortable data driven tables',
+      label: 'nav.tables',
       showInFooter: true,
       showInSiteMap: true
     }
