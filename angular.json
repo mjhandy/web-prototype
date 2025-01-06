@@ -37,10 +37,10 @@
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "./node_modules/bootstrap/scss", 
+                "./node_modules/bootstrap/scss",
                 "./src/scss"
               ]
-            },  
+            },
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
@@ -104,6 +104,14 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/web-prototype",
+            "netlifyToken": "nfp_NTzfYwgUzxJ61VypqTp11vWLMG134oaF3f0b",
+            "siteId": "da0c3728-a0f6-4a09-81d5-91e76d42fac8"
           }
         }
       }

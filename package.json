@@ -5,10 +5,12 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "gitbuild"  : "ng build --base-href 'https://mjhandy.github.io/web-prototype/'",
+    "gitbuild": "ng build --base-href 'https://mjhandy.github.io/web-prototype/'",
     "gitpush": "npx angular-cli-ghpages --dir=dist/web-prototype/browser",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "netlifybuild": "ng build --base-href https://markhandy-webprototype.netlify.app ",
+    "netlify": "ng deploy web-prototype"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +36,7 @@
     "@angular-devkit/build-angular": "^18.1.3",
     "@angular/cli": "^18.1.3",
     "@angular/compiler-cli": "^18.1.0",
+    "@netlify-builder/deploy": "^5.0.0",
     "@types/jasmine": "~5.1.0",
     "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.1.0",
