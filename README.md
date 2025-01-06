@@ -69,8 +69,9 @@ This is my Angular project where I'm teaching myself Angular. This project looks
 
 ## New Features
 
-### Sortable Table
+### Sortable/Dynamic  Table
 
+- Going to build this with mat-table as it seems to offer a lot of built in features, like pagination and sorting.
 - Source a public API that can represent data in a table format, and allow for sortable column.
 
 ### Dynamic Main Nav
