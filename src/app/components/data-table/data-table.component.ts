@@ -7,14 +7,12 @@ export interface SalesInfo{
   department: string
 }
 
-const sales_data = SalesInfo[] = [
-  { name: 'Bob', sales: 2499.00, department: 'Furniture' },
-  { name: 'Jim', sales: 10000.00, department: 'Automotive' }
-] 
+const sales_data = " "
 
 @Component({
     selector: 'aap-data-table',
     imports: [MatTableModule],
+    standalone: true,
     templateUrl: './data-table.component.html',
     styleUrl: './data-table.component.scss'
 })
