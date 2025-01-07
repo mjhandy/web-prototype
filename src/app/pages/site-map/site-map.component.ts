@@ -3,14 +3,13 @@ import { RouterModule, Router } from '@angular/router';
 import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-site-map',
-  standalone: true,
-  imports: [
-    TranslateModule,
-    RouterModule
-  ],
-  templateUrl: './site-map.component.html',
-  styleUrl: './site-map.component.scss'
+    selector: 'app-site-map',
+    imports: [
+        TranslateModule,
+        RouterModule
+    ],
+    templateUrl: './site-map.component.html',
+    styleUrl: './site-map.component.scss'
 })
 export class SiteMapComponent {
   routes: { 

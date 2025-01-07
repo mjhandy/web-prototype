@@ -7,16 +7,15 @@ import {QuestionControlService} from './../services/question-control.service';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  standalone: true,
-  selector: 'app-dynamic-form',
-  templateUrl: './dynamic-form.component.html',
-  providers: [QuestionControlService],
-  imports: [
-    TranslateModule,
-    CommonModule, 
-    DynamicFormQuestionComponent, 
-    ReactiveFormsModule
-  ],
+    selector: 'app-dynamic-form',
+    templateUrl: './dynamic-form.component.html',
+    providers: [QuestionControlService],
+    imports: [
+        TranslateModule,
+        CommonModule,
+        DynamicFormQuestionComponent,
+        ReactiveFormsModule
+    ]
 })
 export class DynamicFormComponent implements OnInit {
   @Input() questions: FormBase<string>[] | null = [];

@@ -2,11 +2,10 @@ import { Component, input, Output, ViewChild } from '@angular/core';
 import { LocalStorageService } from '../../../services/local-storage-service';
 import { Router } from '@angular/router';
 @Component({
-  selector: 'footer-signup',
-  standalone: true,
-  imports: [],
-  templateUrl: './footer-signup.component.html',
-  styleUrl: './footer-signup.component.scss'
+    selector: 'footer-signup',
+    imports: [],
+    templateUrl: './footer-signup.component.html',
+    styleUrl: './footer-signup.component.scss'
 })
 export class FooterSignupComponent {
   @ViewChild('input') footerEmail: any;

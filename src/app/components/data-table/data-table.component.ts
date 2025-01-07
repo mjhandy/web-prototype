@@ -13,11 +13,10 @@ const sales_data = SalesInfo[] = [
 ] 
 
 @Component({
-  selector: 'aap-data-table',
-  standalone: true,
-  imports: [MatTableModule],
-  templateUrl: './data-table.component.html',
-  styleUrl: './data-table.component.scss'
+    selector: 'aap-data-table',
+    imports: [MatTableModule],
+    templateUrl: './data-table.component.html',
+    styleUrl: './data-table.component.scss'
 })
 export class DataTableComponent {
 

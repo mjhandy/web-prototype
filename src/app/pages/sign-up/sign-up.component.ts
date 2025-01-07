@@ -16,16 +16,15 @@ import { LocalStorageService } from '../../services/local-storage-service';
 
 
 @Component({
-  selector: 'app-sign-up',
-  standalone: true,
-  imports: [
-    TranslateModule,
-    ReactiveFormsModule,
-    CommonModule,
-    FormErrorFocusDirective
-  ],
-  templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.scss'
+    selector: 'app-sign-up',
+    imports: [
+        TranslateModule,
+        ReactiveFormsModule,
+        CommonModule,
+        FormErrorFocusDirective
+    ],
+    templateUrl: './sign-up.component.html',
+    styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent implements OnInit {
 

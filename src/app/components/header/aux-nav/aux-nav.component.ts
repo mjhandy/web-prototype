@@ -7,15 +7,15 @@ import { MobileNavToggleComponent } from './mobile-nav-toggle/mobile-nav-toggle.
 
 
 @Component({
-  selector: 'header-aux-nav',
-  standalone: true,
-  imports: [
-    DarkLightModeComponent,
-    MobileNavToggleComponent, 
-    LoginComponent, 
-    LangToggleComponent],
-  templateUrl: './aux-nav.component.html',
-  styleUrl: './aux-nav.component.scss'
+    selector: 'header-aux-nav',
+    imports: [
+        DarkLightModeComponent,
+        MobileNavToggleComponent,
+        LoginComponent,
+        LangToggleComponent
+    ],
+    templateUrl: './aux-nav.component.html',
+    styleUrl: './aux-nav.component.scss'
 })
 export class AuxNavComponent {
 

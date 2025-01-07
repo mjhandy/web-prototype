@@ -6,12 +6,11 @@ import {FormBase} from '../../shared/forms/base/form-base';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-form',
-  standalone: true,
-  providers: [QuestionService],
-  imports: [AsyncPipe, DynamicFormComponent],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.scss'
+    selector: 'app-form',
+    providers: [QuestionService],
+    imports: [AsyncPipe, DynamicFormComponent],
+    templateUrl: './form.component.html',
+    styleUrl: './form.component.scss'
 })
 export class FormComponent {
   questions$: Observable<FormBase<any>[]>;

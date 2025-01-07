@@ -4,11 +4,10 @@ import { RouterModule } from '@angular/router';
 import * as data from '../../Model/slider-data.json';
 
 @Component({
-  selector: 'aap-slider',
-  standalone: true,
-  imports: [MatIconModule, RouterModule],
-  templateUrl: './slider.component.html',
-  styleUrl: './slider.component.scss'
+    selector: 'aap-slider',
+    imports: [MatIconModule, RouterModule],
+    templateUrl: './slider.component.html',
+    styleUrl: './slider.component.scss'
 })
 export class SliderComponent {
 

@@ -4,11 +4,10 @@ import { AccoridonComponent } from '../../../components/accoridon/accoridon.comp
 
 
 @Component({
-  selector: 'app-accordians',
-  standalone: true,
-  imports: [AccoridonComponent],
-  templateUrl: './accordions.component.html',
-  styleUrl: './accordions.component.scss'
+    selector: 'app-accordians',
+    imports: [AccoridonComponent],
+    templateUrl: './accordions.component.html',
+    styleUrl: './accordions.component.scss'
 })
 export class AccordionsComponent {
 

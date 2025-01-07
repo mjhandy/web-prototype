@@ -3,11 +3,10 @@ import { TranslateModule } from "@ngx-translate/core";
 import { ApiDataService } from '../../services/api-data.service';
 
 @Component({
-  selector: 'app-api-feed',
-  standalone: true,
-  imports: [TranslateModule],
-  templateUrl: './api-feed.component.html',
-  styleUrl: './api-feed.component.scss'
+    selector: 'app-api-feed',
+    imports: [TranslateModule],
+    templateUrl: './api-feed.component.html',
+    styleUrl: './api-feed.component.scss'
 })
 export class ApiFeedComponent {
 

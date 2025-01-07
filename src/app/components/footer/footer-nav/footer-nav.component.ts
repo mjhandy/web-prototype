@@ -3,14 +3,13 @@ import { RouterModule, Router } from '@angular/router';
 import { TranslateModule } from "@ngx-translate/core";
 
 @Component({
-  selector: 'footer-nav',
-  standalone: true,
-  imports: [
-    RouterModule,
-    TranslateModule
-  ],
-  templateUrl: './footer-nav.component.html',
-  styleUrl: './footer-nav.component.scss'
+    selector: 'footer-nav',
+    imports: [
+        RouterModule,
+        TranslateModule
+    ],
+    templateUrl: './footer-nav.component.html',
+    styleUrl: './footer-nav.component.scss'
 })
 export class FooterNavComponent {
  routes: { 

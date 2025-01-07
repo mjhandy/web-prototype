@@ -5,11 +5,10 @@ import { FormBase } from '../../../shared/forms/base/form-base';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  standalone: true,
-  selector: 'app-question',
-  templateUrl: './dynamic-form-question.component.html',
-  styleUrl: './dynamic-form-question.component.scss',
-  imports: [TranslateModule, CommonModule, ReactiveFormsModule],
+    selector: 'app-question',
+    templateUrl: './dynamic-form-question.component.html',
+    styleUrl: './dynamic-form-question.component.scss',
+    imports: [TranslateModule, CommonModule, ReactiveFormsModule]
 })
 export class DynamicFormQuestionComponent {
   @Input() question!: FormBase<string>;

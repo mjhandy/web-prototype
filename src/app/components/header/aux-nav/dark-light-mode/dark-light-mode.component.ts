@@ -6,15 +6,14 @@ import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import { LocalStorageService } from '../../../../services/local-storage-service';
 
 @Component({
-  selector: 'aap-dark-light-mode',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatSnackBarModule    
-  ],
-  templateUrl: './dark-light-mode.component.html',
-  styleUrl: './dark-light-mode.component.scss'
+    selector: 'aap-dark-light-mode',
+    imports: [
+        MatIconModule,
+        MatButtonModule,
+        MatSnackBarModule
+    ],
+    templateUrl: './dark-light-mode.component.html',
+    styleUrl: './dark-light-mode.component.scss'
 })
 export class DarkLightModeComponent {
 

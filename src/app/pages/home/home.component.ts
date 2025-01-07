@@ -10,11 +10,10 @@ import * as pdata from '../../Model/pricing-packages.json';
 import * as qaData from "../../Model/faq-data.json";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, PricingTableComponent, SliderComponent, AccoridonComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [CommonModule, PricingTableComponent, SliderComponent, AccoridonComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

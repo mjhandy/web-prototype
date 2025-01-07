@@ -4,11 +4,10 @@ import { RouterModule } from '@angular/router';
 import { HTMLElementService } from '../../../services/html-elements.service';
 
 @Component({
-  selector: 'header-main-nav',
-  standalone: true,
-  imports: [RouterModule, TranslateModule],
-  templateUrl: './main-nav.component.html',
-  styleUrl: './main-nav.component.scss'
+    selector: 'header-main-nav',
+    imports: [RouterModule, TranslateModule],
+    templateUrl: './main-nav.component.html',
+    styleUrl: './main-nav.component.scss'
 })
 export class MainNavComponent {
 

@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 
 
 @Component({
-  selector: 'aux-search',
-  standalone: true,
-  imports: [],
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.scss'
+    selector: 'aux-search',
+    imports: [],
+    templateUrl: './search.component.html',
+    styleUrl: './search.component.scss'
 })
 export class SearchComponent {
 

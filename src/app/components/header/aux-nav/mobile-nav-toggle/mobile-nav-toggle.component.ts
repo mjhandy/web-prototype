@@ -7,11 +7,10 @@ import { filter } from 'rxjs';
 import { HTMLElementService } from '../../../../services/html-elements.service';
 
 @Component({
-  selector: 'aux-mobile-nav-toggle',
-  standalone: true,
-  imports: [MatIconModule, MatRippleModule],
-  templateUrl: './mobile-nav-toggle.component.html',
-  styleUrl: './mobile-nav-toggle.component.scss'
+    selector: 'aux-mobile-nav-toggle',
+    imports: [MatIconModule, MatRippleModule],
+    templateUrl: './mobile-nav-toggle.component.html',
+    styleUrl: './mobile-nav-toggle.component.scss'
 })
 
 

@@ -8,16 +8,15 @@ import { TranslateModule, TranslateService } from "@ngx-translate/core";
 import { LocalStorageService } from '../../../../services/local-storage-service';
 
 @Component({
-  selector: 'aux-lang-toggle',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatButtonModule,
-    MatTooltipModule,
-    TranslateModule
-  ],
-  templateUrl: './lang-toggle.component.html',
-  styleUrl: './lang-toggle.component.scss'
+    selector: 'aux-lang-toggle',
+    imports: [
+        MatIconModule,
+        MatButtonModule,
+        MatTooltipModule,
+        TranslateModule
+    ],
+    templateUrl: './lang-toggle.component.html',
+    styleUrl: './lang-toggle.component.scss'
 })
 export class LangToggleComponent {
 

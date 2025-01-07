@@ -3,12 +3,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { AnalyticsService } from '../../services';
 
 @Component({
-  selector: 'aap-accoridon',
-  standalone: true,
-  imports: [MatIconModule],
-  providers: [AnalyticsService],
-  templateUrl: './accoridon.component.html',
-  styleUrl: './accoridon.component.scss'
+    selector: 'aap-accoridon',
+    imports: [MatIconModule],
+    providers: [AnalyticsService],
+    templateUrl: './accoridon.component.html',
+    styleUrl: './accoridon.component.scss'
 })
 export class AccoridonComponent {
 

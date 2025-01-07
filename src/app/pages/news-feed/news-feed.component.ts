@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { NewsFeedService } from '../../services/news-feed.service';
 
 @Component({
-  selector: 'app-news-feed',
-  standalone: true,
-  imports: [],
-  templateUrl: './news-feed.component.html',
-  styleUrl: './news-feed.component.scss'
+    selector: 'app-news-feed',
+    imports: [],
+    templateUrl: './news-feed.component.html',
+    styleUrl: './news-feed.component.scss'
 })
 export class NewsFeedComponent {
 

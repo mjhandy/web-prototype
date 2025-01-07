@@ -15,18 +15,18 @@ import { filter } from 'rxjs';
 
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    MatIconModule,
-    SkipToMainComponent,
-    ReadOnLoadComponent,
-    FooterComponent,
-    HeaderComponent,
-    TranslateModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        MatIconModule,
+        SkipToMainComponent,
+        ReadOnLoadComponent,
+        FooterComponent,
+        HeaderComponent,
+        TranslateModule
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   private iconPath = './icons/'

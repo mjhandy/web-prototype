@@ -4,11 +4,10 @@ import { TranslateModule } from "@ngx-translate/core";
 import { filter } from 'rxjs';
 
 @Component({
-  selector: 'wcag-read-on-load',
-  standalone: true,
-  imports: [TranslateModule],
-  templateUrl: './read-on-load.component.html',
-  styleUrl: './read-on-load.component.scss'
+    selector: 'wcag-read-on-load',
+    imports: [TranslateModule],
+    templateUrl: './read-on-load.component.html',
+    styleUrl: './read-on-load.component.scss'
 })
 export class ReadOnLoadComponent {
 
