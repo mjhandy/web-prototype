@@ -9,7 +9,7 @@
     "gitpush": "npx angular-cli-ghpages --dir=dist/web-prototype/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "netlifybuild": "ng build --base-href https://markhandy-webprototype.netlify.app ",
+    "netlifybuild": "ng build --base-href https://markhandy-webprototype.netlify.app",
     "netlify": "ng deploy web-prototype"
   },
   "private": true,

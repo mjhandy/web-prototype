@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 
 
 export const routes: Routes = [
+
   {
     path: '',
     redirectTo: 'en',
@@ -115,5 +116,9 @@ export const routes: Routes = [
       showInFooter: true,
       showInSiteMap: true,
     }  
-  }
+  },
+  {
+    path: '**',
+    loadComponent: () => import('./pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
+  },
 ];
