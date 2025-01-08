@@ -1,20 +1,26 @@
 import { Component } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 
-export interface SalesInfo{
+export interface SalesInfo {
+  id: number,
   name: string,
   sales: number,
   department: string
 }
 
-const sales_data = " "
+const SALES_DATA: SalesInfo[] = [
+  { id:1, name: 'Bob', sales: 1234.45, department: 'Appliances'},
+  { id:2, name: 'Alice', sales: 87654.23, department: 'Electronics'}
+];
+
+
 
 @Component({
-    selector: 'aap-data-table',
-    imports: [MatTableModule],
-    standalone: true,
-    templateUrl: './data-table.component.html',
-    styleUrl: './data-table.component.scss'
+  selector: 'aap-data-table',
+  imports: [MatTableModule],
+  standalone: true,
+  templateUrl: './data-table.component.html',
+  styleUrl: './data-table.component.scss'
 })
 export class DataTableComponent {
 
@@ -23,6 +29,6 @@ export class DataTableComponent {
     'col-sales',
     'col-department'
   ]
-  dataSource = sales_data;
+  dataSource = SALES_DATA;
 
 }
