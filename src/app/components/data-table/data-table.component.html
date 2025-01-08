@@ -1,22 +1,32 @@
-<table mat-table [dataSource]="dataSource">
+<table mat-table  [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="table table-default"> 
 
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let sales"> {{sales.name}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">
+      Name
+    </th>
+    <td mat-cell *matCellDef="let sales">
+      {{sales.name}}
+    </td>
   </ng-container>
 
   <ng-container matColumnDef="col-sales">
-    <th mat-header-cell *matHeaderCellDef> Sales </th>
-    <td mat-cell *matCellDef="let sales"> ${{sales.sales}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Sales">
+      Sales
+    </th>
+    <td mat-cell *matCellDef="let sales">
+      ${{sales.sales}}
+    </td>
   </ng-container>
 
-  <ng-container matColumnDef="col-department">
-    <th mat-header-cell *matHeaderCellDef> Department </th>
+  <ng-container matColumnDef="col-department"> 
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Department">
+      Department
+    </th>
     <td mat-cell *matCellDef="let sales"> {{sales.department}} </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayColumns;">
+  <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
 
 </table>
