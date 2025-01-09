@@ -18,7 +18,13 @@ const SALES_DATA: SalesInfo[] = [
   { id: 4, name: 'Frank', saleTotal: 256.87, department: 'Automotive' },
   { id: 5, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
   { id: 6, name: 'Phil', saleTotal: 876.22, department: 'House Ware' },
-  { id: 7, name: 'John', saleTotal: 5677.99, department: 'Furniture' }
+  { id: 7, name: 'Maria', saleTotal: 34.99, department: 'Furniture' },
+  { id: 8, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
+  { id: 9, name: 'Phil', saleTotal: 876.22, department: 'House Ware' },
+  { id: 10, name: 'John', saleTotal: 5677.99, department: 'Furniture' },
+  { id: 11, name: 'Neil', saleTotal: 456.77, department: 'Electronics' },
+  { id: 12, name: 'Jack', saleTotal: 2367.65, department: 'House Ware' },
+  { id: 13, name: 'Mack', saleTotal: 236.99, department: 'Furniture' }
 ];
 
 @Component({
@@ -41,7 +47,7 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {    
-    this.tbSort.sort(({ id: 'saleTotal', start: 'desc'}) as MatSortable);
+    this.tbSort.sort(({ id: 'saleTotal', start: 'desc'}) as MatSortable); // sort sales high to low
     this.dataSource.sort = this.tbSort;
   }
 
