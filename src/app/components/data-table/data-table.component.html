@@ -1,44 +1,62 @@
-<mat-table  
-  matSort 
+<mat-table
+  matSort
   #tbSort="matSort"
-  [dataSource]="dataSource" 
-  (matSortChange)="announceSortChange($event)" 
-  class="table table-default"> 
-
+  [dataSource]="dataSource"
+  (matSortChange)="announceSortChange($event)"
+  class="table table-default"
+>
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
-    <mat-header-cell *matHeaderCellDef mat-sort-header="name" sortActionDescription="Sort by Name">
+    <mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header="name"
+      sortActionDescription="Sort by Name"
+    >
       Name
     </mat-header-cell>
     <mat-cell *matCellDef="let sales">
-      {{sales.name}}
+      {{ sales.name }}
     </mat-cell>
-    <mat-footer-cell *matFooterCellDef>
-      Total
-    </mat-footer-cell>
+    <mat-footer-cell *matFooterCellDef> Total </mat-footer-cell>
   </ng-container>
 
   <ng-container matColumnDef="col-sales">
-    <mat-header-cell *matHeaderCellDef mat-sort-header="saleTotal" sortActionDescription="Sort by Sales">
+    <mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header="saleTotal"
+      sortActionDescription="Sort by Sales"
+    >
       Sales
     </mat-header-cell>
     <mat-cell *matCellDef="let sales">
-      {{sales.saleTotal | currency}}
+      {{ sales.saleTotal | currency }}
     </mat-cell>
-    <mat-footer-cell *matFooterCellDef>{{ getTotalSales()|currency}}</mat-footer-cell>
+    <mat-footer-cell *matFooterCellDef>{{
+      getTotalSales() | currency
+    }}</mat-footer-cell>
   </ng-container>
 
-  <ng-container matColumnDef="col-department"> 
-    <mat-header-cell *matHeaderCellDef  mat-sort-header="department" sortActionDescription="Sort by Department">
+  <ng-container matColumnDef="col-department">
+    <mat-header-cell
+      *matHeaderCellDef
+      mat-sort-header="department"
+      sortActionDescription="Sort by Department"
+    >
       Department
     </mat-header-cell>
-    <mat-cell *matCellDef="let sales"> 
-      {{sales.department}} 
+    <mat-cell *matCellDef="let sales">
+      {{ sales.department }}
     </mat-cell>
     <mat-footer-cell *matFooterCellDef></mat-footer-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayColumns;"></mat-row>
+  <mat-row *matRowDef="let row; columns: displayColumns"></mat-row>
   <mat-footer-row *matFooterRowDef="displayColumns"></mat-footer-row>
 </mat-table>
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 20]"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>
+</mat-paginator>
