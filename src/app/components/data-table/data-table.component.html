@@ -1,5 +1,5 @@
-<table 
-  mat-table 
+<mat-table
+  
   matSort 
   #tbSort="matSort"
   [dataSource]="dataSource" 
@@ -8,31 +8,33 @@
 
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header="name" sortActionDescription="Sort by Name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header="name" sortActionDescription="Sort by Name">
       Name
-    </th>
-    <td mat-cell *matCellDef="let sales">
+    </mat-header-cell>
+    <mat-cell *matCellDef="let sales">
       {{sales.name}}
-    </td>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="col-sales">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header="sales" sortActionDescription="Sort by Sales">
+    <mat-header-cell *matHeaderCellDef mat-sort-header="sales" sortActionDescription="Sort by Sales">
       Sales
-    </th>
-    <td mat-cell *matCellDef="let sales">
+    </mat-header-cell>
+    <mat-cell *matCellDef="let sales">
       {{sales.saleTotal | currency}}
-    </td>
+    </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="col-department"> 
-    <th mat-header-cell *matHeaderCellDef  mat-sort-header="de" sortActionDescription="Sort by Department">
+    <mat-header-cell *matHeaderCellDef  mat-sort-header="de" sortActionDescription="Sort by Department">
       Department
-    </th>
-    <td mat-cell *matCellDef="let sales"> {{sales.department}} </td>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let sales"> 
+      {{sales.department}} 
+    </mat-cell>
   </ng-container>
 
-  <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+  <mat-header-row *matHeaderRowDef="displayColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayColumns;"></mat-row>
 
-</table>
+</mat-table>

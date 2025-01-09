@@ -12,7 +12,7 @@ export interface SalesInfo {
 }
 const SALES_DATA: SalesInfo[] = [
   { id: 1, name: 'Bob', saleTotal: 1234.45, department: 'Appliances' },
-  { id: 2, name: 'Alice', saleTotal: 87654.23, department: 'Electronics' },
+  { id: 2, name: 'Alice', saleTotal: 854.23, department: 'Electronics' },
   { id: 3, name: 'John', saleTotal: 683.91, department: 'Hardware' },
   { id: 4, name: 'Frank', saleTotal: 256.87, department: 'Automotive' },
   { id: 5, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
@@ -39,11 +39,10 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {
-    this.tbSort.sort(({ id: 'sales', start: 'asc'}) as MatSortable);
+    
+    this.tbSort.sort(({ id: 'saleTotal', start: 'asc'}) as MatSortable);
     this.dataSource.sort = this.tbSort;
-
   }
-
 
   /** Announce the change in sort state for assistive technology. */
   announceSortChange(sortState: Sort) {
