@@ -10,13 +10,15 @@ export interface SalesInfo {
   saleTotal: number,
   department: string
 }
+
 const SALES_DATA: SalesInfo[] = [
   { id: 1, name: 'Bob', saleTotal: 1234.45, department: 'Appliances' },
   { id: 2, name: 'Alice', saleTotal: 854.23, department: 'Electronics' },
   { id: 3, name: 'John', saleTotal: 683.91, department: 'Hardware' },
   { id: 4, name: 'Frank', saleTotal: 256.87, department: 'Automotive' },
   { id: 5, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
-  { id: 6, name: 'Phil', saleTotal: 876.22, department: 'House Ware' }
+  { id: 6, name: 'Phil', saleTotal: 876.22, department: 'House Ware' },
+  { id: 7, name: 'John', saleTotal: 5677.99, department: 'Furniture' }
 ];
 
 @Component({
@@ -38,10 +40,14 @@ export class DataTableComponent implements AfterViewInit {
 
   @ViewChild('tbSort') tbSort = new MatSort();
 
-  ngAfterViewInit() {
-    
-    this.tbSort.sort(({ id: 'saleTotal', start: 'asc'}) as MatSortable);
+  ngAfterViewInit() {    
+    this.tbSort.sort(({ id: 'salesTotal', start: 'asc'}) as MatSortable);
     this.dataSource.sort = this.tbSort;
+  }
+
+  // total sales for the footer
+  getTotalSales(){
+    // return this.dataSource.map(t => t.saleTotal).reduce((acc, value) => acc + value, 0);
   }
 
   /** Announce the change in sort state for assistive technology. */
