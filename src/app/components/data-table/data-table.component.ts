@@ -41,13 +41,13 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {    
-    this.tbSort.sort(({ id: 'salesTotal', start: 'asc'}) as MatSortable);
+    // this.tbSort.sort(({ id: 'salesTotal', start: 'asc'}) as MatSortable);
     this.dataSource.sort = this.tbSort;
   }
 
   // total sales for the footer
   getTotalSales(){
-    // return this.dataSource.map(t => t.saleTotal).reduce((acc, value) => acc + value, 0);
+    return this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
   }
 
   /** Announce the change in sort state for assistive technology. */
