@@ -41,7 +41,7 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {    
-    // this.tbSort.sort(({ id: 'salesTotal', start: 'asc'}) as MatSortable);
+    this.tbSort.sort(({ id: 'saleTotal', start: 'desc'}) as MatSortable);
     this.dataSource.sort = this.tbSort;
   }
 
