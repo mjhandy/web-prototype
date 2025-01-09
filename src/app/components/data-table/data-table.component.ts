@@ -1,24 +1,27 @@
 import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatSort, Sort, MatSortModule } from '@angular/material/sort';
+import { MatSort, Sort, MatSortModule, MatSortable } from '@angular/material/sort';
 
 export interface SalesInfo {
   id: number,
   name: string,
-  sales: number,
+  saleTotal: number,
   department: string
 }
 const SALES_DATA: SalesInfo[] = [
-  { id: 1, name: 'Bob', sales: 1234.45, department: 'Appliances' },
-  { id: 2, name: 'Alice', sales: 87654.23, department: 'Electronics' },
-  { id: 3, name: 'John', sales: 683.91, department: 'Hardware' },
-  { id: 4, name: 'Frank', sales: 256.87, department: 'Automotive' }
+  { id: 1, name: 'Bob', saleTotal: 1234.45, department: 'Appliances' },
+  { id: 2, name: 'Alice', saleTotal: 87654.23, department: 'Electronics' },
+  { id: 3, name: 'John', saleTotal: 683.91, department: 'Hardware' },
+  { id: 4, name: 'Frank', saleTotal: 256.87, department: 'Automotive' },
+  { id: 5, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
+  { id: 6, name: 'Phil', saleTotal: 876.22, department: 'House Ware' }
 ];
 
 @Component({
   selector: 'aap-data-table',
-  imports: [MatTableModule, MatSortModule],
+  imports: [MatTableModule, MatSortModule, CurrencyPipe],
   standalone: true,
   templateUrl: './data-table.component.html',
   styleUrl: './data-table.component.scss'
@@ -36,8 +39,11 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {
+    this.tbSort.sort(({ id: 'sales', start: 'asc'}) as MatSortable);
     this.dataSource.sort = this.tbSort;
+
   }
+
 
   /** Announce the change in sort state for assistive technology. */
   announceSortChange(sortState: Sort) {
