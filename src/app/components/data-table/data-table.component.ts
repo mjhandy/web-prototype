@@ -33,11 +33,10 @@ export class DataTableComponent implements AfterViewInit {
   ]
   dataSource = new MatTableDataSource(SALES_DATA);
 
-  @ViewChild(MatSort)
-  sort!: MatSort;
+  @ViewChild('tbSort') tbSort = new MatSort();
 
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
+    this.dataSource.sort = this.tbSort;
   }
 
   /** Announce the change in sort state for assistive technology. */

@@ -1,8 +1,14 @@
-<table mat-table  [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)" class="table table-default"> 
+<table 
+  mat-table 
+  matSort 
+  #tbSort="matSort"
+  [dataSource]="dataSource" 
+  (matSortChange)="announceSortChange($event)" 
+  class="table table-default"> 
 
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="name" sortActionDescription="Sort by Name">
       Name
     </th>
     <td mat-cell *matCellDef="let sales">
@@ -11,7 +17,7 @@
   </ng-container>
 
   <ng-container matColumnDef="col-sales">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Sales">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header="sales" sortActionDescription="Sort by Sales">
       Sales
     </th>
     <td mat-cell *matCellDef="let sales">
@@ -20,7 +26,7 @@
   </ng-container>
 
   <ng-container matColumnDef="col-department"> 
-    <th mat-header-cell *matHeaderCellDef  mat-sort-header sortActionDescription="Sort by Department">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header="department" sortActionDescription="Sort by Department">
       Department
     </th>
     <td mat-cell *matCellDef="let sales"> {{sales.department}} </td>
