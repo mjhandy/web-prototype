@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Bob",
+    "saleTotal": 1234.45,
+    "department": "Appliances"
+  },
+  {
+    "id": 2,
+    "name": "Alice",
+    "saleTotal": 854.23,
+    "department": "Electronics"
+  },
+  {
+    "id": 3,
+    "name": "John",
+    "saleTotal": 683.91,
+    "department": "Hardware"
+  },
+  {
+    "id": 4,
+    "name": "Frank",
+    "saleTotal": 256.87,
+    "department": "Automotive"
+  },
+  {
+    "id": 5,
+    "name": "Ryan",
+    "saleTotal": 456.89,
+    "department": "Electronics"
+  },
+  {
+    "id": 6,
+    "name": "Phil",
+    "saleTotal": 876.22,
+    "department": "House Ware"
+  },
+  {
+    "id": 7,
+    "name": "Maria",
+    "saleTotal": 34.99,
+    "department": "Furniture"
+  },
+  {
+    "id": 8,
+    "name": "Ryan",
+    "saleTotal": 987.32,
+    "department": "Small Appliances"
+  },
+  {
+    "id": 9,
+    "name": "Phil",
+    "saleTotal": 876.22,
+    "department": "House Ware"
+  },
+  {
+    "id": 10,
+    "name": "John",
+    "saleTotal": 5677.99,
+    "department": "Furniture"
+  },
+  {
+    "id": 11,
+    "name": "Neil",
+    "saleTotal": 456.77,
+    "department": "Electronics"
+  },
+  {
+    "id": 12,
+    "name": "Jack",
+    "saleTotal": 2367.65,
+    "department": "House Ware"
+  },
+  {
+    "id": 13,
+    "name": "Mack",
+    "saleTotal": 236.99,
+    "department": "Furniture"
+  },
+  {
+    "id": 14,
+    "name": "Arnold",
+    "saleTotal": 3487.76,
+    "department": "Health & Beauty"
+  }
+]

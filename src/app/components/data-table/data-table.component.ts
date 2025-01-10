@@ -6,28 +6,14 @@ import { MatSort, Sort, MatSortModule, MatSortable } from '@angular/material/sor
 
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 
+import * as data from '../../Model/sales-data.json';
+
 export interface SalesInfo {
   id: number,
   name: string,
   saleTotal: number,
   department: string
 }
-
-const SALES_DATA: SalesInfo[] = [
-  { id: 1, name: 'Bob', saleTotal: 1234.45, department: 'Appliances' },
-  { id: 2, name: 'Alice', saleTotal: 854.23, department: 'Electronics' },
-  { id: 3, name: 'John', saleTotal: 683.91, department: 'Hardware' },
-  { id: 4, name: 'Frank', saleTotal: 256.87, department: 'Automotive' },
-  { id: 5, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
-  { id: 6, name: 'Phil', saleTotal: 876.22, department: 'House Ware' },
-  { id: 7, name: 'Maria', saleTotal: 34.99, department: 'Furniture' },
-  { id: 8, name: 'Ryan', saleTotal: 1234.45, department: 'Electronics' },
-  { id: 9, name: 'Phil', saleTotal: 876.22, department: 'House Ware' },
-  { id: 10, name: 'John', saleTotal: 5677.99, department: 'Furniture' },
-  { id: 11, name: 'Neil', saleTotal: 456.77, department: 'Electronics' },
-  { id: 12, name: 'Jack', saleTotal: 2367.65, department: 'House Ware' },
-  { id: 13, name: 'Mack', saleTotal: 236.99, department: 'Furniture' }
-];
 
 @Component({
   selector: 'aap-data-table',
@@ -49,13 +35,14 @@ export class DataTableComponent implements AfterViewInit {
 
 
   private _liveAnnouncer = inject(LiveAnnouncer);
+  salesData: any = (data as any).default;
 
   displayColumns: string[] = [
     'col-name',
     'col-sales',
     'col-department'
   ]
-  dataSource = new MatTableDataSource<SalesInfo>(SALES_DATA);
+  dataSource = new MatTableDataSource<SalesInfo>(this.salesData);
 
 
 
