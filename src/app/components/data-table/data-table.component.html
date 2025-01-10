@@ -3,8 +3,7 @@
   #tbSort="matSort"
   [dataSource]="dataSource"
   (matSortChange)="announceSortChange($event)"
-  class="table table-default"
->
+  class="table table-default">
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
     <mat-header-cell
@@ -27,15 +26,16 @@
       *matHeaderCellDef
       mat-sort-header="saleTotal"
       sortActionDescription="Sort by Sales"
-      class="table-header">
+      class="table-header table-int">
       Sales
     </mat-header-cell>
-    <mat-cell *matCellDef="let sales">
+    <mat-cell *matCellDef="let sales"
+    class="table-int">
       {{ sales.saleTotal | currency }}
     </mat-cell>
     <mat-footer-cell 
       *matFooterCellDef
-      class="table-footer">
+      class="table-footer table-int">
     {{ getTotalSales() | currency }}
   </mat-footer-cell>
   </ng-container>
