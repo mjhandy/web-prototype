@@ -1,0 +1,16 @@
+// mat table changes
+.table{
+  // border: 1px solid $black;
+  background-color: transparent;
+  &-header{
+    font-weight: 800;
+    font-size: 16px;
+  }
+  &-footer{
+    font-weight: 800;
+  }
+  &-default{
+    border: 1px solid $borderColour;
+    border-radius: 10px;
+  }
+}

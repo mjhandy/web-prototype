@@ -4,7 +4,7 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSort, Sort, MatSortModule, MatSortable } from '@angular/material/sort';
 
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 import * as data from '../../Model/sales-data.json';
 
@@ -18,8 +18,8 @@ export interface SalesInfo {
 @Component({
   selector: 'aap-data-table',
   imports: [
-    MatTableModule, 
-    MatSortModule, 
+    MatTableModule,
+    MatSortModule,
     MatPaginatorModule,
     CurrencyPipe],
   standalone: true,
@@ -28,11 +28,8 @@ export interface SalesInfo {
 })
 export class DataTableComponent implements AfterViewInit {
 
-  
-
   @ViewChild('tbSort') tbSort = new MatSort();
   @ViewChild(MatPaginator) paginator = MatPaginator;
-
 
   private _liveAnnouncer = inject(LiveAnnouncer);
   salesData: any = (data as any).default;
@@ -44,19 +41,15 @@ export class DataTableComponent implements AfterViewInit {
   ]
   dataSource = new MatTableDataSource<SalesInfo>(this.salesData);
 
-
-
-  ngAfterViewInit() {    
-    this.tbSort.sort(({ id: 'saleTotal', start: 'desc'}) as MatSortable); // sort sales high to low
+  ngAfterViewInit() {
+    this.tbSort.sort(({ id: 'saleTotal', start: 'desc' }) as MatSortable); // sort sales high to low
     this.dataSource.sort = this.tbSort;
-
-    // pagination
-    // this.dataSource.paginator = this.paginator;
   }
 
   // total sales for the footer
-  getTotalSales(){
-    return this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
+  getTotalSales() {
+    const totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
+    return totalSales
   }
 
   /** Announce the change in sort state for assistive technology. */
