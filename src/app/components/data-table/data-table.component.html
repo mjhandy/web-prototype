@@ -35,8 +35,10 @@
     </mat-cell>
     <mat-footer-cell 
       *matFooterCellDef
-      class="table-footer table-int">
-    {{ getTotalSales() | currency }}
+      class="table-footer  table-int">
+      {{ getTotalSales() | currency }} <br/>
+      avg. {{ getAverageSales() | currency}}
+      
   </mat-footer-cell>
   </ng-container>
 

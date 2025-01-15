@@ -31,25 +31,45 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild('tbSort') tbSort = new MatSort();
   @ViewChild(MatPaginator) paginator = MatPaginator;
 
-  private _liveAnnouncer = inject(LiveAnnouncer);
+  private _liveAnnouncer = inject(LiveAnnouncer);  
   salesData: any = (data as any).default;
+  dataSource = new MatTableDataSource<SalesInfo>(this.salesData);
+  totalSales: number | undefined;
+  salesCount = this.dataSource.data.length;
 
   displayColumns: string[] = [
     'col-name',
     'col-sales',
     'col-department'
   ]
-  dataSource = new MatTableDataSource<SalesInfo>(this.salesData);
+  
+
+
 
   ngAfterViewInit() {
     this.tbSort.sort(({ id: 'saleTotal', start: 'desc' }) as MatSortable); // sort sales high to low
     this.dataSource.sort = this.tbSort;
+
+    // sales data
+    this.totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
+
+    console.log('total sales:', this.totalSales);
+       
   }
 
   // total sales for the footer
   getTotalSales() {
     const totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
+    
     return totalSales
+  }
+
+  // average sales
+  getAverageSales(){
+    
+    const avargeSales = (this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0)) / this.salesCount;
+    
+     return avargeSales;
   }
 
   /** Announce the change in sort state for assistive technology. */
