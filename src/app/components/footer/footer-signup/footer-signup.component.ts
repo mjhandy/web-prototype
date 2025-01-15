@@ -1,10 +1,11 @@
 import { Component, input, Output, ViewChild } from '@angular/core';
 import { LocalStorageService } from '../../../services/local-storage-service';
 import { Router } from '@angular/router';
-import { GeoLocationComponent } from '../../geo-location/geo-location.component';
+import { FooterMapComponent } from "../footer-map/footer-map.component";
+
 @Component({
     selector: 'footer-signup',
-    imports: [GeoLocationComponent],
+    imports: [FooterMapComponent],
     templateUrl: './footer-signup.component.html',
     styleUrl: './footer-signup.component.scss'
 })
@@ -14,6 +15,7 @@ export class FooterSignupComponent {
 
   inputValue: string = '';
   footerSignUpForm: string = '';
+
 
   constructor(
     private LocalStorageService: LocalStorageService,

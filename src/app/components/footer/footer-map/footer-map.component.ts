@@ -1,22 +1,30 @@
-import { Component } from '@angular/core';
-import { GeolocationService } from '../../services/geolocation.service';
+import { Component, ViewChild } from '@angular/core';
+import { GoogleMap } from '@angular/google-maps';
+import { GeolocationService } from '../../../services/geolocation.service';
 
 @Component({
-  selector: 'aap-geo-location',
-  imports: [],
-  templateUrl: './geo-location.component.html',
-  styleUrl: './geo-location.component.scss'
+  selector: 'aap-footer-map',
+  imports: [
+    GoogleMap
+  ],
+  templateUrl: './footer-map.component.html',
+  styleUrl: './footer-map.component.scss'
 })
-export class GeoLocationComponent {
-
+export class FooterMapComponent {
   lat: string | undefined;
-  long : string | undefined;
+  long: string | undefined;
+  apiKey = 'AIzaSyCgKaxzYJNTn_yOXudF-zX8_cmAsOV7CEU';
 
+  center: google.maps.LatLngLiteral = {lat: 24, lng: 12};
+  zoom = 4;
+  display: google.maps.LatLngLiteral | undefined;
 
   constructor(private geolocationService: GeolocationService) { }
 
   ngOnInit(): void {
     this.getGeoLocation();
+   
+
   }
 
 
@@ -27,6 +35,7 @@ export class GeoLocationComponent {
         console.log('Longitude:', position.coords.longitude);
         this.lat = position.coords.latitude;
         this.long = position.coords.longitude;
+        
       },
       error: (error) => {
         console.error('Error getting geolocation:', error);

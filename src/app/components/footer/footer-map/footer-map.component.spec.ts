@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeoLocationComponent } from './geo-location.component';
+import { FooterMapComponent } from './footer-map.component';
 
-describe('GeoLocationComponent', () => {
-  let component: GeoLocationComponent;
-  let fixture: ComponentFixture<GeoLocationComponent>;
+describe('FooterMapComponent', () => {
+  let component: FooterMapComponent;
+  let fixture: ComponentFixture<FooterMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GeoLocationComponent]
+      imports: [FooterMapComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GeoLocationComponent);
+    fixture = TestBed.createComponent(FooterMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
