@@ -100,7 +100,7 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/site-map/site-map.component').then((d) => d.SiteMapComponent),
     title: 'English SIte Map | Web Prototype',
     data:{      
-      description: 'This is he Web Prototype Site Map',
+      description: 'This is the Web Prototype Site Map',
       label: 'nav.siteMap',      
       showInFooter: true,
       showInSiteMap: false,

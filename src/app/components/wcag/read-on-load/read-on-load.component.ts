@@ -26,17 +26,27 @@ export class ReadOnLoadComponent {
       this.url = event.urlAfterRedirects;
       switch ( this.url){
         case '/en':
-          console.log('home');
           this.announceText = "This is the home page";
           break;
         case '/en/about-us':
-          console.log('About Us');
           this.announceText = 'This is the about us';
           break;
         case '/en/sign-up-dynamic':
-          console.log('Sign Up');
           this.announceText = 'This is the Sign Up page';
-          break;          
+          break;
+        case '/en/packages':
+          this.announceText = 'This is the Packages page.';
+          break;
+        case '/en/signup':
+          this.announceText = 'This is the Sign Up form'; 
+          break;
+        case '/en/components/accordions':
+          this.announceText = 'This is the Accordion example page';
+          break
+        case '/en/components/tables':
+          this.announceText = 'This is the data driven table example page';
+          break
+           
       }
 
     });
