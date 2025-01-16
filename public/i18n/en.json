@@ -14,7 +14,8 @@
     "signUp": "Sign Up",
     "siteMap" : "Site Map",
     "apiFeed" : "API Feed",
-    "newsFeed":   "News Feed"
+    "newsFeed":   "News Feed",
+    "tables": "Data Tables"
   },
   "headings":{
     "langModal": "Select A Language",
