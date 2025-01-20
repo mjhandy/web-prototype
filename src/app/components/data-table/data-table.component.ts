@@ -29,26 +29,28 @@ export interface SalesInfo {
 export class DataTableComponent implements AfterViewInit {
 
   @ViewChild('tbSort') tbSort = new MatSort();
-  @ViewChild(MatPaginator) paginator = MatPaginator;
+  // @ViewChild(MatPaginator) paginator = MatPaginator;
+  @ViewChild('paginator') paginator!: MatPaginator;
 
   private _liveAnnouncer = inject(LiveAnnouncer);  
   salesData: any = (data as any).default;
-  dataSource = new MatTableDataSource<SalesInfo>(this.salesData);
+  dataSource = new MatTableDataSource<SalesInfo>;
   totalSales: number | undefined;
-  salesCount = this.dataSource.data.length;
+  salesCount: number | undefined;
 
   displayColumns: string[] = [
     'col-name',
     'col-sales',
     'col-department'
   ]
-  
-
-
 
   ngAfterViewInit() {
+    this.dataSource = new MatTableDataSource(this.salesData);
+    this.dataSource.paginator = this.paginator;
     this.tbSort.sort(({ id: 'saleTotal', start: 'desc' }) as MatSortable); // sort sales high to low
     this.dataSource.sort = this.tbSort;
+
+    this.salesCount = this.dataSource.data.length;
 
     // sales data
     this.totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
@@ -67,7 +69,7 @@ export class DataTableComponent implements AfterViewInit {
   // average sales
   getAverageSales(){
     
-    const avargeSales = (this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0)) / this.salesCount;
+    const avargeSales = (this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0)) / this.salesCount!;
     
      return avargeSales;
   }

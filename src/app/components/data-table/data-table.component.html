@@ -3,22 +3,24 @@
   #tbSort="matSort"
   [dataSource]="dataSource"
   (matSortChange)="announceSortChange($event)"
-  class="table table-default">
+  class="table table-default"
+>
   <!-- Name Column -->
   <ng-container matColumnDef="col-name">
     <mat-header-cell
       *matHeaderCellDef
       mat-sort-header="name"
       sortActionDescription="Sort by Name"
-      class="table-header">
+      class="table-header"
+    >
       Name
     </mat-header-cell>
     <mat-cell *matCellDef="let sales">
       {{ sales.name }}
     </mat-cell>
-    <mat-footer-cell 
-    *matFooterCellDef
-    class="table-footer">Total</mat-footer-cell>
+    <mat-footer-cell *matFooterCellDef class="table-footer"
+      >Total</mat-footer-cell
+    >
   </ng-container>
 
   <ng-container matColumnDef="col-sales">
@@ -26,20 +28,17 @@
       *matHeaderCellDef
       mat-sort-header="saleTotal"
       sortActionDescription="Sort by Sales"
-      class="table-header table-int">
+      class="table-header table-int"
+    >
       Sales
     </mat-header-cell>
-    <mat-cell *matCellDef="let sales"
-    class="table-int">
+    <mat-cell *matCellDef="let sales" class="table-int">
       {{ sales.saleTotal | currency }}
     </mat-cell>
-    <mat-footer-cell 
-      *matFooterCellDef
-      class="table-footer  table-int">
-      {{ getTotalSales() | currency }} <br/>
-      avg. {{ getAverageSales() | currency}}
-      
-  </mat-footer-cell>
+    <mat-footer-cell *matFooterCellDef class="table-footer table-int">
+      {{ getTotalSales() | currency }} <br />
+      avg. {{ getAverageSales() | currency }}
+    </mat-footer-cell>
   </ng-container>
 
   <ng-container matColumnDef="col-department">
@@ -47,7 +46,8 @@
       *matHeaderCellDef
       mat-sort-header="department"
       sortActionDescription="Sort by Department"
-      class="table-header">
+      class="table-header"
+    >
       Department
     </mat-header-cell>
     <mat-cell *matCellDef="let sales">
@@ -61,3 +61,8 @@
   <mat-footer-row *matFooterRowDef="displayColumns"></mat-footer-row>
 </mat-table>
 
+<mat-paginator
+  #paginator
+  [pageSizeOptions]="[10, 25, 50, 75, 100]"
+  showFirstLastButtons
+></mat-paginator>
