@@ -11,9 +11,7 @@ import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directi
 import { of } from 'rxjs';
 import { LocalStorageService } from '../../services/local-storage-service';
 
-
-
-
+import * as CountryListData from '../../Model/country-list.json'
 
 @Component({
     selector: 'app-sign-up',
@@ -27,7 +25,6 @@ import { LocalStorageService } from '../../services/local-storage-service';
     styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent implements OnInit {
-
   signUpForm: FormGroup;
   submitted = false;
   emailReg = new RegExp("^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
@@ -37,6 +34,8 @@ export class SignUpComponent implements OnInit {
   countries: any = [];
   states: any = [];
   provinces: any = [];
+
+  CL: any = (CountryListData as any).default;
 
   constructor( 
     // private dataService: DataSignalService,
