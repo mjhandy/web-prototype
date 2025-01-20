@@ -11,7 +11,8 @@ import { ReadOnLoadComponent } from './components/wcag/read-on-load/read-on-load
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { filter } from 'rxjs';
+import { GeolocationService } from './services/geolocation.service';
+import { LocalStorageService } from './services/local-storage-service';
 
 
 @Component({
@@ -30,13 +31,16 @@ import { filter } from 'rxjs';
 })
 export class AppComponent {
   private iconPath = './icons/'
+
   
 
   constructor(
     private translate: TranslateService,
     private matIconRegistry: MatIconRegistry,
     private domSanitizer: DomSanitizer,
-    private router: Router
+    private router: Router,
+    private LocalStorageService: LocalStorageService,
+    private geolocationService: GeolocationService
   ) {
     // site languages
     this.translate.addLangs(['en', 'fr']);
@@ -82,11 +86,28 @@ export class AppComponent {
       }
       window.scrollTo(0,0);
     });
+
+    this.getGeoLocation();  
   }
 
   setPath(url: string): SafeResourceUrl{
     return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
+  getGeoLocation() {
+    this.geolocationService.getCurrentPosition().subscribe({
+      next: (position) => {
+        console.log('Latitude:', position.coords.latitude);
+        console.log('Longitude:', position.coords.longitude);
+;
+        // store lat long in local storage
+        this.LocalStorageService.setItem('lat', position.coords.latitude);
+        this.LocalStorageService.setItem('long', position.coords.longitude);
+      },
+      error: (error) => {
+        console.error('Error getting geolocation:', error);
+      },
+    });
+  }
 
 }

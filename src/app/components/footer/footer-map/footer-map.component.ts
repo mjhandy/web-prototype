@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { GoogleMap } from '@angular/google-maps';
-import { GeolocationService } from '../../../services/geolocation.service';
+
+import { LocalStorageService } from '../../../services/local-storage-service';
 
 @Component({
   selector: 'aap-footer-map',
@@ -11,36 +12,27 @@ import { GeolocationService } from '../../../services/geolocation.service';
   styleUrl: './footer-map.component.scss'
 })
 export class FooterMapComponent {
-  lat: string | undefined;
-  long: string | undefined;
+
   apiKey = 'AIzaSyCgKaxzYJNTn_yOXudF-zX8_cmAsOV7CEU';
 
-  center: google.maps.LatLngLiteral = {lat: 24, lng: 12};
-  zoom = 4;
-  display: google.maps.LatLngLiteral | undefined;
+  options: google.maps.MapOptions = {
+    mapId: "footer_map",
+    center: { lat: 44, lng: 147 },
+    zoom: 3,
+  };
+  marker: google.maps.Marker | undefined;
 
-  constructor(private geolocationService: GeolocationService) { }
 
-  ngOnInit(): void {
-    this.getGeoLocation();
-   
 
+  constructor(
+    private LocalStorageService: LocalStorageService
+  ) { }
+
+  ngAfterViewInit(): void {
+    
   }
 
 
-  getGeoLocation() {
-    this.geolocationService.getCurrentPosition().subscribe({
-      next: (position) => {
-        console.log('Latitude:', position.coords.latitude);
-        console.log('Longitude:', position.coords.longitude);
-        this.lat = position.coords.latitude;
-        this.long = position.coords.longitude;
-        
-      },
-      error: (error) => {
-        console.error('Error getting geolocation:', error);
-      },
-    });
-  }
+
 
 }
