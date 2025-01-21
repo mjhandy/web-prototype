@@ -92,10 +92,13 @@
                   <option value="" disabled selected>
                     {{ "forms.label.select" | translate }}
                   </option>
-                  <option *ngFor="let country of countries; let i = index" [value]="countries[i].value">
-                    {{ countries[i].label | translate }}
-                  </option>
+                  @for ( country of CL; track country){
+                    <option value="{{ country.code }}">{{  country.name }}</option>
+                    
+                  }
                 </select>
+
+
 
                 <div class="feedback">
                   @if (submitted && f['country'].errors) {

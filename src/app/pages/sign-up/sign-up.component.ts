@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from "@ngx-translate/core";
-import { 
-  AbstractControl, 
-  FormBuilder, 
-  FormGroup, 
-  ReactiveFormsModule, 
-  Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms';
 import { FormErrorFocusDirective } from '../../directives/formErrorFocus.directive';
 import { of } from 'rxjs';
 import { LocalStorageService } from '../../services/local-storage-service';
@@ -14,15 +15,15 @@ import { LocalStorageService } from '../../services/local-storage-service';
 import * as CountryListData from '../../Model/country-list.json'
 
 @Component({
-    selector: 'app-sign-up',
-    imports: [
-        TranslateModule,
-        ReactiveFormsModule,
-        CommonModule,
-        FormErrorFocusDirective
-    ],
-    templateUrl: './sign-up.component.html',
-    styleUrl: './sign-up.component.scss'
+  selector: 'app-sign-up',
+  imports: [
+    TranslateModule,
+    ReactiveFormsModule,
+    CommonModule,
+    FormErrorFocusDirective
+  ],
+  templateUrl: './sign-up.component.html',
+  styleUrl: './sign-up.component.scss'
 })
 export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
@@ -31,13 +32,13 @@ export class SignUpComponent implements OnInit {
   alphaReg = new RegExp("^[a-zA-Z' ]+$");
   zipCodeReg = new RegExp("^[0-9]{5}(?:-[0-9]{4})?$");
   postalCodeReg = new RegExp("^(?!.*[DFIOQU])[A-VXY][0-9][A-Z] ?[0-9][A-Z][0-9]$");
-  countries: any = [];
+
   states: any = [];
   provinces: any = [];
 
   CL: any = (CountryListData as any).default;
 
-  constructor( 
+  constructor(
     // private dataService: DataSignalService,
     private fb: FormBuilder,
     private LocalStorageService: LocalStorageService,
@@ -55,7 +56,7 @@ export class SignUpComponent implements OnInit {
           Validators.required,
           Validators.pattern(this.alphaReg)
         ]
-      ],      
+      ],
       eMail: ['',
         [
           Validators.required,
@@ -90,12 +91,12 @@ export class SignUpComponent implements OnInit {
           Validators.required
         ]
       ],
-      province:['',
+      province: ['',
         [
           Validators.required
         ]
       ],
-      city:['',
+      city: ['',
         [
           Validators.required,
           Validators.pattern(this.alphaReg)
@@ -107,11 +108,6 @@ export class SignUpComponent implements OnInit {
     this.provinces = this.getCanProv();
     this.states = this.getUsStates();
 
-
-    // asnyc countries
-    of(this.getCountries()).subscribe(countries => {
-      this.countries = countries;
-    });
   }
 
   get f(): { [key: string]: AbstractControl } {
@@ -119,7 +115,6 @@ export class SignUpComponent implements OnInit {
   }
 
   ngOnInit() {
-    
     this.getFooterEmail();
   }
 
@@ -142,49 +137,39 @@ export class SignUpComponent implements OnInit {
     this.signUpForm.reset();
   }
 
-  // country list
-  getCountries(){
-    return [
-      { value: 'ca', label: 'forms.countryList.ca'},
-      { value: 'us', label: 'forms.countryList.us'},
-      { value: 'au', label: 'forms.countryList.au'},
-      { value: 'fa', label: 'forms.countryList.fa'},
-    ]
-  }
-
   //state list
-  getUsStates(){
-    return[
-      {value: 'ca', label: 'California'}
+  getUsStates() {
+    return [
+      { value: 'ca', label: 'California' }
     ]
   }
 
   //Canadian Provinces List
-  getCanProv(){
-    return[
-      { value: 'nl', label:'forms.provList.nl' },
-      { value: 'pe', label:'forms.provList.pe' },
-      { value: 'ns', label:'forms.provList.ns' },
-      { value: 'nb', label:'forms.provList.nb' },
-      { value: 'qc', label:'forms.provList.qc' },
-      { value: 'on', label:'forms.provList.on' },
-      { value: 'mb', label:'forms.provList.mb' },
-      { value: 'sk', label:'forms.provList.sk' },
-      { value: 'ab', label:'forms.provList.ab' },
-      { value: 'bc', label:'forms.provList.bc' },
-      { value: 'yt', label:'forms.provList.yt' },
-      { value: 'nt', label:'forms.provList.nt' },
-      { value: 'nu', label:'forms.provList.nu' },
+  getCanProv() {
+    return [
+      { value: 'nl', label: 'forms.provList.nl' },
+      { value: 'pe', label: 'forms.provList.pe' },
+      { value: 'ns', label: 'forms.provList.ns' },
+      { value: 'nb', label: 'forms.provList.nb' },
+      { value: 'qc', label: 'forms.provList.qc' },
+      { value: 'on', label: 'forms.provList.on' },
+      { value: 'mb', label: 'forms.provList.mb' },
+      { value: 'sk', label: 'forms.provList.sk' },
+      { value: 'ab', label: 'forms.provList.ab' },
+      { value: 'bc', label: 'forms.provList.bc' },
+      { value: 'yt', label: 'forms.provList.yt' },
+      { value: 'nt', label: 'forms.provList.nt' },
+      { value: 'nu', label: 'forms.provList.nu' },
     ]
   }
 
   //email address from footer, if the data exists
-  getFooterEmail(){
+  getFooterEmail() {
     let fEmail = localStorage.getItem('footerEmail');
-    if (fEmail){
+    if (fEmail) {
       this.signUpForm.controls['eMail'].setValue(fEmail);
       localStorage.removeItem('footerEmail');
-    }    
+    }
     console.debug('email from footer:', fEmail);
   }
 }
