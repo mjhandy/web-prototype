@@ -1,5 +1,15 @@
 [
   {
+    "name": "United States",
+    "dial_code": "+1",
+    "code": "US"
+  },
+  {
+    "name": "Canada",
+    "dial_code": "+1",
+    "code": "CA"
+  },
+  {
     "name": "Afghanistan",
     "dial_code": "+93",
     "code": "AF"
@@ -184,11 +194,7 @@
     "dial_code": "+237",
     "code": "CM"
   },
-  {
-    "name": "Canada",
-    "dial_code": "+1",
-    "code": "CA"
-  },
+
   {
     "name": "Cape Verde",
     "dial_code": "+238",
@@ -1148,11 +1154,6 @@
     "name": "United Kingdom",
     "dial_code": "+44",
     "code": "GB"
-  },
-  {
-    "name": "United States",
-    "dial_code": "+1",
-    "code": "US"
   },
   {
     "name": "Uruguay",

@@ -87,8 +87,14 @@
             <div class="col-12 col-lg-6">
               <div class="mb-2">
                 <label for="country">{{ "forms.label.country" | translate }}<span class="required">*</span></label>
-                <select #country id="country" name="country" formControlName="country" class="form-control"
-                  [class]="{ 'valid-false': submitted && f['country'].errors }">
+                <select 
+                  #country 
+                  id="country" 
+                  name="country" 
+                  formControlName="country" 
+                  class="form-control"
+                  [class]="{ 'valid-false': submitted && f['country'].errors }"
+                  [(ngModel)]="countrySelect">
                   <option value="" disabled selected>
                     {{ "forms.label.select" | translate }}
                   </option>
@@ -97,9 +103,6 @@
                     
                   }
                 </select>
-
-
-
                 <div class="feedback">
                   @if (submitted && f['country'].errors) {
                   <div class="feedback-invalid">
@@ -113,45 +116,49 @@
             </div>
             <div class="col-12 col-lg-6">
               <div class="mb-2">
-                <label for="state">{{ "forms.label.state" | translate }}<span class="required">*</span></label>
-                <select #state id="state" formControlName="state" class="form-control"
-                  [class]="{ 'valid-false': submitted && f['state'].errors }">
-                  <option value="">{{ "forms.label.select" | translate }}</option>
-                </select>
-                <div class="feedback">
-                  @if (submitted && f['state'].errors) {
-                  <div class="feedback-invalid">
-                    @if (f['state'].errors['required']) {
-                    {{ "forms.required.state" | translate }}
+                @if ( countrySelect === 'US'){
+                  <label for="state">{{ "forms.label.state" | translate }}<span class="required">*</span></label>
+                  <select #state id="state" formControlName="state" class="form-control"
+                    [class]="{ 'valid-false': submitted && f['state'].errors }">
+                    <option value="">{{ "forms.label.select" | translate }}</option>
+                  </select>
+                  <div class="feedback">
+                    @if (submitted && f['state'].errors) {
+                    <div class="feedback-invalid">
+                      @if (f['state'].errors['required']) {
+                      {{ "forms.required.state" | translate }}
+                      }
+                    </div>
                     }
                   </div>
-                  }
-                </div>
-              </div>
-              <div class="mb-2">
-                <label for="province">{{ "forms.label.province" | translate }}<span class="required">*</span></label>
-                <select #province id="province" formControlName="province" class="form-control"
-                  [class]="{ 'valid-false': submitted && f['province'].errors }">
-                  <option value="">{{ "forms.label.select" | translate }}</option>
-                  <option *ngFor="let province of provinces; let i = index" [value]="provinces[i].value">
-                    {{ provinces[i].label | translate }}
-                  </option>
-                </select>
-                <div class="feedback">
-                  @if (submitted && f['province'].errors) {
-                  <div class="feedback-invalid">
-                    @if (f['province'].errors['required']) {
-                    {{ "forms.required.province" | translate }}
+                }
+                @if ( countrySelect === 'CA' ){
+                  <label for="province">{{ "forms.label.province" | translate }}<span class="required">*</span></label>
+                  <select #province id="province" formControlName="province" class="form-control"
+                    [class]="{ 'valid-false': submitted && f['province'].errors }">
+                    <option value="">{{ "forms.label.select" | translate }}</option>
+                    <option *ngFor="let province of provinces; let i = index" [value]="provinces[i].value">
+                      {{ provinces[i].label | translate }}
+                    </option>
+                  </select>
+                  <div class="feedback">
+                    @if (submitted && f['province'].errors) {
+                    <div class="feedback-invalid">
+                      @if (f['province'].errors['required']) {
+                      {{ "forms.required.province" | translate }}
+                      }
+                    </div>
                     }
                   </div>
-                  }
-                </div>
+                }
               </div>
+
             </div>
           </div>
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="mb-2">
+                @if ( countrySelect === 'US' || countrySelect === 'CA'){
                 <label for="city">{{ "forms.label.city" | translate }}<span class="required">*</span></label>
                 <input 
                   type="text" 
@@ -171,11 +178,12 @@
                     </div>
                     }
                   </div>
+                }
               </div>
             </div>
             <div class="col-2 col-lg-6">
               <div class="mb-2">
-                @if (country.value == 'us'){
+                @if ( countrySelect === 'US'){
                 <label for="usZipCode">Zip Code<span class="required">*</span></label>
                 <input type="text" id="usZipCode" formControlName="usZipCode" class="form-control" [class]="{
                     'valid-false': submitted && f['usZipCode'].errors
@@ -191,7 +199,8 @@
                   </div>
                   }
                 </div>
-                } @if (country.value == 'ca'){
+                } 
+                @if ( countrySelect === 'CA'){
                 <label for="canPostalCode">Postal Code<span class="required">*</span></label>
                 <input type="text" #canPostalCode id="canPostalCode" formControlName="canPostalCode"
                   class="form-control" [class]="{

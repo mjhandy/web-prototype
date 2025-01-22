@@ -36,6 +36,8 @@ export class SignUpComponent implements OnInit {
   states: any = [];
   provinces: any = [];
 
+  countrySelect: string | undefined;
+
   CL: any = (CountryListData as any).default;
 
   constructor(
