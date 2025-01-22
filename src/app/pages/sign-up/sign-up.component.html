@@ -86,7 +86,11 @@
           <div class="row">
             <div class="col-12 col-lg-6">
               <div class="mb-2">
-                <label for="country">{{ "forms.label.country" | translate }}<span class="required">*</span></label>
+                <label 
+                  for="country">
+                  {{ "forms.label.country" | translate }}
+                  <span class="required">*</span>
+                </label>
                 <select 
                   #country 
                   id="country" 
@@ -99,8 +103,9 @@
                     {{ "forms.label.select" | translate }}
                   </option>
                   @for ( country of CL; track country){
-                    <option value="{{ country.code }}">{{  country.name }}</option>
-                    
+                    <option value="{{ country.code }}">
+                      {{  country.name }}
+                    </option>                  
                   }
                 </select>
                 <div class="feedback">
@@ -117,8 +122,15 @@
             <div class="col-12 col-lg-6">
               <div class="mb-2">
                 @if ( countrySelect === 'US'){
-                  <label for="state">{{ "forms.label.state" | translate }}<span class="required">*</span></label>
-                  <select #state id="state" formControlName="state" class="form-control"
+                  <label 
+                    for="state">{{ "forms.label.state" | translate }}
+                    <span class="required">*</span>
+                  </label>
+                  <select 
+                    #state 
+                    id="state" 
+                    formControlName="state" 
+                    class="form-control"
                     [class]="{ 'valid-false': submitted && f['state'].errors }">
                     <option value="">{{ "forms.label.select" | translate }}</option>
                   </select>
@@ -152,7 +164,6 @@
                   </div>
                 }
               </div>
-
             </div>
           </div>
           <div class="row">
@@ -227,7 +238,7 @@
         </fieldset>
         <fieldset>
           <legend class="visually-hidden">{{ "forms.legend.controls" | translate }}</legend>
-          <div class="mb-3">
+          <div class="mb-3 btn-group">
             <button 
               type="submit" 
               class="btn btn-primary me-3" 
@@ -239,7 +250,7 @@
               (click)="onReset()" 
               class="btn btn-secondary"
               attr.aria-label="{{ 'wcag.clear' | translate }}">
-              {{ " buttons.clear" | translate }}
+              {{ "buttons.clear" | translate }}
             </button>
           </div>
         </fieldset>
