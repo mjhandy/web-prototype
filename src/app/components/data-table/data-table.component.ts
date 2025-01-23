@@ -29,10 +29,9 @@ export interface SalesInfo {
 export class DataTableComponent implements AfterViewInit {
 
   @ViewChild('tbSort') tbSort = new MatSort();
-  // @ViewChild(MatPaginator) paginator = MatPaginator;
   @ViewChild('paginator') paginator!: MatPaginator;
 
-  private _liveAnnouncer = inject(LiveAnnouncer);  
+  private _liveAnnouncer = inject(LiveAnnouncer);
   salesData: any = (data as any).default;
   dataSource = new MatTableDataSource<SalesInfo>;
   totalSales: number | undefined;
@@ -55,23 +54,22 @@ export class DataTableComponent implements AfterViewInit {
     // sales data
     this.totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
 
-    console.log('total sales:', this.totalSales);
-       
+    // console.log('total sales:', this.totalSales);
+
   }
 
   // total sales for the footer
   getTotalSales() {
     const totalSales = this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0);
-    
+
     return totalSales
   }
 
   // average sales
-  getAverageSales(){
-    
+  getAverageSales() {
     const avargeSales = (this.dataSource.data.reduce((acc, SALES_DATA) => acc + SALES_DATA.saleTotal, 0)) / this.salesCount!;
-    
-     return avargeSales;
+
+    return avargeSales;
   }
 
   /** Announce the change in sort state for assistive technology. */
