@@ -20,11 +20,7 @@ export class AccoridonComponent {
   constructor(
     private analyticsService: AnalyticsService
   ) 
-  {
-    console.log(this.randomNumber);
-    console.log(this.aid);
-
-  }
+  { }
 
   ngOnInit(){
     this.analyticsService.trackEvent('Accordion', 'Loading','Accordion has loaded');

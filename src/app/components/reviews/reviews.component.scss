@@ -1,0 +1,15 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+.review{
+  display: flex;
+  flex-flow: row;
+  &-profile{
+    img{
+      border-radius: 5px;
+    }
+    .name{
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+.mat-icon{
+  --mat-icon-color:var(--web-orange);
+
+  height: 2rem;
+  width: 2rem;
+  font-size: 2rem;
+}
