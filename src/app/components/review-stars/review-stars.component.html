@@ -1,5 +1,7 @@
-<mat-icon>star</mat-icon>
-<mat-icon>star_border</mat-icon>
-<mat-icon>star_half</mat-icon>
-<mat-icon>star</mat-icon>
-<mat-icon>star_border</mat-icon>
+@for (star of stars; track star){
+  <mat-icon>star</mat-icon>
+}
+
+@if ( rating % 1 !== 0 ){
+  <mat-icon>star_half</mat-icon>
+}

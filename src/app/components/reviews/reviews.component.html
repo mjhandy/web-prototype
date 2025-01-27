@@ -1,13 +1,17 @@
 @for (review of jsonData; track review){
-  <div class="review">
-    <div class="review-profile">
+  <div class="row review">
+    <div class="col-lg-3 review-profile">
       <img src="{{ review.headShot }}" width="64px" height="64px">
       <p class="name">{{ review.first}}</p>
-      <p>{{ review.city}}, {{ review.country}}</p>
+      <p>{{ review.city}},<br/> {{ review.country}}</p>
 
-      <aap-review-stars [displayMode]="review" reviewCount="{{ review.rating}}"></aap-review-stars>
+      
     </div>
-    <div class="review-body" [innerHTML]="review.review"></div>
+    <div class="review-body">
+      {{ review.review}}
+      <p>{{ review.rating }}</p>
+      <aap-review-stars [displayMode]="review" rating="{{ review.rating}}"></aap-review-stars>
+    </div>
   </div>
 }
 

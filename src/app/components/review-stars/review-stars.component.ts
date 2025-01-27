@@ -12,17 +12,11 @@ import { MatIcon } from '@angular/material/icon';
 export class ReviewStarsComponent {
 
   @Input() displayMode: any;
-  @Input() reviewCount: any;
+  @Input() rating: any;
 
-  constructor(
-    
-  ){
-    
+  constructor() {}
+
+  get stars(){
+    return Array(Math.floor(this.rating)).fill(0);
   }
-
-  ngOninit(){
-    
-    
-  }
-
 }
