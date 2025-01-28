@@ -23,7 +23,12 @@ export class HomeComponent {
   pricingData: any = (pdata as any).default;
   AD: any = (qaData as any).default;
   reviewData: any = (reviewData as any).default;
+  sortedRewiews = [];
 
   constructor() {}
+
+  ngOnInit(){
+    this.sortedRewiews = this.reviewData.sort((a: { rating: number; }, b: { rating: number; }) => b.rating - a.rating);
+  }
 
 }

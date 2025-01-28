@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ReviewStarsComponent } from "../review-stars/review-stars.component";
+// import { ReviewsService } from '../../services/reviews.service';
 
 @Component({
   selector: 'aap-reviews',
@@ -11,6 +12,8 @@ export class ReviewsComponent {
   @Input() jsonData: any;
   silderID = 'slideID-' + this.randomString(5);
   review: any;
+
+  constructor() { }
 
   randomString(length: number) {
 
