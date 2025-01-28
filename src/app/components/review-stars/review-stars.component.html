@@ -1,7 +1,18 @@
-@for (star of stars; track star){
-  <mat-icon>star</mat-icon>
-}
-
-@if ( rating % 1 !== 0 ){
-  <mat-icon>star_half</mat-icon>
-}
+<div class="reviewStars">
+  <div class="position-absolute d-flex flex-row">
+    @for (star of stars; track star){
+      <mat-icon>star</mat-icon>
+    }
+    
+    @if ( rating % 1 !== 0 ){
+      <mat-icon>star_half</mat-icon>
+    }    
+  </div>
+  <div class="position-absolute opacity-50 d-flex flex-row">
+    <mat-icon>star_border</mat-icon>
+    <mat-icon>star_border</mat-icon>
+    <mat-icon>star_border</mat-icon>
+    <mat-icon>star_border</mat-icon>
+    <mat-icon>star_border</mat-icon>
+  </div>
+</div>

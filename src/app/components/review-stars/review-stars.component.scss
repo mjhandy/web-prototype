@@ -1,6 +1,10 @@
 @import 'bsOverrides';
 @import 'componentInclude';
 
+.reviewStars{
+  position: relative;
+}
+
 .mat-icon{
   --mat-icon-color:var(--web-orange);
   height: 2rem;
