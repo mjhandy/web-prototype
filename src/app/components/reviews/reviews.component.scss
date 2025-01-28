@@ -1,5 +1,7 @@
-@import 'bsOverrides';
-@import 'componentInclude';
+@import "bsOverrides";
+@import "componentInclude";
+
+@import "carousel";
 
 .review{
   display: flex;

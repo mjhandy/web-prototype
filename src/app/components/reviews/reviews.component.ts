@@ -9,7 +9,18 @@ import { ReviewStarsComponent } from "../review-stars/review-stars.component";
 })
 export class ReviewsComponent {
   @Input() jsonData: any;
+  silderID = 'slideID-' + this.randomString(5);
   review: any;
 
+  randomString(length: number) {
+
+    const randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+
+    for (var i = 0; i < length; i++) {
+      result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+    }
+    return result;
+  }
 
 }

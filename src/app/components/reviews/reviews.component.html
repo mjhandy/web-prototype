@@ -1,17 +1,26 @@
-@for (review of jsonData; track review){
-  <div class="row review">
-    <div class="col-lg-3 review-profile">
-      <img src="{{ review.headShot }}" width="64px" height="64px">
-      <p class="name">{{ review.first}}</p>
-      <p>{{ review.city}},<br/> {{ review.country}}</p>
-
-      
+<div id="{{ silderID }}" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    @for (review of jsonData; track review; let i = $index){
+    <div class="carousel-item row" [class.active]="i === 0">
+      <div class="review">
+        <div class="col-lg-3 review-profile">
+          <img src="{{ review.headShot }}" width="64px" height="64px" />
+          <p class="name">{{ review.first }}</p>
+          <p>
+            {{ review.city }},<br />
+            {{ review.country }}
+          </p>
+        </div>
+        <div class="review-body">
+          {{ review.review }}
+          <p>{{ review.rating }}</p>
+          <aap-review-stars
+            [displayMode]="review"
+            rating="{{ review.rating }}"
+          ></aap-review-stars>
+        </div>
+      </div>
     </div>
-    <div class="review-body">
-      {{ review.review}}
-      <p>{{ review.rating }}</p>
-      <aap-review-stars [displayMode]="review" rating="{{ review.rating}}"></aap-review-stars>
-    </div>
+    }
   </div>
-}
-
+</div>
