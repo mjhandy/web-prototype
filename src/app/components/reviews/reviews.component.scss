@@ -5,13 +5,22 @@
 
 .review{
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   &-profile{
+    border-bottom: 1px solid $borderColour;
+    gap: 15px;
+    padding: 0 0 15px 0;
     img{
-      border-radius: 5px;
+      border-radius: 50%;
     }
     .name{
       font-style: italic;
     }
+  }
+  &-stars{
+    margin: 10px 0;
+  }
+  &-body{
+
   }
 }
