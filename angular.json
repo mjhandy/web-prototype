@@ -19,6 +19,7 @@
           "options": {
             "outputPath": "dist/web-prototype",
             "index": "src/index.html",
+            "baseHref": "/",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
