@@ -9,7 +9,7 @@ import { NewsFeedService } from '../../services/news-feed.service';
 })
 export class NewsFeedComponent {
 
-  article : any;
+  story : any;
 
   constructor(private nsewsFeedService: NewsFeedService) { }
 
@@ -19,8 +19,11 @@ export class NewsFeedComponent {
     this.nsewsFeedService.getNews()
       .subscribe(response => {
         
-        this.article = response;
-        console.log(this.article, this.article.title);
+        this.story = response;
+        this.story = this.story.articles;
+        
+        console.log('Article', this.story);
+        console.log('Article Title:', this.story[0].title)
       });
   }
 

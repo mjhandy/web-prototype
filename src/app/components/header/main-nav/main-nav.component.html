@@ -3,10 +3,10 @@
 
     <div class="collapse navbar-collapse offcanvas-collapse" id="mainNav" #mainNav>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
-     
         <li class="nav-item" [routerLinkActive]="['active']">
-          <a class="nav-link" routerLink="en/about-us">{{ "nav.aboutUs" | translate }}</a>
-        </li>
+          <a class="nav-link" routerLink="en/the-news">{{ "nav.newsFeed" | translate }}</a>
+        </li> 
+
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/api-feed">{{ "nav.apiFeed" | translate }}</a>
         </li> 
@@ -25,6 +25,9 @@
             <li [routerLinkActive]="['active']"><a class="dropdown-item" routerLink="en/components/tables">{{ "nav.tables" | translate }}</a></li>
           </ul>
         </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" routerLink="en/about-us">{{ "nav.aboutUs" | translate }}</a>
+        </li>        
       </ul>
       <form class="d-flex">
         <input class="form-control header-search" type="search" placeholder="Search" aria-label="Search">

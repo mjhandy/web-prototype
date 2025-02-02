@@ -25,20 +25,17 @@ export const routes: Routes = [
     }    
   },
   {
-    path: 'en/about-us',    
-    loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
-    title: 'English About Us ! Web Prototype',
+    path: 'en/the-news',    
+    loadComponent: () => import('./pages/news-feed/news-feed.component').then((d) => d.NewsFeedComponent),
+    title: 'English News Feed API | Web Prototype',
     data:{      
-      description: 'This is he Web Prototype About Us pages',
-      label: 'nav.aboutUs',      
+      description: 'This is the Web Prototype News Feed',
+      label: 'nav.newsFeed',      
       showInFooter: true,
       showInSiteMap: true,
-      loc: '/en/about-us',
-      lastmod: "20250-01-01",
-      changefreq: "daily",
-      priority: "1.0",
     }  
-  },
+  },  
+
   {
     path: 'en/api-feed',    
     loadComponent: () => import('./pages/api-feed/api-feed.component').then((d) => d.ApiFeedComponent),
@@ -61,18 +58,6 @@ export const routes: Routes = [
       showInSiteMap: true,
     }
   },
-  {
-    path: 'en/news-feed',    
-    loadComponent: () => import('./pages/news-feed/news-feed.component').then((d) => d.NewsFeedComponent),
-    title: 'English News Feed API | Web Prototype',
-    data:{      
-      description: 'This is the Web Prototype News Feed',
-      label: 'nav.newsFeed',      
-      showInFooter: true,
-      showInSiteMap: true,
-    }  
-  },
-
   {
     path: 'en/sign-up',    
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
@@ -117,7 +102,21 @@ export const routes: Routes = [
       showInSiteMap: false,
     }  
   },   
-
+  {
+    path: 'en/about-us',    
+    loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
+    title: 'English About Us ! Web Prototype',
+    data:{      
+      description: 'This is he Web Prototype About Us pages',
+      label: 'nav.aboutUs',      
+      showInFooter: true,
+      showInSiteMap: true,
+      loc: '/en/about-us',
+      lastmod: "20250-01-01",
+      changefreq: "daily",
+      priority: "1.0",
+    }  
+  },
   {
     path: '**',
     loadComponent: () => import('./pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)

@@ -1,17 +1,23 @@
 <div class="container">
   <div class="row">
-    <div class="col-12">News Feed</div>
+    <div class="col-12"><h1>The News</h1></div>
   </div>
   <div class="row">
     <div class="col-12">
       <div class="newsArticles">
         
-        @for (article of article; track article)
+        @for (article of story; track article)
         {
-        <div class="article">
-          <h4>{{ article.title }}</h4>
-          <p>{{ article.content }}</p>
-        </div>
+        <a class="article" href="{{ article.url }}" target="_blank">
+          <figure class="article-header">
+            <img src="{{ article.urlToImage }}" alt="{{ article.title }}">
+            <caption>{{ article.title }}</caption>
+          </figure>
+          <div class="article-body">
+            <h4>{{ article.content }}</h4>
+            <p>{{ article.source.name }}</p>          
+          </div>
+        </a>
         }
       </div>
     </div>

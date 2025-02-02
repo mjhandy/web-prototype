@@ -1,0 +1,35 @@
+.newsArticles {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  .article {
+    width: 20%;
+    display: flex;
+    flex-flow: column;
+    text-decoration: none;
+    &-header {
+      display: flex;
+      flex-flow: column;
+      // height: 180px;
+      // background-color: var(--web-gray-300);
+      img {
+        width: 100%;
+      }
+      caption{
+        font-size: .9rem;
+        line-height: 1;
+      }
+    }
+    &-body{
+      h4{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 1.25rem;
+        font-weight: 400;
+      }
+    }
+
+  }
+}

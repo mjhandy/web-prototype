@@ -7,11 +7,16 @@ import { Injectable } from '@angular/core';
 export class NewsFeedService {
 
   private apiKey = 'a5f25a762a2648bca39205529db2ad5b';  
-  private url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.apiKey;
+  private url = 'https://newsapi.org/v2/top-headlines' ;
+  private usNews = 'us';
+  private ukNews = 'gb';
+  private lang = 'en';
+  
+  private feed = this.url + '?country=' + this.usNews + '&apiKey='  +  this.apiKey
 
   constructor(private httpClient: HttpClient) { }
 
   getNews(){
-    return this.httpClient.get(this.url);
+    return this.httpClient.get(this.feed);
   }
 }
