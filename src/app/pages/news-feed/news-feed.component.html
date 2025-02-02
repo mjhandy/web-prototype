@@ -5,10 +5,13 @@
   <div class="row">
     <div class="col-12">
       <div class="newsArticles">
+        @if (isLoading === true){
+          <mat-spinner></mat-spinner>
+        }
         
-        @for (article of story; track article)
+        @for (article of story; track article; let i = $index)
         {
-        <a class="article" href="{{ article.url }}" target="_blank">
+        <a class="article" href="{{ article.url }}" target="_blank" [class]="i === 0?'w-100':''">
           <figure class="article-header">
             <img src="{{ article.urlToImage }}" alt="{{ article.title }}">
             <caption>{{ article.title }}</caption>

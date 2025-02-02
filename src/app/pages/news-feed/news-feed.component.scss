@@ -1,3 +1,7 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+@import 'materialComponets';
+
 .newsArticles {
   display: flex;
   flex-flow: row;
@@ -11,8 +15,6 @@
     &-header {
       display: flex;
       flex-flow: column;
-      // height: 180px;
-      // background-color: var(--web-gray-300);
       img {
         width: 100%;
       }
