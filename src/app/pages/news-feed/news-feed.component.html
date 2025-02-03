@@ -16,30 +16,31 @@
         </div>
         <p>{{ errorMessage }}</p>
         } @else {
-        <div class="visually-hidden" aria-live="assertive">
-          Loading complete
-        </div>
-        @for (article of story; track article; let i = $index) {
-        <a
-          class="article col-12 col-lg-3"
-          href="{{ article.url }}"
-          target="_blank"
-          [class]="i === 0 ? 'col-lg-12' : ''"
-        >
-          <figure class="article-header">
-            <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
-            <caption>
-              {{
-                article.title
-              }}
-            </caption>
-          </figure>
-          <div class="article-body">
-            <!-- <h4>{{ article.content }}</h4> -->
-            <p>{{ article.source.name }}</p>
+          <div class="visually-hidden" aria-live="assertive">
+            Loading complete
           </div>
-        </a>
-        } } }
+          @for (article of story; track article; let i = $index)
+            {
+              <a
+                class="article col-12 col-lg-3"
+                href="{{ article.url }}"
+                target="_blank"
+                [class]="i === 0 ? 'col-lg-12' : ''">
+                <figure class="article-header">
+                  <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
+                  <caption>
+                    {{
+                      article.title
+                    }}
+                  </caption>
+                </figure>
+                <div class="article-body">
+                  <p>{{ article.source.name }}</p>
+                </div>
+              </a>
+            } 
+        } 
+    }
       </div>
     </div>
   </div>
