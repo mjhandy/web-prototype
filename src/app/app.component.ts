@@ -97,9 +97,8 @@ export class AppComponent {
   getGeoLocation() {
     this.geolocationService.getCurrentPosition().subscribe({
       next: (position) => {
-        console.log('Latitude:', position.coords.latitude);
-        console.log('Longitude:', position.coords.longitude);
-;
+        // console.log('Latitude:', position.coords.latitude);
+        // console.log('Longitude:', position.coords.longitude);
         // store lat long in local storage
         this.LocalStorageService.setItem('lat', position.coords.latitude);
         this.LocalStorageService.setItem('long', position.coords.longitude);
