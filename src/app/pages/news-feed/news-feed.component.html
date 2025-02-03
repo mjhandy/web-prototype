@@ -5,28 +5,41 @@
   <div class="row">
     <div class="col-12">
       <div class="newsArticles">
-        @if (isLoading === true){
-          <div class="visually-hidden" aria-live="assertive">Please wait, loading</div>
-          <mat-spinner></mat-spinner>
-        }
-        @else {
-          <div class="visually-hidden"  aria-live="assertive">Loading complete</div>
-          @for (article of story; track article; let i = $index)
-          {
-          <a class="article" href="{{ article.url }}" target="_blank" [class]="i === 0?'w-100':''">
-            <figure class="article-header">
-              <img src="{{ article.urlToImage }}" alt="{{ article.title }}">
-              <caption>{{ article.title }}</caption>
-            </figure>
-            <div class="article-body">
-              <h4>{{ article.content }}</h4>
-              <p>{{ article.source.name }}</p>          
-            </div>
-          </a>
-          }
-        }
-        
-
+        @if (isLoading && isError === false){
+        <div class="visually-hidden" aria-live="assertive">
+          Please wait, loading
+        </div>
+        <mat-spinner></mat-spinner>
+        } @else { @if ( isError){
+          <div class="visually-hidden" aria-live="assertive">
+            {{ errorMessage }}
+          </div>
+       
+        } @else {
+        <div class="visually-hidden" aria-live="assertive">
+          Loading complete
+        </div>
+        @for (article of story; track article; let i = $index) {
+        <a
+          class="article"
+          href="{{ article.url }}"
+          target="_blank"
+          [class]="i === 0 ? 'w-100' : ''"
+        >
+          <figure class="article-header">
+            <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
+            <caption>
+              {{
+                article.title
+              }}
+            </caption>
+          </figure>
+          <div class="article-body">
+            <h4>{{ article.content }}</h4>
+            <p>{{ article.source.name }}</p>
+          </div>
+        </a>
+        } } }
       </div>
     </div>
   </div>
