@@ -1,0 +1,10 @@
+@if (isLoading){
+  <div class="visually-hidden" aria-live="assertive">
+    Please wait, loading
+  </div>
+  <mat-spinner></mat-spinner>
+}
+@if(isError) {
+  <p>There has been an error</p>
+  <p>{{ errorMessage }}</p>
+}

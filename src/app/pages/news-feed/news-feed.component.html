@@ -5,43 +5,28 @@
   <div class="row">
     <div class="col-12">
       <div class="newsArticles row">
-        @if (isLoading && isError === false){
-        <div class="visually-hidden" aria-live="assertive">
-          Please wait, loading
-        </div>
-        <mat-spinner></mat-spinner>
-        } @else { @if ( isError){
-        <div class="visually-hidden" aria-live="assertive">
-          {{ errorMessage }}
-          <p>Please pull the source code from <a href="https://github.com/mjhandy/web-prototype" target="_blank">Github</a></p>
-        </div>
-        <p>{{ errorMessage }}</p>
-        } @else {
-          <div class="visually-hidden" aria-live="assertive">
-            Loading complete
-          </div>
-          @for (article of story; track article; let i = $index)
-            {
-              <a
-                class="article col-12 col-lg-3"
-                href="{{ article.url }}"
-                target="_blank"
-                [class]="i === 0 ? 'col-lg-12' : ''">
-                <figure class="article-header">
-                  <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
-                  <caption>
-                    {{
-                      article.title
-                    }}
-                  </caption>
-                </figure>
-                <div class="article-body">
-                  <p>{{ article.source.name }}</p>
-                </div>
-              </a>
-            } 
-        } 
-    }
+        <aap-loading [isLoading]="isLoading" [isError]="isError" [errorMessage]="errorMessage"></aap-loading>
+
+        @for (article of story; track article; let i = $index) {
+          <a
+            class="article col-12 col-lg-3"
+            href="{{ article.url }}"
+            target="_blank"
+            [class]="i === 0 ? 'col-lg-12' : ''"
+          >
+            <figure class="article-header">
+              <img src="{{ article.urlToImage }}" alt="{{ article.title }}" />
+              <caption>
+                {{
+                  article.title
+                }}
+              </caption>
+            </figure>
+            <div class="article-body">
+              <p>{{ article.source.name }}</p>
+            </div>
+          </a>
+          }
       </div>
     </div>
   </div>

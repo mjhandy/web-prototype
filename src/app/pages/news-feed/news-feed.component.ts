@@ -1,54 +1,39 @@
 import { Component } from '@angular/core';
 import { NewsFeedService } from '../../services/news-feed.service';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { catchError, throwError } from 'rxjs';
+import { LoadingComponent } from '../../components/loading/loading.component';
 
 
 
 @Component({
   selector: 'app-news-feed',
-  imports: [MatProgressSpinnerModule],
+  imports: [LoadingComponent],
   templateUrl: './news-feed.component.html',
   styleUrl: './news-feed.component.scss'
 })
 export class NewsFeedComponent {
 
   story: any;
-  isLoading = true;
-  isError = false;
-  errorMessage : string | undefined;
+  isLoading: boolean = true;
+  isError: boolean = false;
+  errorMessage = "";
 
-  constructor(private nsewsFeedService: NewsFeedService) { }
+  constructor(private newsFeedService: NewsFeedService) { }
 
 
   ngOnInit() {
 
-    this.nsewsFeedService.getNews().subscribe({
+    this.newsFeedService.getNews().subscribe({
       next: (data) => {
         this.story = data;
         this.story = this.story.articles;
         this.isLoading = false;
+        console.log(this.isLoading);
       },
       error: (error) => {
+        this.isLoading = false;
         this.isError = true;
         this.errorMessage = error.error.message;
-       console.log('error', error)
       }
     })
-
-
-    // this.nsewsFeedService.getNews()
-    //   .subscribe(
-    //     data => {
-    //       this.story = data;
-    //       this.story = this.story.articles;
-    //       this.isLoading = false;
-    //     },
-    //     // error => {
-    //     //   console.log ('loading error');
-    //     // }
-    //   );
-
   }
-
 }
