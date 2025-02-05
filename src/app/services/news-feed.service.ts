@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class NewsFeedService {
 
-  private apiKey = 'a5f25a762a2648bca39205529db2ad5b';  
+  private apiKey = 'a5f25a762a2648bca39205529db2ad5b-';  
   private url = 'https://newsapi.org/v2/top-headlines?' ;
   private pageSize = 10;
   

@@ -16,6 +16,7 @@ export class NewsFeedComponent {
   isLoading: boolean = true;
   isError: boolean = false;
   errorMessage = "";
+  snackType: string = "";
 
   constructor(private newsFeedService: NewsFeedService) { }
 
@@ -27,6 +28,8 @@ export class NewsFeedComponent {
         this.story = data;
         this.story = this.story.articles;
         this.isLoading = false;
+        this.snackType = 'alert';
+        console.log('snack type:', this.snackType);
         console.log(this.isLoading);
       },
       error: (error) => {

@@ -5,7 +5,11 @@
   <div class="row">
     <div class="col-12">
       <div class="newsArticles row">
-        <aap-loading [isLoading]="isLoading" [isError]="isError" [errorMessage]="errorMessage"></aap-loading>
+        <aap-loading 
+          [isLoading]="isLoading" 
+          [isError]="isError" 
+          [errorMessage]="errorMessage"
+          [snackType]="snackType"></aap-loading>
 
         @for (article of story; track article; let i = $index) {
           <a
