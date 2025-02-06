@@ -1,11 +1,11 @@
 import { Component, input, Output, ViewChild } from '@angular/core';
 import { LocalStorageService } from '../../../services/local-storage-service';
 import { Router } from '@angular/router';
-import { FooterMapComponent } from "../footer-map/footer-map.component";
+// import { FooterMapComponent } from "../footer-map/footer-map.component";
 
 @Component({
     selector: 'footer-signup',
-    imports: [FooterMapComponent],
+    imports: [],
     templateUrl: './footer-signup.component.html',
     styleUrl: './footer-signup.component.scss'
 })
