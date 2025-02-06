@@ -30,9 +30,7 @@ import { LocalStorageService } from './services/local-storage-service';
     styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  private iconPath = './icons/'
-
-  
+  private iconPath = './icons/'  
 
   constructor(
     private translate: TranslateService,

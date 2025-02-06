@@ -10,10 +10,5 @@ export class LoadingComponent {
   @Input() isLoading: boolean = false;
   @Input() isError: boolean = false;
   @Input() errorMessage: string = '';
-  
 
-  ngOnInit(){
-    console.log('loading:', this.isLoading);
-    console.log('Error:', this.isError);
-  }
 }

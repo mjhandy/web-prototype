@@ -1,25 +1,25 @@
 @import 'bsOverrides';
 @import 'componentInclude';
 
+.snackDefault{
+  border-radius: 10px;
+  text-align: center;
+}
 
-.snackBar{
-  &-notification{
-    .mdc-snackbar__surface.mat-mdc-snackbar-surface{
-      background: rgba(var(--web-black-rgb),0.6);
-      border: 2px solid #495057;
-      border-radius: 10px;
-      padding: 25px 50px;
-    }
-  }
+.snack{
+
   &-alert{
     .mdc-snackbar__surface.mat-mdc-snackbar-surface{
-      background: rgba(var(--web-black-rgb),0.6);
-      border: 2px solid red;
-      border-radius: 10px;
-      padding: 25px 50px;
+      @extend .snackDefault;
+      background: rgba(var(--web-success-rgb),0.75);
+      border: 2px solid var(--web-green);
     }
   }
   &-error{
-
+    .mdc-snackbar__surface.mat-mdc-snackbar-surface{
+      @extend .snackDefault;
+      background: rgba(var(--web-danger-rgb),0.75);
+      border: 2px solid var(--web-red);
+    }
   }
 }

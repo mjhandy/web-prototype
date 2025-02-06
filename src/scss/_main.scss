@@ -1,6 +1,9 @@
 @import "bsOverrides";
 @import "componentInclude";
 
+// required material scss
+@import 'custom/material/snackBar';
+
 // @import "colourModes";
 
 // skip to main items
