@@ -14,14 +14,14 @@ export class SnackBarService {
 
   openSBAlert(message: string) {
     this.snackBar.open(message, '', {
-      // duration: 1500,
+      duration: 1500,
       panelClass: ['snack-alert']
     });
   }
 
   openSBError(message: string){
     this.snackBar.open(message, '', {
-      // duration: 1500,
+      duration: 1500,
       panelClass: ['snack-error']
     });
   }
