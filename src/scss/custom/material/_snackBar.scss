@@ -4,6 +4,7 @@
 .snackDefault{
   border-radius: 10px;
   text-align: center;
+  @include boxShadow (2, 3, 300);
 }
 
 .snack{
