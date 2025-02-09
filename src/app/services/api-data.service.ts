@@ -11,6 +11,8 @@ export class ApiDataService {
   constructor(private httpClient: HttpClient) { }
   
   getPosts(){
-    return this.httpClient.get(this.url);
+    const posts = this.httpClient.get(this.url);
+    posts.subscribe(Response => console.log(Response))
+    return posts
   }
 }
