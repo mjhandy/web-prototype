@@ -105,9 +105,5 @@
       "aboutUs": "This is the About Us page.",
       "siteMap": "THis is the Site Map page."
     }
-  },
-  "snackbar": {
-    "lightMode": "Light Mode",
-    "darkMode": "Dark Mode"
   }
 }

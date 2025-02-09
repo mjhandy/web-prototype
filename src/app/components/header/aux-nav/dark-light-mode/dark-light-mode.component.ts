@@ -3,6 +3,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
+import { SnackBarService } from '../../../../services/snack-bar.service';
 import { LocalStorageService } from '../../../../services/local-storage-service';
 
 @Component({
@@ -18,13 +19,15 @@ import { LocalStorageService } from '../../../../services/local-storage-service'
 export class DarkLightModeComponent {
 
   mode = '';
-  message= '';
+  snackMessageEN: string = "";
+  snackMessageFR: string = "";
   body = document.body;
   private _snackBar = inject(MatSnackBar);
   
 
   constructor(
     private LocalStorageService: LocalStorageService,
+    private snackBar: SnackBarService
   ) {
     // console.log(this.body);
   }
@@ -49,22 +52,18 @@ export class DarkLightModeComponent {
   modeSwitch(){
     if (this.mode === 'light'){
       this.mode = 'dark'; 
-      this.message = "Dark Mode Enabled";  
+      this.snackMessageEN = "Dark Mode Enabled";
+      this.snackMessageFR = "Mode sombre activé";
+      this.snackBar.openSBAlert(this.snackMessageEN, this.snackMessageFR);
           }
     else {
       this.mode = 'light';
-      this.message = "Light Mode Enabled";
+      this.snackMessageEN = "Light Mode Enabled";
+      this.snackMessageFR = "Mode d'éclairage activé";
+      this.snackBar.openSBAlert(this.snackMessageEN, this.snackMessageFR);
     }
-    this.openSnackBar(this.message);
+
     this.body.setAttribute('data-bs-theme', this.mode);
     this.LocalStorageService.setItem('mode', this.mode);
   }
-
-  openSnackBar(message: string) {
-    this._snackBar.open(message, '', {
-      duration: 1500,
-      panelClass: ['alert-default']
-    });
-  }
-
 }
