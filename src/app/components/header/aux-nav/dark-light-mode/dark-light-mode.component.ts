@@ -19,8 +19,7 @@ import { LocalStorageService } from '../../../../services/local-storage-service'
 export class DarkLightModeComponent {
 
   mode = '';
-  snackMessageEN: string = "";
-  snackMessageFR: string = "";
+  snackMessage: string = "";
   body = document.body;
   private _snackBar = inject(MatSnackBar);
 
@@ -52,15 +51,13 @@ export class DarkLightModeComponent {
   modeSwitch() {
     if (this.mode === 'light') {
       this.mode = 'dark';
-      this.snackMessageEN = "Dark Mode Enabled";
-      this.snackMessageFR = "Mode sombre activé";
-      this.snackBar.openSBAlert(this.snackMessageEN, this.snackMessageFR);
+      this.snackMessage = "darkMode";
+      this.snackBar.openSBAlert(this.snackMessage);
     }
     else {
       this.mode = 'light';
-      this.snackMessageEN = "Light Mode Enabled";
-      this.snackMessageFR = "Mode d'éclairage activé";
-      this.snackBar.openSBAlert(this.snackMessageEN, this.snackMessageFR);
+      this.snackMessage = "lightMode";
+      this.snackBar.openSBAlert(this.snackMessage);
     }
     this.body.setAttribute('data-bs-theme', this.mode);
     this.LocalStorageService.setItem('mode', this.mode);

@@ -77,6 +77,14 @@
     "privacy": "politique de confidentialité",
     "terms": "termes et conditions"
   },
+  "snackbar": {
+    "darkMode": "Dark Mode Enabled",
+    "lightMode": "Light Mode Enabled",
+    "loadError":"Data Load Error",
+    "newsLoaded": "News Loaded",
+    "success": "Data Loaded",
+    "error": "Form Submission Failed!"
+  },  
   "wcag": {
     "close": "Fermer",
     "langToggle": "Cliquez pour sélectionner votre langue",

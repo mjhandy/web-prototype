@@ -1,44 +1,30 @@
 import { inject, Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { LocalStorageService } from '../services/local-storage-service';
-
+import { TranslateService } from "@ngx-translate/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SnackBarService {
-
-  message: string = '';
-  
+  message: string = '';  
   private snackBar = inject(MatSnackBar);
   constructor(
-    private LocalStorageService: LocalStorageService,
+    private translate: TranslateService
   ) { }
 
-  openSBAlert(messageEN: string, messageFR: string) {
-    this.messageLang(messageEN, messageFR);
+  openSBAlert(message: string) {
+    this.message = this.translate.instant('snackbar.' + message   );
     this.snackBar.open(this.message, '', {
       duration: 1500,
       panelClass: ['snack-alert']
     });
   }
 
-  openSBError(messageEN: string, messageFR: string){
-    this.messageLang(messageEN, messageFR);
+  openSBError(message: string){
+    this.message = this.translate.instant('snackbar.' + message   );
     this.snackBar.open(this.message, '', {
       duration: 1500,
       panelClass: ['snack-error']
     });
   }
-
-    messageLang(en: string, fr: string){
-      const lng = this.LocalStorageService.getItem('lang');    
-      if (lng === 'en') {
-        return this.message = en;
-      }
-      else {
-        return this.message = fr;
-      }
-    }
-
 }

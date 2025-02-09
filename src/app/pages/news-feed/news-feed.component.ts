@@ -17,8 +17,7 @@ export class NewsFeedComponent {
   isLoading: boolean = true;
   isError: boolean = false;
   errorMessage = "";
-  snackMessageEN: string = "";
-  snackMessageFR: string = "";
+  snackMessage: string = "";
 
   constructor(
     private newsFeedService: NewsFeedService,
@@ -32,17 +31,15 @@ export class NewsFeedComponent {
         this.story = data;
         this.story = this.story.articles;
         this.isLoading = false;
-        this.snackMessageEN = 'News Loaded';
-        this.snackMessageFR = 'Nouvelles chargées';
-        this.snackBar.openSBAlert(this.snackMessageEN, this.snackMessageFR);
+        this.snackMessage = 'newsLoaded';
+        this.snackBar.openSBAlert(this.snackMessage);
       },
       error: (error) => {
         this.isLoading = false;
         this.isError = true;
-        this.snackMessageEN = 'Loading Error';
-        this.snackMessageFR = 'Erreur de chargement';
+        this.snackMessage = 'loadError';
         this.errorMessage = error.error.message;
-        this.snackBar.openSBError(this.snackMessageEN, this.snackMessageFR);
+        this.snackBar.openSBError(this.snackMessage);
       }
     })
   }
