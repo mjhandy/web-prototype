@@ -1,43 +1,50 @@
+<!-- New dynamic nav -->
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <div class="collapse navbar-collapse offcanvas-collapse" id="mainNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
+        @for ( route of routes; track route.title ){
+        <li class="nav-item" [routerLinkActive]="['active']">
+          <a class="nav-link" [routerLink]="[route.path]">{{ route.label | translate}}</a>
+        </li>
+        }
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- Old hard coded -->
 <nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">    
-
+  <div class="container-fluid">
     <div class="collapse navbar-collapse offcanvas-collapse" id="mainNav" #mainNav>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/the-news">{{ "nav.newsFeed" | translate }}</a>
-        </li> 
-
+        </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/api-feed">{{ "nav.apiFeed" | translate }}</a>
-        </li> 
+        </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/packages">{{ "nav.packages" | translate }}</a>
-        </li>   
+        </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/sign-up">{{ "nav.signUp" | translate }}</a>
-        </li>         
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Components
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li [routerLinkActive]="['active']"><a class="dropdown-item" routerLink="en/components/accordions">{{ "nav.accordions" | translate }}</a></li>
-            <li [routerLinkActive]="['active']"><a class="dropdown-item" routerLink="en/components/tables">{{ "nav.tables" | translate }}</a></li>
+            <li [routerLinkActive]="['active']"><a class="dropdown-item" routerLink="en/components/accordions">{{
+                "nav.accordions" | translate }}</a></li>
+            <li [routerLinkActive]="['active']"><a class="dropdown-item" routerLink="en/components/tables">{{
+                "nav.tables" | translate }}</a></li>
           </ul>
         </li>
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" routerLink="en/about-us">{{ "nav.aboutUs" | translate }}</a>
-        </li>        
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control header-search" type="search" placeholder="Search" aria-label="Search">

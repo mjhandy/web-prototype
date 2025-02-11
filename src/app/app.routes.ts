@@ -16,12 +16,7 @@ export const routes: Routes = [
       description: 'This is the Web Prototype home page',
       label: 'nav.home',
       showInFooter: true,  
-      showInSiteMap: true,
-      loc: '/en',
-      lastmod: "20250-01-01",
-      changefreq: "daily",
-      priority: "1.0",
-
+      showInSiteMap: true
     }    
   },
   {
@@ -33,6 +28,7 @@ export const routes: Routes = [
       label: 'nav.newsFeed',      
       showInFooter: true,
       showInSiteMap: true,
+      showInMain: true,
     }  
   },  
 
@@ -45,6 +41,7 @@ export const routes: Routes = [
       label: 'nav.apiFeed',      
       showInFooter: true,
       showInSiteMap: true,
+      showInMain: true,
     }  
   },
   {
@@ -56,6 +53,7 @@ export const routes: Routes = [
       label: 'nav.packages',      
       showInFooter: true,
       showInSiteMap: true,
+      showInMain: true,
     }
   },
   {
@@ -77,7 +75,9 @@ export const routes: Routes = [
       description: 'Themed accordion componet',
       label: 'nav.accordions',
       showInFooter: true,
-      showInSiteMap: true
+      showInSiteMap: true,
+      showInMain: true,
+      parent: 'components'
     }
   },
   {
@@ -88,7 +88,8 @@ export const routes: Routes = [
       description: 'Sortable data driven tables',
       label: 'nav.tables',
       showInFooter: true,
-      showInSiteMap: true
+      showInSiteMap: true,
+      showInMain: true,
     }
   },
   {
@@ -111,10 +112,7 @@ export const routes: Routes = [
       label: 'nav.aboutUs',      
       showInFooter: true,
       showInSiteMap: true,
-      loc: '/en/about-us',
-      lastmod: "20250-01-01",
-      changefreq: "daily",
-      priority: "1.0",
+      showInMain: true,
     }  
   },
   {
