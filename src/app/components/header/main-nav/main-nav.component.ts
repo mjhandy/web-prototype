@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslateModule } from "@ngx-translate/core";
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { HTMLElementService } from '../../../services/html-elements.service';
 
 @Component({
@@ -11,7 +11,15 @@ import { HTMLElementService } from '../../../services/html-elements.service';
 })
 export class MainNavComponent {
 
-  constructor(private elementService: HTMLElementService) {}
+  routes: { 
+    path:   string; 
+    title:  string;  
+    label:  string;
+  }[] = [];
+
+  constructor(
+    private elementService: HTMLElementService, 
+    private router: Router) {}
 
   @ViewChild('mainNav') mainNav!: ElementRef;
 
