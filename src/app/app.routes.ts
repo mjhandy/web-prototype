@@ -90,6 +90,8 @@ export const routes: Routes = [
       showInFooter: true,
       showInSiteMap: true,
       showInMain: true,
+      
+      parent: 'components'
     }
   },
   {

@@ -12,6 +12,7 @@ import { HTMLElementService } from '../../../services/html-elements.service';
 export class MainNavComponent {
 
   routes: {
+parent: any;
     path: string;
     title: string;
     label: string;
@@ -30,7 +31,8 @@ export class MainNavComponent {
       .map(route => ({
         path: route.path!,
         title: route.title as string,
-        label: route.data!['label']
+        label: route.data!['label'],
+        parent: route.data!['parent']
       }));
   }
 

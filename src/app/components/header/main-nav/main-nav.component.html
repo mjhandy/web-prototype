@@ -6,6 +6,9 @@
         @for ( route of routes; track route.title ){
         <li class="nav-item" [routerLinkActive]="['active']">
           <a class="nav-link" [routerLink]="[route.path]">{{ route.label | translate}}</a>
+          @if (route.parent === 'components'){
+            <p>Parent is components</p>
+          }
         </li>
         }
       </ul>
