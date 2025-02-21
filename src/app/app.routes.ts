@@ -11,7 +11,7 @@ export const routes: Routes = [
   {
     path: 'en',    
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
-    title: 'English Home Page ! Web Prototype',
+    title: 'English Home Page | Web Prototype',
     data:{      
       description: 'This is the Web Prototype home page',
       label: 'nav.home',
@@ -61,7 +61,7 @@ export const routes: Routes = [
   {
     path: 'en/sign-up',    
     loadComponent: () => import('./pages/sign-up/sign-up.component').then((d) => d.SignUpComponent),
-    title: 'English Sign Up Form ! Web Prototype',
+    title: 'English Sign Up Form | Web Prototype',
     data:{      
       description: 'This is the Web Prototype Sign Up',
       label: 'nav.signUp',      
@@ -94,7 +94,7 @@ export const routes: Routes = [
   {
     path: 'en/site-map',    
     loadComponent: () => import('./pages/site-map/site-map.component').then((d) => d.SiteMapComponent),
-    title: 'English SIte Map | Web Prototype',
+    title: 'English Site Map | Web Prototype',
     data:{      
       description: 'This is the Web Prototype Site Map',
       label: 'nav.siteMap',      
@@ -105,14 +105,49 @@ export const routes: Routes = [
   {
     path: 'en/about-us',    
     loadComponent: () => import('./pages/about-us/about-us.component').then((d) => d.AboutUsComponent),
-    title: 'English About Us ! Web Prototype',
+    title: 'English About Us | Web Prototype',
     data:{      
       description: 'This is he Web Prototype About Us pages',
       label: 'nav.aboutUs',      
       showInFooter: true,
       showInSiteMap: true,
       showInAboutUs: true,
-    }  
+    },
+    children: [
+      {
+        path: 'en/about-us/board',
+        loadComponent: () => import('./pages/about-us/board/board.component').then((d) => d.BoardComponent),
+        title: 'Board of Directors | Web Prototype',
+        data: {
+          description: 'Board of Directors',
+          label: 'nav.board',
+          showInFooter: true,
+          showInSiteMap: true
+        }
+      },
+      {
+        path: 'en/about-us/leadership',
+        loadComponent: () => import('./pages/about-us/leadership/leadership.component').then((d) => d.LeadershipComponent),        
+        title: 'Corporate Leadership | Web Prototype',
+        data: {
+          description: 'Our Mission',
+          label: 'nav.mission',
+          showInFooter: true,
+          showInSiteMap: true
+        }
+      },
+      {
+        path: 'en/about-us/history',
+        loadComponent: () => import('./pages/about-us/history/history.component').then((d) => d.HistoryComponent),
+        title: 'Our History | Web Prototype',
+        data: {
+          description: 'Our History',
+          label: 'nav.history',
+          showInFooter: true,
+          showInSiteMap: true
+        }
+      }
+    ]  
   },
   {
     path: '**',
