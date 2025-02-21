@@ -111,10 +111,7 @@ export const routes: Routes = [
       label: 'nav.aboutUs',      
       showInFooter: true,
       showInSiteMap: true,
-      loc: '/en/about-us',
-      lastmod: "20250-01-01",
-      changefreq: "daily",
-      priority: "1.0",
+      showInAboutUs: true,
     }  
   },
   {
