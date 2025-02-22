@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-leadership',
+  selector: 'aap-leadership',
   imports: [],
   templateUrl: './leadership.component.html',
   styleUrl: './leadership.component.scss'

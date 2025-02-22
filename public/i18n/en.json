@@ -9,6 +9,9 @@
   "nav": {
     "home": "Home",
     "aboutUs": "About Us",
+    "board" : "Board of Directors",
+    "mission": "Mission Statement",
+    "history": "History",
     "packages": "Packages",
     "accordions": "Accordions",
     "signUp": "Sign Up",

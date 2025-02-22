@@ -7,7 +7,16 @@
   "nav": {
     "home": "Page d'accueil",
     "aboutUs": "À propos de nous",
-    "signUp":   "Sign Up FR"
+    "board" : "Board of Directors",
+    "mission": "Mission Statement",
+    "history": "History",
+    "packages": "Packages",
+    "accordions": "Accordions",
+    "signUp": "Sign Up",
+    "siteMap": "Site Map",
+    "apiFeed": "API Feed",
+    "newsFeed": "The News",
+    "tables": "Data Tables"
   },
   "headings":{
     "langModal": "Sélectionnez une langue",

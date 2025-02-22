@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterModule, Router, Route } from '@angular/router';
 import { TranslateModule } from "@ngx-translate/core";
+import { SitemapService } from '../../services/navs/sitemap.service';
 
 @Component({
   selector: 'app-site-map',
@@ -12,31 +13,16 @@ import { TranslateModule } from "@ngx-translate/core";
   styleUrl: './site-map.component.scss'
 })
 export class SiteMapComponent {
-  routes: {
-    path: string;
-    title: string;
-    label: string;
-  }[] = [];
 
-  constructor(private router: Router) {
-    console.log(
-      this.router.config
-    );
+  private navigation = inject(SitemapService);
 
+  routes: Route[] = [];
 
-    // Filter routes that have a valid `path` and `title`, then map to the required type
-    this.routes = this.router.config
-      .filter(
-        route => route.path &&
-          typeof route.title === 'string' &&
-          route.data && route.data['label'] &&
-          route.data['showInSiteMap'] === true
-      )
-      .map(route => ({
-        path: route.path!,
-        title: route.title as string,
-        label: route.data!['label']
-      }));
+  ngOnInit(): void {
+    this.routes = this.getRoutes();
   }
 
+  private getRoutes(): Route[] {
+    return this.navigation.getSiteMapNavRouters();
+  }
 }

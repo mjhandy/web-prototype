@@ -120,9 +120,7 @@ export const routes: Routes = [
         title: 'Board of Directors | Web Prototype',
         data: {
           description: 'Board of Directors',
-          label: 'nav.board',
-          showInFooter: true,
-          showInSiteMap: true
+          label: 'nav.board'
         }
       },
       {
@@ -131,9 +129,7 @@ export const routes: Routes = [
         title: 'Corporate Leadership | Web Prototype',
         data: {
           description: 'Our Mission',
-          label: 'nav.mission',
-          showInFooter: true,
-          showInSiteMap: true
+          label: 'nav.mission'
         }
       },
       {
@@ -142,9 +138,7 @@ export const routes: Routes = [
         title: 'Our History | Web Prototype',
         data: {
           description: 'Our History',
-          label: 'nav.history',
-          showInFooter: true,
-          showInSiteMap: true
+          label: 'nav.history'
         }
       }
     ]  

@@ -4,9 +4,29 @@
       <h1>{{ "headings.siteMap" | translate }}</h1>
       <nav>
         <ul>
-          @for ( route of routes; track route.title ){
+          @for ( route of routes; track $index )
+          {
             <li>
-              <a [routerLink]="'/'+ [route.path]" routerLinkActive="active">{{ route.label | translate}}</a>
+              <a 
+                [routerLink]="'/' + [route.path]" 
+                routerLinkActive="active">
+                  {{ route.data?.['label'] | translate }}
+              </a>
+              @if ( route.children )
+              {
+                <ul>
+                  @for ( child of route.children; track $index )
+                  {
+                    <li>
+                      <a 
+                        [routerLink]="'/' + [child.path]" 
+                        routerLinkActive="active">
+                          {{ child.data?.['label'] | translate }}
+                      </a>
+                    </li>
+                  }
+                </ul>
+              }
             </li>
           }
         </ul>

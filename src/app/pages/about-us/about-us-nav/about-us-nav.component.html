@@ -1,1 +1,31 @@
-<p>about-us-nav works!</p>
+<nav class="navbar">
+    <ul  class="navbar-nav">
+      @for ( route of routes; track $index )
+      {
+        <li  class="nav-item">
+          <a
+          class="nav-link" 
+            [routerLink]="'/' + [route.path]" 
+            routerLinkActive="active">
+              {{ route.data?.['label'] | translate }}
+          </a>
+          @if ( route.children )
+          {
+            <ul>
+              @for ( child of route.children; track $index )
+              {
+                <li>
+                  <a 
+                  class="nav-link"
+                    [routerLink]="'/' +  [child.path]" 
+                    routerLinkActive="active">
+                      {{ child.data?.['label'] | translate }}
+                  </a>
+                </li>
+              }
+            </ul>
+          }
+        </li>
+      }
+    </ul>
+  </nav>
