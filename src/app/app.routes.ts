@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 
+import { HistoryComponent } from './pages/about-us/history/history.component';
+
 
 export const routes: Routes = [
 
@@ -98,8 +100,7 @@ export const routes: Routes = [
     data:{      
       description: 'This is the Web Prototype Site Map',
       label: 'nav.siteMap',      
-      showInFooter: true,
-      showInSiteMap: false,
+      showInFooter: true
     }  
   },   
   {
@@ -115,12 +116,13 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'en/about-us/board',
+        path: 'en/about-us/board-of-directors',
         loadComponent: () => import('./pages/about-us/board/board.component').then((d) => d.BoardComponent),
         title: 'Board of Directors | Web Prototype',
         data: {
           description: 'Board of Directors',
-          label: 'nav.board'
+          label: 'nav.board',
+          showInAboutUs: true,
         }
       },
       {
@@ -134,7 +136,10 @@ export const routes: Routes = [
       },
       {
         path: 'en/about-us/history',
-        loadComponent: () => import('./pages/about-us/history/history.component').then((d) => d.HistoryComponent),
+        loadChildren: () => 
+          import('./pages/about-us/history/history.component').then((child) => 
+            child.HistoryComponent),
+        // component: HistoryComponent,
         title: 'Our History | Web Prototype',
         data: {
           description: 'Our History',
