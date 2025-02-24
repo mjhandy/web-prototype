@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
+import { AboutUsNavComponent } from '../about-us-nav/about-us-nav.component';
 @Component({
   selector: 'aap-leadership',
-  imports: [],
+  imports: [AboutUsNavComponent],
   templateUrl: './leadership.component.html',
   styleUrl: './leadership.component.scss'
 })

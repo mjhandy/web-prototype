@@ -1,0 +1,25 @@
+@import 'bsOverrides';
+@import 'componentInclude';
+
+.history{
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  .year{
+    border: 2px solid $blue;
+    border-radius: 50%;
+    padding: 10px 0 0 5px ;
+    width: 50px;
+    height: 50px;
+    background-color: $white;
+    font-weight: 700;
+  }
+  .entry{
+    border-left: 2px dotted $blue;
+    padding: 10px 25px;
+    margin-top: 50px;
+    margin-left: -25px;
+    width: 80%;
+  }
+}

@@ -1,0 +1,24 @@
+.sideNav {
+  &-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  &-item {
+    
+    &.active {
+      background-color: var(--web-gray-300);
+    }
+    &:hover {
+      background-color: var(--web-gray-300);
+    }
+  }
+  &-link {
+    padding: 5px 10px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: $blue;
+    font-size: 1.2rem;
+  }
+}

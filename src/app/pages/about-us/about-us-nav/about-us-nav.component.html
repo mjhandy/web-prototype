@@ -1,10 +1,10 @@
-<nav class="navbar">
-    <ul  class="navbar-nav">
+<nav class="sideNav">
+    <ul  class="sideNav-nav">
       @for ( route of routes; track $index )
       {
-        <li  class="nav-item">
+        <li  class="sideNav-item" routerLinkActive="active">
           <a
-          class="nav-link" 
+          class="sideNav-link" 
             [routerLink]="'/' + [route.path]" 
             routerLinkActive="active">
               {{ route.data?.['label'] | translate }}

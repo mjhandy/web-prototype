@@ -114,40 +114,71 @@ export const routes: Routes = [
       showInSiteMap: true,
       showInAboutUs: true,
     },
-    children: [
-      {
-        path: 'en/about-us/board-of-directors',
-        loadComponent: () => import('./pages/about-us/board/board.component').then((d) => d.BoardComponent),
-        title: 'Board of Directors | Web Prototype',
-        data: {
-          description: 'Board of Directors',
-          label: 'nav.board',
-          showInAboutUs: true,
-        }
-      },
-      {
-        path: 'en/about-us/leadership',
-        loadComponent: () => import('./pages/about-us/leadership/leadership.component').then((d) => d.LeadershipComponent),        
-        title: 'Corporate Leadership | Web Prototype',
-        data: {
-          description: 'Our Mission',
-          label: 'nav.mission'
-        }
-      },
-      {
-        path: 'en/about-us/history',
-        loadChildren: () => 
-          import('./pages/about-us/history/history.component').then((child) => 
-            child.HistoryComponent),
-        // component: HistoryComponent,
-        title: 'Our History | Web Prototype',
-        data: {
-          description: 'Our History',
-          label: 'nav.history'
-        }
-      }
-    ]  
   },
+    // children: [
+    //   {
+    //     path: 'en/about-us/board-of-directors',
+    //     loadComponent: () => import('./pages/about-us/board/board.component').then((d) => d.BoardComponent),
+    //     title: 'Board of Directors | Web Prototype',
+    //     data: {
+    //       description: 'Board of Directors',
+    //       label: 'nav.board',
+    //       showInAboutUs: true,
+    //     }
+    //   },
+    //   {
+    //     path: 'en/about-us/leadership',
+    //     loadComponent: () => import('./pages/about-us/leadership/leadership.component').then((d) => d.LeadershipComponent),        
+    //     title: 'Corporate Leadership | Web Prototype',
+    //     data: {
+    //       description: 'Our Mission',
+    //       label: 'nav.mission'
+    //     }
+    //   },
+    //   {
+    //     path: 'en/about-us/history',
+    //     loadChildren: () => 
+    //       import('./pages/about-us/history/history.component').then((child) => 
+    //         child.HistoryComponent),
+    //     // component: HistoryComponent,
+    //     title: 'Our History | Web Prototype',
+    //     data: {
+    //       description: 'Our History',
+    //       label: 'nav.history'
+    //     }
+    //   }
+    
+    {
+      path: 'en/about-us/board-of-directors',
+      loadComponent: () => import('./pages/about-us/board/board.component').then((d) => d.BoardComponent),
+      title: 'Board of Directors | Web Prototype',
+      data: {
+        description: 'Board of Directors',
+        label: 'nav.board',
+        showInAboutUs: true,
+      }
+    },
+    {
+      path: 'en/about-us/leadership',
+      loadComponent: () => import('./pages/about-us/leadership/leadership.component').then((d) => d.LeadershipComponent),        
+      title: 'Corporate Leadership | Web Prototype',
+      data: {
+        description: 'Our Leadership Team',
+        label: 'nav.leader',        
+        showInAboutUs: true,
+      }
+    },
+    {
+      path: 'en/about-us/history',
+      loadComponent: () => 
+        import('./pages/about-us/history/history.component').then((d) => d.HistoryComponent),
+      title: 'Our History | Web Prototype',
+      data: {
+        description: 'Our History',
+        label: 'nav.history',        
+        showInAboutUs: true,
+      }
+    },
   {
     path: '**',
     loadComponent: () => import('./pages/page-not-found/page-not-found.component').then(m => m.PageNotFoundComponent)
