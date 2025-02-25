@@ -4,8 +4,7 @@
     margin: 0;
     list-style: none;
   }
-  &-item {
-    
+  &-item {    
     &.active {
       background-color: var(--web-gray-300);
     }
