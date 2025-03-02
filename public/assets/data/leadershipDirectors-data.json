@@ -1,0 +1,23 @@
+[
+    {
+        "name": "John Doe",
+        "title": "Chief Executive Officer",
+        "biography": "John Doe has over 20 years of experience in the industry and has led the company to new heights.",
+        "leadershipTeam": true,
+        "boardOfDirectors": false
+    },
+    {
+        "name": "Jane Smith",
+        "title": "Chief Financial Officer",
+        "biography": "Jane Smith is a seasoned financial expert with a strong background in corporate finance and strategic planning.",
+        "leadershipTeam": true,
+        "boardOfDirectors": true
+    },
+    {
+        "name": "Emily Johnson",
+        "title": "Chief Operating Officer",
+        "biography": "Emily Johnson has a proven track record in operations management and has been instrumental in streamlining processes.",
+        "leadershipTeam": true,
+        "boardOfDirectors": true
+    }
+]

@@ -6,6 +6,7 @@ import * as HistoryData from '../../../Model/history-data.json';
 @Component({
   selector: 'aap-history',
   imports: [AboutUsNavComponent],
+  standalone: true,
   templateUrl: './history.component.html',
   styleUrl: './history.component.scss'
 })

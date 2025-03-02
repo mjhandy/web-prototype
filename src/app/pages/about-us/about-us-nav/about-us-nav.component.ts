@@ -9,6 +9,7 @@ import { AboutUsService } from '../../../services/navs/about-us.service';
     TranslateModule,
     RouterModule
   ],
+  standalone: true,
   templateUrl: './about-us-nav.component.html',
   styleUrl: './about-us-nav.component.scss'
 })
