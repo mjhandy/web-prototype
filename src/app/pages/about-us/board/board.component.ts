@@ -18,7 +18,7 @@ export class BoardComponent {
   constructor(private leaderDirectorService: LeaderDirectorService) { }
 
   ngOnInit() {
-    this.leaderDirectorService.getLeadershipTeam()
+    this.leaderDirectorService.getBoardMembers()
       .subscribe(response => {
         this.member = response;
       });
@@ -26,7 +26,3 @@ export class BoardComponent {
   }
 
 }
-function subscribe(arg0: (response: any) => void) {
-  throw new Error('Function not implemented.');
-}
-

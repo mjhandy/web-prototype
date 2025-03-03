@@ -17,7 +17,6 @@ export class LeaderDirectorService {
     return this.httpClient.get<any>(this.url).pipe(
       map(data => {
       const boardMembers = data.filter((member: any) => member.boardOfDirectors === true);
-      console.log('Board Members: ', boardMembers);
       return boardMembers;
       })
     );
@@ -28,7 +27,6 @@ export class LeaderDirectorService {
     return this.httpClient.get<any>(this.url).pipe(
       map(data => {
         const leadershipTeam = data.filter((member: any) => member.leadershipTeam === true);
-        console.log('Leadership Team: ', leadershipTeam);
         return leadershipTeam;
       })
     );
