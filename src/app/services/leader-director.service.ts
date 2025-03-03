@@ -10,8 +10,7 @@ export class LeaderDirectorService {
   private url = '../assets/data/leadershipDirectors-data.json';
 
   constructor(private httpClient: HttpClient) { 
-    console.log('LeaderDirectorService constructor called');
-    console.log(this.url)
+
   }
 
   getBoardMembers(): Observable<any> {
@@ -28,7 +27,7 @@ export class LeaderDirectorService {
   getLeadershipTeam(): Observable<any> {
     return this.httpClient.get<any>(this.url).pipe(
       map(data => {
-        const leadershipTeam = data.filter((member: any) => member.leadershipTeam === false);
+        const leadershipTeam = data.filter((member: any) => member.leadershipTeam === true);
         console.log('Leadership Team: ', leadershipTeam);
         return leadershipTeam;
       })

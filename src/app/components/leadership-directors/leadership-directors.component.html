@@ -1,4 +1,17 @@
 @for( member of data; track member; let i = $index ){
-    {{  member.title}}
+<div class="member">
+  <div class="thumbnail">
+    <img
+      src="{{ member.thumbnail }}"
+      alt="{{ member.name }}"
+      width="128"
+      height="128"
+    />
+  </div>
+  <div class="bio">
+    <p class="name">{{ member.name }}</p>
+    <p class="title">{{ member.title }}</p>
+    <p class="biography">{{ member.biography }}</p>
+  </div>
+</div>
 }
-

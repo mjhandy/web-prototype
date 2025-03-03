@@ -1,0 +1,27 @@
+.member{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 0 15px 0;
+  .thumbnail{
+    width: 126px;
+    height: 128px;
+    img{
+      border-radius: 50%;
+    }
+  }
+  .bio{
+    flex-grow: 1;
+    padding: 0 0 0 15px;
+    p{
+      margin: 0;
+      &.name{
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      &.title{
+        font-size: 0.80rem;
+      }
+    }
+  }
+}

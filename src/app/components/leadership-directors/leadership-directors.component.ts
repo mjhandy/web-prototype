@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LeaderDirectorService } from '../../services/leader-director.service';
+
 
 @Component({
   selector: 'app-leadership-directors',
@@ -12,14 +12,11 @@ export class LeadershipDirectorsComponent {
 
   @Input() data: any;
 
-  constructor(
-    private leaderDirectorService: LeaderDirectorService
-  ) { }
+  constructor( ) { }
 
   ngOnInit() {
 
-    this.leaderDirectorService.getBoardMembers().subscribe(boardMembers => {      
-    });
+
   }
 
 }
