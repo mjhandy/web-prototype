@@ -23,6 +23,10 @@ This is my Angular project where I'm teaching myself Angular. This project looks
 - clickable pips needs some tweeks, just location and size adjustments
 - this is also data bound to allow the component to be reused.
 
+## About Us
+- side nav dynamicily driven by router.ts
+- Board of Directors, and Leadership pages both driven by the same json file, using a boolean 
+
 ## Dark Mode
 - There are still a few UI bugs, but it works. And the selection is stored in Local Storage for the users next visit.
 - toast message shows the mode change. Redundant, but I wanted to exploring implimeninting this.
@@ -46,18 +50,7 @@ This is my Angular project where I'm teaching myself Angular. This project looks
 
 ### Dark Mode
 
-- The current logo, an SVG, needs fixed wile in dark mode
-  - needs testing
-- Nav drop down needs update
-  - needs testing
 - Mobile nav has not been tested
-
-### Sign Up Form
-
-- When using the country select drop down:
-  - the State/Provce field should offer the apporiate options if America or Canada is selected
-  - The postal/Zip code should update, with the aproprate validation
-  - If neither Canada nor America is selected, the state/province and postal/zip code fields should not be visible, and the UI should not leave any gaps
 
 ### Cross Platform Testing
 
@@ -68,11 +61,6 @@ This is my Angular project where I'm teaching myself Angular. This project looks
 
 
 ## New Features
-
-### Sortable/Dynamic  Table
-
-- Going to build this with mat-table as it seems to offer a lot of built in features, like pagination and sorting.
-- Source a public API that can represent data in a table format, and allow for sortable column.
 
 ### Dynamic Main Nav
 
